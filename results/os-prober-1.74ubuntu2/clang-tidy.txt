@@ -1,0 +1,56 @@
+6415 warnings generated.
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:1:9: warning: declaration uses identifier '_GNU_SOURCE', which is a reserved identifier [bugprone-reserved-identifier,cert-dcl37-c,cert-dcl51-cpp]
+    1 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+      |         GNU_SOURCE
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:2:1: warning: system include errno.h not allowed [llvmlibc-restrict-system-libc-headers]
+    2 | #include <errno.h>
+      | ^~~~~~~~~~~~~~~~~~
+    3 | #include <stdlib.h>
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:3:1: warning: #includes are not sorted properly [llvm-include-order]
+    3 | #include <stdlib.h>
+      | ^
+note: this fix will not be applied because it overlaps with another fix
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:3:1: warning: system include stdlib.h not allowed [llvmlibc-restrict-system-libc-headers]
+    3 | #include <stdlib.h>
+      | ^~~~~~~~~~~~~~~~~~~
+    4 | #include <unistd.h>
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:4:1: warning: system include unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+    4 | #include <unistd.h>
+      | ^~~~~~~~~~~~~~~~~~~
+    5 | #include <stdio.h>
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:5:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    5 | #include <stdio.h>
+      | ^~~~~~~~~~~~~~~~~~
+    6 | #include <sched.h>
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:6:1: warning: system include sched.h not allowed [llvmlibc-restrict-system-libc-headers]
+    6 | #include <sched.h>
+      | ^~~~~~~~~~~~~~~~~~
+    7 | 
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:11:3: warning: the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c]
+   11 |                 fprintf(stderr, "Usage: newns PROGRAM [ARGUMENTS ...]\n");
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:11:3: note: cast the expression to void to silence this warning
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:11:3: warning: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   11 |                 fprintf(stderr, "Usage: newns PROGRAM [ARGUMENTS ...]\n");
+      |                 ^~~~~~~
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:11:3: note: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+   11 |                 fprintf(stderr, "Usage: newns PROGRAM [ARGUMENTS ...]\n");
+      |                 ^~~~~~~
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:12:3: warning: function is not thread safe [concurrency-mt-unsafe]
+   12 |                 exit(1);
+      |                 ^
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:20:50: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+   20 |         if (unshare(CLONE_NEWNS) < 0 && errno != ENOSYS)
+      |                                                         ^
+      |                                                          {
+   21 |                 perror("unshare failed");
+      |                                          
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:24:2: warning: function is not thread safe [concurrency-mt-unsafe]
+   24 |         setenv("OS_PROBER_NEWNS", "1", 1);
+      |         ^
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:28:8: warning: 127 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   28 |         _exit(127);
+      |               ^
+Suppressed 6397 warnings (6397 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

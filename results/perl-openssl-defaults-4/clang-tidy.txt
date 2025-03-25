@@ -1,0 +1,16 @@
+1378 warnings and 1 error generated.
+Error while processing /home/capstone/Desktop/root/perl-openssl-defaults-4/openssl-version.c.
+/home/capstone/Desktop/root/perl-openssl-defaults-4/openssl-version.c:1:10: error: 'openssl/crypto.h' file not found [clang-diagnostic-error]
+    1 | #include <openssl/crypto.h>
+      |          ^~~~~~~~~~~~~~~~~~
+/home/capstone/Desktop/root/perl-openssl-defaults-4/openssl-version.c:2:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    2 | #include <stdio.h>
+      | ^~~~~~~~~~~~~~~~~~
+    3 | 
+/home/capstone/Desktop/root/perl-openssl-defaults-4/openssl-version.c:7:17: warning: variable 'version' is not initialized [cppcoreguidelines-init-variables]
+    7 |     const char *version;
+      |                 ^      
+      |                         = NULL
+Suppressed 1376 warnings (1376 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).

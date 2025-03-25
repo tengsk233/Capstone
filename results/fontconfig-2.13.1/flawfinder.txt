@@ -1,0 +1,720 @@
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1338:15:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	    else if (chmod ((char *) d, 0755) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:253:43:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = mkdir ((char *) dir, 0755) == 0 && chmod ((char *) dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:255:73:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = FcMakeDirectory (parent) && (mkdir ((char *) dir, 0755) == 0) && chmod ((char *) dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:268:12:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+    return readlink ((const char *) pathname, (char *)buf, bufsiz);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:165:12:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+	    len = readlink ("/proc/self/exe", buf, size - 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:72:34:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = mkdir (dir, 0755) == 0 && chmod (dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:74:56:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = mkdir_p (parent) && (mkdir (dir, 0755) == 0) && chmod (dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:66:34:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = mkdir (dir, 0755) == 0 && chmod (dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:68:56:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	ret = mkdir_p (parent) && (mkdir (dir, 0755) == 0) && chmod (dir, 0755) == 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/doc/edit-sgml.c:255:5:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    fprintf (stderr, format, line, arg);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:114:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy (path, dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:116:2:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+	strcat (path, file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:83:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) atomic->file, (char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:86:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) atomic->new, (char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:87:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) atomic->new, NEW_NAME);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:90:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) atomic->lck, (char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:91:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) atomic->lck, LCK_NAME);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:109:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) atomic->tmp, (char *) atomic->file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:110:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) atomic->tmp, TMP_NAME);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:72:18:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (force || access ((const char *) uuidname, F_OK) < 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:296:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) cache_base, "-" FC_ARCHITECTURE FC_CACHE_SUFFIX);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:316:2:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+	strcat ((char *) cache_base, "-" FC_ARCHITECTURE FC_CACHE_SUFFIX);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1316:6:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	if (access ((char *) d, W_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1326:10:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	    if (access ((char *) d, F_OK) == -1) {
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1461:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access ((char *) dir, W_OK) != 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1465:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		    access ((char *) dir, F_OK) == 0 ? "unwritable" : "non-existent");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1937:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access ((char *) cache_dir, W_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1926:4:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+	  strcat ((char *) fontconfig_instprefix, (char *) fontconfig_path);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1969:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) path, (const char *) dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1984:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) path, (char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1986:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access ((char *) path, R_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2054:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) path[i], (const char *) dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:252:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access ((char *) parent, F_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:254:14:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    else if (access ((char *) parent, F_OK) == -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:49:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf (f,
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:210:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) file, (char *) dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:236:6:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	    strcpy ((char *) base, (char *) e->d_name);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:90:5:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    vfprintf (stderr, fmt, args);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2563:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) complex_, OTLAYOUT_HEAD);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2564:5:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+    strcat ((char *) complex_, (char *) tagstring);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:679:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		sprintf ((char *) temp, "%4s=%g", tag, num);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:819:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+		    strcpy (x, s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:340:22:  [4] (buffer) sscanf:The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20).  Specify a limit to %s, or use a different input function. 
+	    if (sc && ec && sscanf ((char *) string, "[%s %[^]]]", sc, ec) == 2)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcpat.c:436:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *)new_path, (char *)relocated_font_file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcserialize.c:151:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) str_serialize, (const char *) str);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:959:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy ((char *) full, (char *) home);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:960:2:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+	strcat ((char *) full, (char *) s + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:599:5:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    vfprintf (stderr, fmt, args);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy ((char *) s, (char *) attr[i]);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1373:6:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	    strcpy (buf + (dot - s), decimal_point);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1375:6:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	    strcpy (buf + (dot - s) + dlen, dot + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2225:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy ((char *) prefix, (char *) fontconfig_instprefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3212:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy ((char *) file, (char *) dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3242:6:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	    strcpy ((char *) base, (char *) e->d_name);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:23:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf( stderr, format, ap );
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:53:10:  [4] (tmpfile) mktemp:Temporary file race condition (CWE-377).  
+    if (!mktemp (template) || mkdir (template, 0700))
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:71:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access (parent, F_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:73:14:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    else if (access (parent, F_OK) == -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:112:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy (n, dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:114:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy (&n[len + 1], e->d_name);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:201:5:  [4] (shell) system:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+    system (cmd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:204:5:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+    snprintf (conf, 1024, tconf, fontdir, cachedir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:230:5:  [4] (shell) system:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+    system (cmd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:269:5:  [4] (shell) system:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+    system (cmd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:47:10:  [4] (tmpfile) mktemp:Temporary file race condition (CWE-377).  
+    if (!mktemp (template) || mkdir (template, 0700))
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:65:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access (parent, F_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:67:14:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    else if (access (parent, F_OK) == -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:101:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy (n, dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:103:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy (&n[len + 1], e->d_name);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:157:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (xdg, tmp);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:162:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (confd, xdg);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:167:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access (confd, F_OK) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:179:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (fn, tmp);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:181:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (nfn, confd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:196:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access (nfn, F_OK) != 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:208:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (ud, tmp);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:210:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (nud, confd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:218:9:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+    if (access (nud, F_OK) != 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cache/fc-cache.c:308:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "Efrsy:Vvh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cache/fc-cache.c:310:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "Efrsy:Vvh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cat/fc-cat.c:277:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "Vvrh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cat/fc-cat.c:279:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "Vvrh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-conflist/fc-conflist.c:108:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "Vh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-conflist/fc-conflist.c:110:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "Vh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:61:24:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    return (FcChar8 *) getenv ("HOME");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-list/fc-list.c:123:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "vbf:qVh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-list/fc-list.c:125:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "vbf:qVh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-match/fc-match.c:127:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "asvbf:Vh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-match/fc-match.c:129:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "asvbf:Vh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-pattern/fc-pattern.c:117:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "cdf:Vh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-pattern/fc-pattern.c:119:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "cdf:Vh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-query/fc-query.c:121:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "i:bf:Vh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-query/fc-query.c:123:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "i:bf:Vh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-scan/fc-scan.c:116:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "bf:Vh", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-scan/fc-scan.c:118:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "bf:Vh")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:124:17:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt_long (argc, argv, "i:l:mVhv", longopts, NULL)) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:126:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt (argc, argv, "i:l:mVhv")) != -1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:254:20:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	const char *env = getenv ("FONTCONFIG_USE_MMAP");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1083:25:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    source_date_epoch = getenv("SOURCE_DATE_EPOCH");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1116:9:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    if (getenv("SOURCE_DATE_EPOCH"))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2004:23:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    env = (FcChar8 *) getenv ("FONTCONFIG_PATH");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2082:22:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        char *home = getenv ("HOME");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2086:13:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	    home = getenv ("USERPROFILE");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2097:23:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    const char *env = getenv ("XDG_CACHE_HOME");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2125:23:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    const char *env = getenv ("XDG_CONFIG_HOME");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2153:23:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    const char *env = getenv ("XDG_DATA_HOME");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2193:20:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	url = (FcChar8 *) getenv ("FONTCONFIG_FILE");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2467:24:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+    return (FcChar8 *) getenv ("FONTCONFIG_SYSROOT");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:208:10:  [3] (random) setstate:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+	state = setstate (statebuf);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:210:14:  [3] (random) random:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+    result = random ();
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:212:5:  [3] (random) setstate:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+    setstate (state);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:214:14:  [3] (random) lrand48:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+    result = lrand48 ();
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:224:2:  [3] (random) srand:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+	srand (time (NULL));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:229:12:  [3] (random) random:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+# error no random number generator function available.
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:574:6:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	e = getenv ("FC_DEBUG");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:61:10:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	langs = getenv ("FC_LANG");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:63:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	    langs = getenv ("LC_ALL");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:65:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	    langs = getenv ("LC_CTYPE");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:67:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	    langs = getenv ("LANG");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:106:13:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	env_file = getenv ("FONTCONFIG_FILE");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:107:13:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	env_path = getenv ("FONTCONFIG_PATH");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:791:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	char *env = getenv ("FC_DBG_MATCH_FILTER");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmutex.h:54:31:  [3] (misc) InitializeCriticalSection:Exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+#define fc_mutex_impl_init(M)	InitializeCriticalSection (M)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmutex.h:55:31:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+#define fc_mutex_impl_lock(M)	EnterCriticalSection (M)
+/home/capstone/Desktop/root/fontconfig-2.13.1/doc/edit-sgml.c:529:9:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    f = fopen (argv[1], "r");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:264:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char    line[MAX_LINE];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:282:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char		line[MAX_LINE];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:287:16:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    caseFile = fopen (argv[1], "r");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:109:9:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    f = fopen (file, "r");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:112:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	path[1024];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:117:6:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	f = fopen (path, "r");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:138:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char	    buf[1024];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:266:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char		*names[MAX_LANG];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:267:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char		*langs[MAX_LANG];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:277:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char		line[1024];
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:132:18:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	    set_index = atoi (optarg);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:77:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char out[37];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:195:6:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	    char suuid[37];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:229:18:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+        unsigned char in[64];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:234:31:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static void MD5Final(unsigned char digest[16], struct MD5Context *ctx);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:278:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    unsigned char 	hash[16];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:642:41:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	while (next[i] && (char *) object >= ((char *) next[i]->cache + next[i]->size))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1749:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy(p, buf, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1752:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(p, buf, t);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1761:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(ctx->in, buf, 64);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1770:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(ctx->in, buf, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1777:31:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static void MD5Final(unsigned char digest[16], struct MD5Context *ctx)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1814:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(digest, ctx->buf, 16);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1927:4:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	  strcat ((char *) fontconfig_path, "\\etc\\fonts");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2029:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	    strncpy ((char *) path[i], (const char *) e, colon - e);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2047:3:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+		strcat ((char *) fontconfig_path, "\\fonts");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2054:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    strcpy ((char *) path[i], (const char *) dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2113:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy (ret, home, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2114:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy (&ret[len], FC_DIR_SEPARATOR_S ".cache", 7);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2141:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy (ret, home, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2142:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy (&ret[len], FC_DIR_SEPARATOR_S ".config", 8);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2169:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy (ret, home, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2170:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy (&ret[len], FC_DIR_SEPARATOR_S ".local" FC_DIR_SEPARATOR_S "share", 13);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:790:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (map, ai.leaf->map, sizeof (ai.leaf->map));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:827:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (result, ai.leaf->map, sizeof (ai.leaf->map));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:1187:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (FcCharSetNumbers (&ent->set),
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:76:1:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+mkstemp (char *template)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:125:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(pathname, flags | FC_O_CLOEXEC | FC_O_LARGEFILE, mode);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:129:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(pathname, flags | FC_O_CLOEXEC | FC_O_LARGEFILE);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:143:10:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+    fd = mkstemp (template);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:174:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char statebuf[256];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:198:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char statebuf[256];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:578:19:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	    FcDebugVal = atoi (e);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:120:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[MAX_PATH+1];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:103:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    const char	fromcode[12];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:131:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    const char	lang[8];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:535:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char	fromcode[12];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1397:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy ((void *)foundry_, os2->achVendID, sizeof (os2->achVendID));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1658:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	    psname[256];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2684:9:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+        strcpy((char *) complex_, "ttable:Silf ");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:128:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&prefix[plen], FC_DIR_SEPARATOR_S "fontconfig", 11);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcint.h:592:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char c[256]; /* Enlarge as needed */
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:302:14:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	    v.u.i = atoi ((char *) string);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:548:2:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	sprintf ((char *) temp, "%d", v.u.i);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:551:2:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	sprintf ((char *) temp, "%g", v.u.d);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:561:2:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	sprintf ((char *) temp, "%g %g %g %g",
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:571:2:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	sprintf ((char *) temp, "[%g %g]", v.u.r->begin, v.u.r->end);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcpat.c:541:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+			memcpy(e, e0, FcPatternObjectCount (p) * sizeof (FcPatternElt));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcrange.c:153:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (r_serialize, r, sizeof (FcRange));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:79:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char full_path_name[MAX_PATH];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:229:6:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	    memcpy (p, dent, dentlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:297:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (f, dir, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:299:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&f[len + 1], files[n]->d_name, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:49:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (s, s1, s1l);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:50:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (s + s1l, s2, s2l + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:119:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		    memcpy (w->utf8, fcCaseFoldChars + fold->offset, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:789:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (ret, buf->buf, buf->len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:830:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy (new, buf->buf, buf->len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:928:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (p, s, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1169:9:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+        memcpy (strs, set->strs, set->num * sizeof (FcChar8 *));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:412:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    const char  name[16];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:474:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static const char *fcElementIgnoreName[16] = {
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:485:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	if (!strcmp ((char *) name, fcElementMap[i].name))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:488:17:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	if (!strncmp ((char *) name, fcElementIgnoreName[i], strlen (fcElementIgnoreName[i])))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1124:19:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	slen += strlen ((char *) attr[i]) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	strcpy ((char *) s, (char *) attr[i]);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:23:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	strcpy ((char *) s, (char *) attr[i]);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1358:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	buf[128];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2105:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&prefix[plen + 1], data, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2127:2:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	strcat ((char *) data, "\\fonts");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2140:2:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	strcat ((char *) data, "\\..\\share\\fonts");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2154:2:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	strcat ((char *) data, "fonts");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2208:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&prefix[plen + 1], data, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2227:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&prefix[plen + 1], data, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2251:2:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	strcat ((char *) data, "fontconfig\\cache");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2255:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char szFPath[MAX_PATH + 1];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2359:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (&prefix[plen + 1], s, dlen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2484:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char    name[16];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2494:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	if (!strcmp ((char *) op, map[i].name))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3351:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy (buf, s, buflen);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3412:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char            buf[BUFSIZ];
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3471:6:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	    char ebuf[BUFSIZ+1];
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:173:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char *basedir, template[512] = "/tmp/bz106632-XXXXXX";
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:174:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char cmd[512];
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:180:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char conf[1024];
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-conf.c:277:15:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    if ((fp = fopen(file, "rb")) == NULL)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:149:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char template[32] = "fontconfig-XXXXXXXX";
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:152:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char xdg[256], confd[256], fn[256], nfn[256], ud[256], nud[256];
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:158:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&xdg[len], "/.config");
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:163:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&confd[xlen], "/fontconfig");
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:180:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&fn[len], "/.fonts.conf");
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:182:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&nfn[dlen], "/fonts.conf");
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:188:15:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    if ((fp = fopen (fn, "wb")) == NULL)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:209:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&ud[len], "/.fonts.conf.d");
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:211:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy (&nud[dlen], "/conf.d");
+/home/capstone/Desktop/root/fontconfig-2.13.1/doc/edit-sgml.c:263:13:  [1] (buffer) getc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    int	c = getc (f);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cat/fc-cat.c:192:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int		    cache_len = strlen ((char *) cache);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:92:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    end = strlen (line);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:115:2:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	strcat (path, "/");
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:212:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	dot = file + strlen(file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:214:5:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+    strncpy (name, file, dot - file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:225:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    char    *lang = malloc (strlen (name) + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:69:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int	    file_len = strlen ((char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:119:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	write (fd, out, strlen (out));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:199:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	    len = read (fd, suuid, 36);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:284:50:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    MD5Update (&ctx, (const unsigned char *)dir, strlen ((const char *) dir));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:982:6:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if (read (fd, cache, fd_stat->st_size) != fd_stat->st_size)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1134:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    if (read (fd, &c, sizeof (FcCache)) != sizeof (FcCache))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1486:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(ent->d_name) != 32 + strlen ("-" FC_ARCHITECTURE FC_CACHE_SUFFIX) ||
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1486:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(ent->d_name) != 32 + strlen ("-" FC_ARCHITECTURE FC_CACHE_SUFFIX) ||
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1958:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    osize = strlen ((char *) dir) + 1 + strlen ((char *) file) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1958:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    osize = strlen ((char *) dir) + 1 + strlen ((char *) file) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1972:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if ((!path[0] || (path[strlen((char *) path)-1] != '/' &&
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1973:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		      path[strlen((char *) path)-1] != '\\')) &&
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1977:2:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	strcat ((char *) path, "\\");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1979:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if ((!path[0] || path[strlen((char *) path)-1] != '/') && file[0] != '/')
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1980:2:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	strcat ((char *) path, "/");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2025:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		colon = e + strlen ((char *) e);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2029:6:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	    strncpy ((char *) path[i], (const char *) e, colon - e);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2051:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    path[i] = malloc (strlen ((char *) dir) + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2107:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t len = home ? strlen ((const char *)home) : 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2135:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t len = home ? strlen ((const char *)home) : 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2163:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t len = home ? strlen ((const char *)home) : 0;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:87:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    l = strlen (template);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:159:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+   if (_mktemp_s(template, strlen(template) + 1) != 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:246:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (strlen ((char *) dir) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:134:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    len = strlen (p);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:94:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    size_t len = strlen ((const char *)sysroot);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:141:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		len = strlen ((const char *)sysroot);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:204:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    file = (FcChar8 *) malloc (strlen ((char *) dir) + 1 + FC_MAX_FILE_LEN + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:211:5:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+    strcat ((char *) file, "/");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:212:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    base = file + strlen ((char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:234:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (e->d_name[0] != '.' && strlen (e->d_name) < FC_MAX_FILE_LEN)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:112:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    c->format_len = strlen ((const char *) format);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:727:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	c->word = c->word + strlen ((const char *) c->word) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:926:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    from_len = strlen (from);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:938:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    to_len = strlen (to);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1558:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		    len = strlen ((const char *) pp);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1639:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    end = start + strlen ((char *) start);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1642:2:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	strncpy ((char *) family, (char *) start, end - start);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1683:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    len = strlen ((const char *)family);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1701:6:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	    strncpy (psname, tmp, 255);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2562:2:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	strcat ((char *) complex_, " ");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:123:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	plen = strlen ((const char *)prefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fclang.c:236:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	mlen = strlen (modifier);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fclang.c:256:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tlen = strlen (territory);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fclang.c:258:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    llen = strlen ((const char *) s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:98:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    len = strlen ((const char *)v1_string);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:810:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		    len = strlen (s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:335:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    size_t len = strlen ((const char *) string);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:419:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    save = malloc (strlen ((char *) name) + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:629:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen ((const char *)p) > 1)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcobjs.c:114:65:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    const struct FcObjectTypeInfo *o = FcObjectTypeLookup (str, strlen (str));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcobjs.c:125:65:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    const struct FcObjectTypeInfo *o = FcObjectTypeLookup (str, strlen (str));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcpat.c:396:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t new_path_len = strlen ((char *)relocated_font_file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcserialize.c:142:46:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    return FcSerializeAlloc (serialize, str, strlen ((const char *) str) + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:218:60:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    size_t dentlen = FcPtrToOffset (dent, dent->d_name) + strlen (dent->d_name) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:265:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t len = strlen ((const char *)dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:281:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t dlen = strlen (files[n]->d_name);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:42:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int	    s1l = strlen ((char *) s1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:43:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int	    s2l = strlen ((char *) s2);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:67:22:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    const FcChar8   *read;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:84:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int		len = strlen((char*)w->src);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:141:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    if (w->read)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:365:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int	    s1len = strlen ((char *) s1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:366:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    int	    s2len = strlen ((char *) s2);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:428:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		l1 = strlen ((char *) string);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:429:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		l2 = strlen ((char *) glob);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:913:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len += strlen ((const char *)s) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:927:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen ((const char *)s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:955:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size = strlen ((char *) home) + strlen ((char *) s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:955:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size = strlen ((char *) home) + strlen ((char *) s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1001:5:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+    strncpy ((char *) dir, (const char *) file, slash - file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1025:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size = strlen ((char *) s) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1077:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t len = strlen (str);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1265:2:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	strncpy ((char *) lang, p, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:488:55:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (!strncmp ((char *) name, fcElementIgnoreName[i], strlen (fcElementIgnoreName[i])))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1124:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	slen += strlen ((char *) attr[i]) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1144:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	s += strlen ((char *) s) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1316:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (end != s + strlen ((char *) s))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1348:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    dlen = strlen (decimal_point);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1359:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int	slen = strlen (s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1371:6:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	    strncpy (buf, s, dot - s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1408:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (end != s + strlen ((char *) s))
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2094:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t plen = strlen ((const char *)prefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2095:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t dlen = strlen ((const char *)data);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2152:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (data [strlen ((const char *) data) - 1] != '\\')
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2153:6:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	    strcat ((char *) data, "\\");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2157:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (strlen ((char *) data) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2196:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t plen = strlen ((const char *)prefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2197:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t dlen = strlen ((const char *)data);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2216:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t plen = strlen ((const char *)fontconfig_instprefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2217:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t dlen = strlen ((const char *)data);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2249:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (data [strlen ((const char *) data) - 1] != '\\')
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2250:6:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+	    strcat ((char *) data, "\\");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2263:2:  [1] (buffer) strncat:Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120).  Consider strcat_s, strlcat, snprintf, or automatically resizing strings. Risk is low because the source is a constant string.
+	strncat(szFPath, "\\fontconfig\\cache", MAX_PATH - 1 - strlen(szFPath));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2263:57:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	strncat(szFPath, "\\fontconfig\\cache", MAX_PATH - 1 - strlen(szFPath));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2264:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(szFPath) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2272:2:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	strncpy((char *) data, szFPath, len);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2275:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (strlen ((char *) data) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2347:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t plen = strlen ((const char *)prefix);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2348:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t dlen = strlen ((const char *)s);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3205:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    file = (FcChar8 *) malloc (strlen ((char *) dir) + 1 + FC_MAX_FILE_LEN + 1);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3213:5:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+    strcat ((char *) file, "/");
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3214:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    base = file + strlen ((char *) file);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3238:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    (d_len = strlen (e->d_name)) < FC_MAX_FILE_LEN &&
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3298:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    len = strlen ((const char *) buffer);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3467:8:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	len = read (fd, buf, BUFSIZ);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3477:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    size_t len = strlen (tmp);
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3478:6:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	    strncpy (ebuf, tmp, FC_MIN (BUFSIZ, len));
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:85:16:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if ( stream->read )
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:87:18:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    if ( stream->read( stream, pos, 0, 0 ) )
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:107:16:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if ( stream->read )
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:117:26:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    read_bytes = stream->read( stream, stream->pos,
+/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:153:16:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if ( stream->read )
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:66:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (strlen (dir) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:87:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t len = strlen (dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:103:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	l = strlen (e->d_name) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:60:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (strlen (dir) == 0)
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:81:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t len = strlen (dir);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:97:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	l = strlen (e->d_name) + 1;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:151:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t len = strlen (tmp), xlen, dlen;
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:161:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    xlen = strlen (xdg);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:164:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    dlen = strlen (confd);
+/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:193:37:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    fwrite (content, sizeof (char), strlen (content), fp);

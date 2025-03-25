@@ -1,0 +1,957 @@
+<ul>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:914:6: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	if (chmod(tn, 0600) &lt; OK)
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:930:7: <b>  [5] </b> (race) <i> chown:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchown( ) instead. </i>
+<pre>
+		if (chown(tn, pw-&gt;pw_uid, -1) != 0) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:256:13: <b>  [5] </b> (race) <i> chown:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchown( ) instead. </i>
+<pre>
+		if (OK == chown(SPOOL_DIR, -1, gr-&gt;gr_gid)) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:60:9: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	(void) strcpy(temp, str);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.c:282:6: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	if (access(REBOOT_FILE, F_OK) == 0) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.h:125:5: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+				printf message;
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:305:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:359:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:421:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+		strcpy(Directory, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:427:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+		strcat(Directory, template);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:555:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:690:3: <b>  [4] </b> (shell) <i> execlp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		execlp(_PATH_BSHELL, _PATH_BSHELL, "-c", q, NULL);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:828:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(tn, MAX_FNAME, CRON_TAB("tmp.XXXXXX"));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:937:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(n, sizeof(n), CRON_TAB(User));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:121:4: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+			sprintf(syscrond_fname, "%s/%s", SYSCRONDIR,
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:195:10: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+		(void) strcat(fname, dp-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:196:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		sprintf(tabname,"%s/%s", SYSCRONDIR, dp-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:227:10: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+		(void) strcpy(fname, dp-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:228:3: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+		snprintf(tabname, PATH_MAX+1, CRON_TAB(fname));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:361:4: <b>  [4] </b> (shell) <i> execle:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+			execle(shell, shell, "-c", e-&gt;cmd, (char *)0, jobenv);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:540:9: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	(void) snprintf(mailcmd, sizeof(mailcmd),
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/env.c:260:13: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+					(void) strcpy(val, val+1);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/env.c:268:9: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	(void) sprintf(envstr, "%s=%s", name, val);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/externs.h:62:26: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+extern	char		*getenv(), *strcpy(), *strchr(), *strtok();
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:299:10: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+		(void) snprintf(pidfile, MAX_FNAME, PIDFILE, PIDDIR);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:152:3: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		execvp(gargv[0], gargv);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:154:3: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		execvp(argv[0], argv);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:226:19: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	if (overwrite &amp;&amp; getenv(name))
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.c:468:25: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while (EOF != (argch = getopt(argc, argv, getoptarg))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:183:25: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while (EOF != (argch = getopt(argc, argv, getoptarg))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:323:15: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	if (!(ctnh = getenv("CRONTAB_NOHEADER")) || toupper(*ctnh) != 'N') {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:420:11: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	if ((tmp=getenv("TMPDIR")) &amp;&amp; strlen(tmp) &lt; MAX_FNAME) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:645:19: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	if ((!((editor = getenv("VISUAL")) &amp;&amp; strlen(editor)))
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:646:19: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	 &amp;&amp; (!((editor = getenv("EDITOR")) &amp;&amp; strlen(editor)))
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/externs.h:62:15: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+extern	char		*getenv(), *strcpy(), *strchr(), *strtok();
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/externs.h:80:5: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+int	getopt __P((int, char * const *, const char *));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:43:1: <b>  [2] </b> (race) <i> vfork:
+  On some old systems, vfork() permits race conditions, and it's very
+  difficult to use correctly (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fork() instead. </i>
+<pre>
+vfork() {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:73:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	static char buf[32];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:112:12: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if ((fd = open("/dev/tty", 2)) &gt;= 0)
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:120:30: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	(void) close(STDIN);	(void) open("/dev/null", 0);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:121:31: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	(void) close(STDOUT);	(void) open("/dev/null", 1);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/compat.c:122:31: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	(void) close(STDERR);	(void) open("/dev/null", 2);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.c:89:10: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		(void) open("dev/null", 0);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.c:112:3: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+		strcpy( cron_default_mail_charset, "US-ASCII");
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.c:479:16: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+			log_level = atoi(optarg);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.h:313:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char	cron_default_mail_charset[MAX_ENVSTR] = "";
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/cron.h:335:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+extern	char	cron_default_mail_charset[MAX_ENVSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:58:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static	char		Filename[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:59:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static	char		Directory[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:271:23: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+			if (!(NewCrontab = fopen(Filename, "r"))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:298:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	n[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:306:12: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if (!(f = fopen(n, "r"))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:353:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	n[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:354:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	q[MAX_TEMPSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:423:3: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+		strcpy(Directory,"/tmp");
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:446:11: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if ((nfd=open(Filename, O_CREAT|O_EXCL|O_WRONLY, 0600)) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:465:9: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if ((t=open(Filename, O_RDONLY)) &lt; 0) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:505:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char fname[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:545:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char		n[MAX_FNAME], q[MAX_TEMPSTR], *editor;
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:556:12: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if (!(f = fopen(n, "r"))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:563:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		if (!(f = fopen("/dev/null", "r"))) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:790:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char tn[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:804:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	n[MAX_FNAME], envstr[MAX_ENVSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:830:7: <b>  [2] </b> (tmpfile) <i> mkstemp:
+  Potential for temporary file vulnerability in some circumstances. Some
+  older Unix-like systems create temp files with permission to write by all
+  by default, so be sure to set the umask to override this. Also, some older
+  Unix systems might fail to use O_EXCL when opening the file, so make sure
+  that O_EXCL is used by the library (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+	fd = mkstemp(tn);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:71:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char		syscrond_fname[PATH_MAX+1];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:175:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char	fname[MAXNAMLEN+1],
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:194:10: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+		(void) strcpy(fname,"*system*");
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:216:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char	fname[MAXNAMLEN+1],
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:334:21: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		if ((crontab_fd = open(tabname, O_RDONLY|O_NOFOLLOW, 0)) &lt; OK) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/database.c:385:21: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		if ((crontab_fd = open(tabname, O_RDONLY, 0)) &lt; OK) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:190:16: <b>  [2] </b> (tmpfile) <i> tmpfile:
+  Function tmpfile() has a security flaw on some systems (e.g., older System
+  V systems) (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+	if ((tmpout = tmpfile()) == NULL) {
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:305:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:313:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:321:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:372:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char logcmd[MAX_COMMAND + 8];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:465:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char		msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:534:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	auto char	mailcmd[MAX_COMMAND];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:535:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	auto char	hostname[MAXHOSTNAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:599:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[4096];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:625:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char buf[MAX_TEMPSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:643:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char logcmd[MAX_COMMAND + 8];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/entry.c:93:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	cmd[MAX_COMMAND];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/entry.c:94:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	envstr[MAX_ENVSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/entry.c:532:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	temp[MAX_TEMPSTR], *pc;
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/entry.c:575:13: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+		*numptr = atoi(temp);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/env.c:155:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char name[MAX_ENVSTR], val[MAX_ENVSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/externs.h:27:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+extern char *tzname[2];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/externs.h:150:15: <b>  [2] </b> (race) <i> vfork:
+  On some old systems, vfork() permits race conditions, and it's very
+  difficult to use correctly (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fork() instead. </i>
+<pre>
+extern	PID_T		vfork __P((void));
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:295:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char	pidfile[MAX_FNAME];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:296:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char	buf[MAX_TEMPSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:300:20: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		if ((-1 == (fd = open(pidfile, O_RDWR|O_CREAT, 0644)))
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:441:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char line[MAX_TEMPSTR];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:479:11: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		allow = fopen(ALLOW_FILE, "r");
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:489:10: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		deny = fopen(DENY_FILE, "r");
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:552:11: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		LogFD = open(LOG_FILE, O_WRONLY|O_APPEND|O_CREAT, 0600);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:625:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	static char retbuf[2][MAX_TEMPSTR + 1];	/* sure wish C had GC */
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/misc.c:707:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	static char ret[64];	/* zone name might be &gt;3 chars */
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:59:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char *argv[MAX_ARGS + 1];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:61:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char **pop, *vv[2];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:63:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char *gargv[1000];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:128:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:136:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:144:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char msg[256];
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/popen.c:172:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		free((char *)argv[argc]);
+</pre>
+<li>/home/capstone/Desktop/root/cron-3.0pl1/user.c:209:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	envstr[MAX_ENVSTR];
+</pre>
+</ul>

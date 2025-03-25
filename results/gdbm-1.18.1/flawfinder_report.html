@@ -1,0 +1,1035 @@
+<ul>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:174:29: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  fd = ndbm_open_dir_file0 (strcat (strcpy (file_name, base), DIRSUF),
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:174:37: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  fd = ndbm_open_dir_file0 (strcat (strcpy (file_name, base), DIRSUF),
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:219:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (pag_file, file);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:24:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (fp, fmt, *(type*) ptr);              \
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/err.c:28:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:168:4: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	  strcpy (dbf-&gt;last_errstr, errstr);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:170:4: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+	  strcat (dbf-&gt;last_errstr, syserrstr);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:94:4: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	  access (dbname, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:190:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (fp, mesg, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:446:2: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	fprintf (param-&gt;fp, 
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:570:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1959:12: <b>  [4] </b> (shell) <i> popen:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	  pagfp = popen (pager, "w");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2000:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access (GDBMTOOLRC, R_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2019:11: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+      if (access (fname, R_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2041:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:817:21: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#  define YYFPRINTF fprintf
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:136:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy (hname, HISTFILE_PREFIX);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:137:7: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+      strcat (hname, rl_readline_name);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:138:7: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+      strcat (hname, HISTFILE_SUFFIX);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2320:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/mem.c:70:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (p, str);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:475:4: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	  strcpy (&amp;buf[n], arg);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:504:4: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	  strcpy (&amp;buf[n], opt-&gt;opt_long);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:509:8: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	      strcpy (&amp;buf[n], arg);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:541:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf (version_etc_copyright, _("(C)"), "2011-2017");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:59:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (buf, name);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:62:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (buf, INITIAL_SUFFIX);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:64:10: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  while (access (buf, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:391:7: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+      strcat (strcpy (new_name, dbf-&gt;name), TMPSUF);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:391:15: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcat (strcpy (new_name, dbf-&gt;name), TMPSUF);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:107:4: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	  vfprintf (stdout, prompt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/var.c:342:8: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	      fprintf (fp, (vp-&gt;flags &amp; VARF_OCTAL) ? "%s=%03o" : "%s=%d",
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/d_creat_ce.c:84:4: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+   execl (argv[1], "fdop",
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:84:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (strcpy (dbname, *argv), PAGSUF);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:84:11: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcat (strcpy (dbname, *argv), PAGSUF);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:86:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access (dbname, F_OK))
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_open_ce.c:62:3: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  execl (argv[1], "fdop",
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_reorg_ce.c:68:3: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  execl (argv[1], "fdop",
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:37:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:74:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtrecover.c:36:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:374:24: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	  const char *lines = getenv ("LINES");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:381:23: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  const char *lines = getenv ("LINES");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2007:17: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+      char *p = getenv ("HOME");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2074:39: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  variable_set ("pager", VART_STRING, getenv ("PAGER"));
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:578:12: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+      rc = getopt_long (argc, argv, short_options, long_options, NULL);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:580:12: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+      rc = getopt (argc, argv, short_options);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:406:7: <b>  [3] </b> (random) <i> srandom:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+      srandom (time (NULL));
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:409:29: <b>  [3] </b> (random) <i> random:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+	  numeral_t n = range_get (random () % range_total);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:65:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char dirbuf[DEF_DIR_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:112:9: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	  fd = open (file_name, flags);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:144:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (file_name, flags | O_CREAT, pagst.st_mode &amp; 0777);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:220:3: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+  strcat (pag_file, ".pag");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/bucket.c:178:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (bucket, dbf-&gt;bucket, size);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/bucket.c:187:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy (bucket, dbf-&gt;bucket_cache[i].ca_bucket, size);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:219:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *delim[2];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:308:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (xd-&gt;dptr + xd-&gt;off, val, size);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/debug.c:72:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+datbuf_format (char vbuf[DATBUFSIZE], const char *buf, size_t size)
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/debug.c:119:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char vbuf[DATBUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_dump.c:60:15: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	    format = atoi (optarg);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_dump.c:107:12: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      fp = fopen (filename, "w");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_load.c:248:12: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      fp = fopen (filename, "r");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdefs.h:109:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char  key_start[SMALL]; /* Up to the first SMALL bytes of the key.  */
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdump.c:181:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      nfd = open (filename, O_WRONLY | O_CREAT | O_EXCL, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdump.c:189:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      nfd = open (filename, O_WRONLY | O_CREAT | O_TRUNC, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:102:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+const char * const gdbm_errlist[_GDBM_MAX_ERRNO+1] = {
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:169:4: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	  strcat (dbf-&gt;last_errstr, ": ");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:112:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      nfd = open (exportfile, O_WRONLY | O_CREAT | O_EXCL, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:120:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      nfd = open (exportfile, O_WRONLY | O_CREAT | O_TRUNC, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmfetch.c:65:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (return_val.dptr, find_data, return_val.dsize);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmimp.c:177:8: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fp = fopen (importfile, "r");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:79:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[80];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:105:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy (file-&gt;linebuf + file-&gt;lblevel, buf, n);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:140:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (file-&gt;buffer + file-&gt;buflevel, file-&gt;linebuf, n);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:464:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[256];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:630:8: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fp = fopen (filename, "r");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:227:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (dbf-&gt;name, O_RDWR|O_TRUNC, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:565:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (dbf-&gt;header, &amp;partial_header, sizeof (gdbm_file_header));
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:710:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (file, fbits, mode);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmseq.c:90:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (return_val-&gt;dptr, find_data, return_val-&gt;dsize);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmstore.c:152:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (dbf-&gt;bucket-&gt;h_table[elem_loc].key_start, key.dptr,
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:440:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:529:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (key_data.dptr, PARAM_DATUM (param, 0).dptr, key_data.dsize);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1378:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  { S(open), T_CMD,
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1626:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (copy, s, l);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1872:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char argbuf[128];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:211:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char msg_ctxt_id[msgctxt_len + msgid_len];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:213:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:221:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (msg_ctxt_id, msgctxt, msgctxt_len - 1);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:223:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (msg_ctxt_id + msgctxt_len, msgid, msgid_len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:257:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char msg_ctxt_id[msgctxt_len + msgid_len];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:259:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:267:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (msg_ctxt_id, msgctxt, msgctxt_len - 1);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:269:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (msg_ctxt_id + msgctxt_len, msgid, msgid_len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:1120:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:1374:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char yymsgbuf[128];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/input-file.c:69:8: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fp = fopen (name, "r");
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:230:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (buf, input_ptr (), len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:1041:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (file, p, len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:1163:22: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+                     memcpy (yylval.string, yytext+1, yyleng-2);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2216:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char ptr[1];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2242:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (seg-&gt;ptr, s, l);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2271:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (p, seg-&gt;ptr, seg-&gt;len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:274:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy (cbuf, (char*) dbf-&gt;mapped_region + dbf-&gt;mapped_pos, nbytes);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:327:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy ((char*) dbf-&gt;mapped_region + dbf-&gt;mapped_pos, cbuf, nbytes);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:408:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[RMARGIN+1];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:393:12: <b>  [2] </b> (tmpfile) <i> mkstemp:
+  Potential for temporary file vulnerability in some circumstances. Some
+  older Unix-like systems create temp files with permission to write by all
+  by default, so be sure to set the umask to override this. Also, some older
+  Unix systems might fail to use O_EXCL when opening the file, so make sure
+  that O_EXCL is used by the library (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+      fd = mkstemp (new_name);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:35:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (tmp, dir, dirlen);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:38:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (tmp + dirlen, file, fillen);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:40:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (tmp + dirlen + fillen, suf, suflen);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:60:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy (user, p, len);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/src/var.c:130:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/d_creat_ce.c:49:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+   char fdbuf[2][80];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:37:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/fdop.c:31:15: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+      int n = atoi (*++argv);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_open_ce.c:47:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char fdbuf[80];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_reorg_ce.c:47:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char fdbuf[80];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:84:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:132:15: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	block_size = atoi (arg + 11);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtopt.c:328:15: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	block_size = atoi (arg + 11);
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:75:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char buffer[1024];
+</pre>
+<li>/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:91:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (buffer + bufoff, str, len);
+</pre>
+</ul>

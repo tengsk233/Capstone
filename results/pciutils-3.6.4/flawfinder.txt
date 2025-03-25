@@ -1,0 +1,418 @@
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:130:7:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+  if (readlink(path, rel_path, sizeof(rel_path)) < 0)
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:238:7:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+  n = readlink(name, buf, DRIVER_BUF_SIZE);
+/home/capstone/Desktop/root/pciutils-3.6.4/common.c:24:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf(stderr, msg, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:246:21:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  p = pci_malloc(d->access, sizeof(*p) + strlen(value));
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:250:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy(p->value, value);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:93:3:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+  snprintf(command, sizeof (command), AIX_ODMGET_CMD, name);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:94:17:  [4] (shell) popen:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  odmget_pipe = popen(command, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:135:16:  [4] (shell) popen:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  lsdev_pipe = popen(command, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:149:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy(name, buf);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:224:24:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  fd = aix_bus_open(d->access, d->bus);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:246:24:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  fd = aix_bus_open(d->access, d->bus);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/caps.c:16:39:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_cap *cap = pci_malloc(d->access, sizeof(*cap));
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:37:42:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct dump_data *dd = pci_malloc(dev->access, sizeof(struct dump_data) + len - 1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:46:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(name, R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c:80:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:75:26:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  d->aux = pci_malloc(d->access, sizeof(mach_port_t));
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-ports.c:32:27:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+#error Do not know how to access I/O ports on this OS.
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:128:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf(stderr, msg, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:141:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf(stderr, msg, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:152:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf(stdout, msg, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:40:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+  sprintf(buf, "%s%s", pw->pw_dir, name+1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:137:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+  sprintf(tmpname, "%s.tmp-%s-%d", name, hostname, this_pid);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:77:11:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+    res = snprintf(buf, size, ((flags & PCI_LOOKUP_MIXED) ? "%s [%s]" : "%s %s"), unknown, num);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:210:4:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	  sprintf(pifbuf, "%s%s%s%s%s",
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:36:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(name, R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:42:8:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (!access(name, W_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/obsd-device.c:30:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(name, R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/pci.h:147:22:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/pread.h:38:30:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	  struct pci_access *a = d->access;							\
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:32:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(name, R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:74:13:  [4] (buffer) sscanf:The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20).  Specify a limit to %s, or use a different input function. If the scanf format is influenceable by an attacker, it's exploitable.
+      cnt = sscanf(buf, "%x %x %x" F F F F F F F F F F F F F F,
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:118:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sylixos-device.c:42:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(name, R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysdep.h:69:11:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+  #define snprintf _snprintf
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysdep.h:69:20:  [4] (format) _snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+  #define snprintf _snprintf
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:40:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access(sysfs_name(a), R_OK))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:83:20:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		   sysfs_name(d->access), d->domain, d->bus, d->dev, d->func, object);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:93:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:134:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat(path, rel_path);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:154:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:310:27:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+      sysfs_fill_slots(d->access);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:356:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:460:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  struct pci_access *a = d->access;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/types.h:72:47:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define PCI_PRINTF(x,y) __attribute__((format(printf, x, y)))
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:432:3:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  printf(fmt,
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:446:3:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  printf(fmt,
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:464:3:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  printf(fmt,
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:134:7:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+      sprintf(name, "/lib/modules/%s/modules.pcimap", uts.release);
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:166:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy(e->module, line);
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:229:29:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  base = pci_get_param(dev->access, "sysfs.path");
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:160:28:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+static char * FORMAT_CHECK(printf, 3, 4)
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:170:13:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+  int res = vsnprintf(p, end - p, fmt, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:383:9:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+        printf(" %016" PCI_U64_FMT_X "-%016" PCI_U64_FMT_X, base, limit);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:453:6:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	    printf(PCIADDR_PORT_FMT, a);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:472:6:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	    printf(PCIADDR_T_FMT, a);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:518:5:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    printf(PCIADDR_T_FMT, rom & PCI_ROM_ADDRESS_MASK);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:840:2:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	printf(", IRQ " PCIIRQ_FMT, irq);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:920:7:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+      printf((opt_machine >= 2) ? "Slot:\t" : "Device:\t");
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:1089:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf(stderr, help_msg, pacc->id_file_name);
+/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:69:5:  [4] (format) vprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    vprintf(fmt, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:173:7:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+      printf(formats[width]+1, x);
+/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:396:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf(stderr, msg, args);
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:172:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+extern char *getenv(const char *name);
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:179:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+extern char *getenv();
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:354:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+		} else if (getenv("POSIXLY_CORRECT") != NULL)
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:617:5:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+int getopt(int argc, char *const *argv, const char *optstring)
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:622:5:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+int getopt_long(int argc, char *const *argv, const char *options, const struct option *long_options, int *opt_index)
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:642:7:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+		c = getopt(argc, argv, "abc:d:0123456789");
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:102:12:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+extern int getopt (int argc, char *const *argv, const char *shortopts);
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:104:12:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+extern int getopt_long (int argc, char *const *argv, const char *shortopts,
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:116:12:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+extern int getopt ();
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:117:12:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+extern int getopt_long ();
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-io-windows.h:39:9:  [3] (misc) LoadLibrary:Ensure that the full path to the library is specified, or current directory may be used (CWE-829, CWE-20).  Use registry entry or GetWindowsDirectory to find library path, if you aren't already. 
+  lib = LoadLibrary("WinIo.dll");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:137:10:  [3] (buffer) realpath:This function does not protect against buffer overflows, and some implementations can overflow internally (CWE-120/CWE-785!).  Ensure that the destination buffer is at least of size MAXPATHLEN, andto protect against implementation problems, the input argument should also be checked to ensure it is no larger than MAXPATHLEN. 
+  return realpath(path, NULL);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:1020:15:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+  while ((i = getopt(argc, argv, options)) != -1)
+/home/capstone/Desktop/root/pciutils-3.6.4/common.c:52:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(copy, str, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/example.c:17:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char namebuf[1024], *name;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:98:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(buf, d->cache + pos, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:145:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(d->cache + pos, buf, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:175:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy(d->cache + pos, buf, l);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:69:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char devbuf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:73:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      bp->bus_fd = open(devbuf, mode, 0);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:88:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char command[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:89:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:132:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:61:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:67:13:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  if (!(f = fopen(name, "r")))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:108:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		  memcpy(((struct dump_data *) dev->aux)->data, dd->data, 256);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:154:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(buf, dd->data + pos, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:69:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open(name, O_RDWR, 0);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:72:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      fd = open(name, O_RDONLY, 0);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:98:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char path[NAME_MAX];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:99:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char server[NAME_MAX];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:239:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy(buf, data, nread);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:304:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy(&regions, buf, size);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:341:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy(&rom, buf, size);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-io-haiku.h:67:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  poke_driver_fd = open(POKE_DEVICE_FULLNAME, O_RDWR);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:117:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(t, s, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/internal.h:81:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char value[1];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:50:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char line[MAX_LINE];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:66:7:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  f = fopen(name, "rb");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:121:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char hostname[256], *tmpname, *name;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:139:7:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  f = fopen(tmpname, "wb");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hash.c:79:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(n->name, text, len+1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:24:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char modalias[64];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:28:19:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+  if (disabled && atoi(disabled))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:34:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v%08X*", id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:38:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v%08Xd%08X*", id1, id2);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:42:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v%08Xd%08Xsv%08Xsd%08X*", id1, id2, id3, id4);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:46:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v*d*sv%08Xsd%08X*", id1, id2);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:50:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02X*", id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:54:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02Xsc%02X*", id1, id2);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:58:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02Xsc%02Xi%02X*", id1, id2, id3);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:163:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char name[256], dnsname[512], txt[256], *domain;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:176:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%04x", id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:179:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%04x.%04x", id2, id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:182:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%04x.%04x.%04x.%04x", id4, id3, id2, id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:185:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%04x.%04x.s", id2, id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:188:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%02x.c", id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:191:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%02x.%02x.c", id2, id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:194:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(name, "%02x.%02x.%02x.c", id3, id2, id1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:231:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy(txt, &data[j+1], data[j]);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:36:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(new_name, a->id_file_name, len - 3);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:55:22:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+#define pci_open(a)		fopen(a->id_file_name, "r")
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:87:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char line[MAX_LINE];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:128:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char numbuf[16], pifbuf[32];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:150:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x", iv);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:156:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x", id);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:162:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x:%04x", iv, id);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:169:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x", isv);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:178:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x", isd);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:188:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x:%04x", isv, isd);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:193:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%04x", icls);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:205:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf(numbuf, "%02x", ipif);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.h:18:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char name[1];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:54:11:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  a->fd = open(name, mode, 0);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/obsd-device.c:44:11:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  a->fd = open(name, O_RDWR, 0);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:61:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[512];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:65:7:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  f = fopen(buf, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:122:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[1024];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:132:15:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      a->fd = open(buf, a->fd_rw ? O_RDWR : O_RDONLY);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:140:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	  a->fd = open(buf, a->fd_rw ? O_RDWR : O_RDONLY);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:95:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char namebuf[OBJNAMELEN];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:99:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open(namebuf, O_RDONLY);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:125:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char path[2*OBJNAMELEN], rel_path[OBJNAMELEN];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:143:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[OBJBUFSIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:155:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char namebuf[OBJNAMELEN], buf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:160:10:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  file = fopen(namebuf, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:194:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char dirname[1024];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:247:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char dirname[1024];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:261:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char namebuf[OBJNAMELEN], buf[16];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:274:14:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      file = fopen(namebuf, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:317:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[OBJBUFSIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:324:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[OBJBUFSIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:357:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char namebuf[OBJNAMELEN];
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:370:16:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	  a->fd_vpd = open(namebuf, O_RDONLY);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:380:15:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      a->fd = open(namebuf, a->fd_rw ? O_RDWR : O_RDONLY);
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:62:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	c += sprintf(c, "x%d", 1 << (i + 2*agp3));
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:67:5:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+    strcpy(buf, "<none>");
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:74:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char rate[16];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:158:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static const char * const sec_clock_freq[8] = { "conv", "66MHz", "100MHz", "133MHz", "?4", "?5", "?6", "?7" };
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:217:10:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static char * const widths[8] = { "8bit", "16bit", "[2]", "32bit", "2bit", "4bit", "[6]", "N/C" };
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:224:10:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static char * const freqs[16] = { "200MHz", "300MHz", "400MHz", "500MHz", "600MHz", "800MHz", "1.0GHz", "1.2GHz",
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:1366:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char ssnamebuf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:495:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static const char arb_selects[8][7] = { "Fixed", "WRR32", "WRR64", "WRR128", "??4", "??5", "??6", "??7" };
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:496:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static const char vc_arb_selects[8][8] = { "Fixed", "WRR32", "WRR64", "WRR128", "TWRR128", "WRR256", "??6", "??7" };
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:497:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[8];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:582:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[8];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:804:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char been_there[0x1000];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:106:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char module[1];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:116:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *name, line[1024];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:125:11:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      f = fopen(name, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:135:11:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      f = fopen(name, "r");
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:223:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char name[1024], *drv, *base;
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:254:10:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static char prev_module[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:273:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[DRIVER_BUF_SIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:292:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[DRIVER_BUF_SIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:188:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char namebuf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:262:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char line[LINE_BUF_SIZE];
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-vpd.c:165:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	      memcpy(id, buf, 2);
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:312:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char classbuf[128], devbuf[128];
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:344:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char ssnamebuf[256];
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:912:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char classbuf[128], vendbuf[128], devbuf[128], svbuf[128], sdbuf[128];
+/home/capstone/Desktop/root/pciutils-3.6.4/lspci.h:64:76:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+#define TABLE(tab,x,buf) ((x) < sizeof(tab)/sizeof((tab)[0]) ? (tab)[x] : (sprintf((buf), "??%d", (x)), (buf)))
+/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:81:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char slot[16];
+/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:83:3:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+  sprintf(slot, "%04x:%02x:%02x.%x", dev->domain, dev->bus, dev->dev, dev->func);
+/home/capstone/Desktop/root/pciutils-3.6.4/common.c:50:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  int len = strlen(str) + 1;
+/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:165:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define	my_strlen	strlen
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:99:25:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  else if (!d->methods->read(d, pos, buf, len))
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:130:22:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  return d->methods->read(d, pos, buf, len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:246:42:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  p = pci_malloc(d->access, sizeof(*p) + strlen(value));
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:143:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      len = strlen(buf);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c:201:69:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  return pci_generic_block_op(d, pos, buf, len, d->access->methods->read);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-ports.c:81:14:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      if (m->read(&d, PCI_CLASS_DEVICE, (byte *) &class, sizeof(class)) &&
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-ports.c:83:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	  m->read(&d, PCI_VENDOR_ID, (byte *) &vendor, sizeof(vendor)) &&
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:115:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  int len = strlen(s) + 1;
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/internal.h:45:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  int (*read)(struct pci_dev *, int pos, byte *buf, int len);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:39:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  buf = pci_malloc(a, strlen(pw->pw_dir) + strlen(name+1) + 1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:39:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  buf = pci_malloc(a, strlen(pw->pw_dir) + strlen(name+1) + 1);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:136:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  tmpname = pci_malloc(a, strlen(name) + strlen(hostname) + 64);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:136:42:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  tmpname = pci_malloc(a, strlen(name) + strlen(hostname) + 64);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hash.c:68:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  int len = strlen(text);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:32:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen(a->id_file_name);
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/pread.h:49:14:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+make_rw_glue(read)
+/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:106:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  n = read(fd, buf, OBJBUFSIZE);
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:133:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      name = alloca(64 + strlen(uts.release));
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:158:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      e = xmalloc(sizeof(*e) + strlen(line));
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:261:4:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+	  strncpy(prev_module, module, sizeof(prev_module));
+/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:174:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      p += strlen(p);

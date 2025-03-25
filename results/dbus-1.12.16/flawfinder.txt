@@ -1,0 +1,868 @@
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:334:7:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+  if (chmod (filename_c, 0644) == -1)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1222:20:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+  if (!abstract && chmod (path, 0777) < 0)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/activation-helper.c:354:7:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  if (execv (argv[0], argv) < 0)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:187:12:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+      goto syslog;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:194:14:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+        goto syslog;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:205:1:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+syslog:
+/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:73:16:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+  unsigned int syslog : 1;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:309:20:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+      if (context->syslog)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:984:20:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+      if (context->syslog)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:1371:19:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+  return context->syslog;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:119:16:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+  unsigned int syslog : 1; /**< TRUE to enable syslog */
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:2950:18:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+  return parser->syslog;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:151:3:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  fprintf (stderr,
+/home/capstone/Desktop/root/dbus-1.12.16/bus/selinux.c:140:5:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+    vsnprintf(buf, sizeof(buf), fmt, ap);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:311:11:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+          strcpy(module_name,last_slash+1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:427:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy(buf,module_name);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:429:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+  sprintf (buf+strlen(buf), "[%s(%d):%s] ",_dbus_file_path_extract_elements_from_tail(file,2),line,function);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:431:3:  [4] (format) vsprintf:Potential format string problem (CWE-134).  Make format string constant. 
+  vsprintf (buf+strlen(buf),format, args);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:440:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, format, args);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2767:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (buf, sample_signatures[seed % _DBUS_N_ELEMENTS(sample_signatures)]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-win.c:523:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy (p, strings[i]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1095:3:  [4] (format) vsprintf:Potential format string problem (CWE-134).  Make format string constant. 
+  vsprintf ((char*) (real->str + (real->len - len)),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1073:7:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+      execvp (path, (char * const *) argv);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3517:9:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+  len = vsnprintf (static_buf, bufsize, format, args_copy);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3536:11:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+      if (vsnprintf (static_buf, 1, format, args_copy) == 1)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3556:13:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+      len = vsnprintf (buf, bufsize, format, args_copy);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3741:11:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+          execv (progpath, (char * const *) argv);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3750:13:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+            execvp (strrchr (progpath, '/')+1, (char * const *) argv);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3753:9:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+        execvp (progpath, (char * const *) argv);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4728:7:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+      vfprintf (stderr, msg, tmp);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:550:11:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  return (access (file, F_OK) == 0);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2449:27:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define DPRINTF(fmt, ...) fprintf (stderr, fmt, ##__VA_ARGS__)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2915:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy( shared_addr, address);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3730:7:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+      vsnprintf(buf, sizeof(buf), format, tmp);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3739:7:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+      vfprintf (stderr, msg, tmp);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:231:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (stpcpy (stpcpy (result, tmp), "\\bin\\"), name);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:255:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (stpcpy (stpcpy (result, tmp), "\\"), name);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:278:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (result, dir);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:481:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (lpBuffer, filename);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1118:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy (lpBuffer, buffer_c);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:140:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy (putenv_value, varname);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:171:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy (putenv_value, varname);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:173:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy (putenv_value + varname_len + 1, value);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-userdb-util.c:59:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access ("/run/systemd/seats/", F_OK) >= 0)
+/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-privserver-client.c:12:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, message, args);
+/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-privserver.c:12:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, message, args);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:128:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (se->name, dir);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:130:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (se->name, fname);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:44:3:  [4] (buffer) wcscat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  
+  wcscat (dest, src);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:53:3:  [4] (buffer) wcscpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using a function version that stops copying at the end of the buffer. 
+  wcscpy (dest, src);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:163:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (result, home);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:164:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (result, prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:165:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (result, machine);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:167:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (result, display);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:190:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (dir, home);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:192:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (dir, DBUS_DIR);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:202:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (dir, DBUS_SESSION_BUS_DIR);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:268:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (atom_name, selection_prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:269:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (atom_name, user_name);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:271:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (atom_name, machine);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:275:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (atom_name, address_prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:279:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (atom_name, pid_prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:162:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, format, args);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:786:7:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+      strcat (envvar, bus_address);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:789:7:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+      execvp (runprog, args);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1235:13:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+            execl (test_daemon,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1253:7:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+      execl (DBUS_DAEMONDIR"/dbus-daemon",
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1273:7:  [4] (shell) execlp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+      execlp ("dbus-daemon",
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:189:3:  [4] (shell) execlp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  execlp (dbus_daemon,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:206:3:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  execvp (argv[prog_arg], argv + prog_arg);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:93:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, format, ap);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/tool-common.h:30:17:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define VERBOSE fprintf
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:46:3:  [3] (misc) InitializeCriticalSection:Exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  InitializeCriticalSection (&init_lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:173:3:  [3] (misc) InitializeCriticalSection:Exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  InitializeCriticalSection (&cond->lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:202:3:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  EnterCriticalSection (&cond->lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:220:7:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+      EnterCriticalSection (&cond->lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:233:3:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  EnterCriticalSection (&cond->lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:262:3:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  EnterCriticalSection (&cond->lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:296:3:  [3] (misc) EnterCriticalSection:On some versions of Windows, exceptions can be thrown in low-memory situations.  Use InitializeCriticalSectionAndSpinCount instead. 
+  EnterCriticalSection (&init_lock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3593:18:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        tmpdir = getenv("TMPDIR");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3599:18:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        tmpdir = getenv("TMP");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3601:18:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        tmpdir = getenv("TEMP");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:122:21:  [3] (misc) LoadLibrary:Ensure that the full path to the library is specified, or current directory may be used (CWE-829, CWE-20).  Use registry entry or GetWindowsDirectory to find library path, if you aren't already. 
+  HMODULE hModule = LoadLibrary ("iphlpapi.dll");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:288:1:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+getenv (const char *name)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.h:89:9:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+#define getenv _dbus_wince_getenv
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.h:90:7:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+char *getenv (const char *name);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:194:10:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  return getenv (varname);
+/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-shutdown.c:26:34:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  session_addr_no_guid = strdup (getenv ("DBUS_SESSION_BUS_ADDRESS"));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:96:13:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  char *s = getenv("DBUS_VERBOSE");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:72:10:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  home = getenv ("HOME");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:107:22:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  display = xstrdup (getenv ("DISPLAY"));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:422:12:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+           getenv ("DISPLAY"),
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:153:17:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+      verbose = getenv ("DBUS_VERBOSE") != NULL;
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:644:7:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  s = getenv ("DBUS_DEBUG_OUTPUT");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:986:21:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+      if ((shname = getenv ("SHELL")) != NULL)
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1219:35:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        const char *test_daemon = getenv ("DBUS_TEST_DAEMON");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1223:40:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+            if (config_file == NULL && getenv ("DBUS_TEST_DATA") != NULL)
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1225:40:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+                config_file = concat2 (getenv ("DBUS_TEST_DATA"),
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:346:3:  [3] (random) srand:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+  srand (seed);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:102:27:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  char *xdg_runtime_dir = getenv ("XDG_RUNTIME_DIR");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:303:21:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+              val = getenv (var);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/activation.c:2409:10:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  file = fopen (_dbus_string_get_const_data (&full_path), "w");
+/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:141:15:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  mask_file = open (_dbus_string_get_const_data (&aa_dbus),
+/home/capstone/Desktop/root/dbus-1.12.16/bus/desktop-file.c:71:17:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static unsigned char valid[256] = { 
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:51:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char *dirs[MAX_DIRS_TO_WATCH];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:60:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buffer[INOTIFY_BUF_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:99:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *new_dirs[MAX_DIRS_TO_WATCH];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:48:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char *dirs[MAX_DIRS_TO_WATCH];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:202:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *new_dirs[MAX_DIRS_TO_WATCH];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:267:16:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+          fd = open (new_dirs[i], O_RDONLY | O_CLOEXEC);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:273:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+              fd = open (new_dirs[i], O_RDONLY);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:4133:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  const char *argv[7] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL};
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:79:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+        char action[2] = { ACTION_RELOAD, '\0' };
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:113:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+        char action[2] = { ACTION_QUIT, '\0' };
+/home/capstone/Desktop/root/dbus-1.12.16/bus/selinux.c:137:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buf[PATH_MAX*2];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-address.c:291:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+          char buf[3];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:210:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (array[k],
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-bus.c:93:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char *bus_connection_addresses[N_BUS_TYPES] = { NULL, NULL, NULL };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:70:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (filename_c, O_RDONLY | O_BINARY);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:215:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (tmp_filename_c, O_WRONLY | O_BINARY | O_EXCL | O_CREAT,
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:363:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (filename_c, O_WRONLY | O_BINARY | O_EXCL | O_CREAT,
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-hash.c:1617:13:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      len = sprintf (keys[i], "Hash key %d", i);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:291:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char module_name[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:312:9:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+        strcat(module_name,": ");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:426:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:550:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (copy, str, len + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:573:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (copy, mem, n_bytes);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.h:397:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char as_bytes[DBUS_UUID_LENGTH_BYTES];                /**< guid as 16 single-byte values */
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.h:422:20:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  typedef struct { char _assertion[(expr) ? 1 : -1]; } \
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-basic.c:1611:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char array1[5] = { 3, 4, 0, 1, 9 };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-header.c:296:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[2];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:1925:7:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+      atoi (_dbus_getenv ("DBUS_TEST_SLOW")) < 1)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2006:7:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+  if (atoi (_dbus_getenv ("DBUS_TEST_SLOW")) < 2)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2429:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_STRING_LEN + 1]="";
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2447:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_STRING_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2474:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_STRING_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2701:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2717:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2742:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2776:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2792:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2818:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-memory.c:135:15:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	  fail_nth = atoi (_dbus_getenv ("DBUS_MALLOC_FAIL_NTH"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-memory.c:142:23:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+          fail_size = atoi (_dbus_getenv ("DBUS_MALLOC_FAIL_GREATER_THAN"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-mempool.c:92:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char elements[ELEMENT_PADDING]; /**< the block data, actually allocated to required size */
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:431:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH+2];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:467:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH*2+4];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:687:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH*4+10];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-util.c:1232:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char sig[64];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-util.c:1606:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char garbage_header[DBUS_MINIMUM_HEADER_SIZE] = "xxx";
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message.c:1875:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+          char buf[2];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-nonce.c:128:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buffer[17];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-nonce.c:138:8:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fp = fopen (_dbus_string_get_const_data (fname), "rb");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:81:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char                               name[1]; /**< Allocated as large as necessary */
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1120:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (subtree->name, name, len + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1598:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  const char *result[20];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:364:47:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+sha_finish (DBusSHAContext *context, unsigned char digest[20])
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:459:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char digest[20];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:937:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char all_bytes[256];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:61:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  const char *argv[4] = { NULL, NULL, NULL, NULL };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:103:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:158:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:209:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:1404:16:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+          fd = open ("/proc/self/oom_score_adj", O_WRONLY | O_CLOEXEC);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:1409:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+              fd = open ("/proc/self/oom_score_adj", O_WRONLY);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string-util.c:197:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    unsigned char buf[512];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:682:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (*data_return, real->str, real->len + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:706:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (buffer, real->str, real->len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:728:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (buffer, real->str, real->len+1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:920:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (real->str + (real->len - buffer_len),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:974:47:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                               const unsigned char octets[2])
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:998:47:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                               const unsigned char octets[4])
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1022:47:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                               const unsigned char octets[8])
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1472:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char byte_string[2] = "";
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:2228:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  const char hexdigits[16] = {
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:209:66:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                                                  const unsigned char octets[2]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:212:66:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                                                  const unsigned char octets[4]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:215:66:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+                                                  const unsigned char octets[8]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:177:19:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+        devnull = open ("/dev/null", O_RDWR);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:485:13:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+            memcpy (fds, payload, fds_to_use * sizeof (int));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:594:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy(CMSG_DATA(cm), fds, n_fds * sizeof(int));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1651:15:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+              char portbuf[50];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1737:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1] = { '\0' };
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1741:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	  char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1962:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3169:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open ("/dev/urandom", O_RDONLY);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3511:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char static_buf[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3861:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  const char *argv[6];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4035:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *argv[4];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4577:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char hostip[INET6_ADDRSTRLEN];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:179:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (cfilename, O_WRONLY|O_CREAT|O_EXCL|O_BINARY, 0644);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:1152:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (_dbus_string_get_const_data (&path), O_RDONLY);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-win.c:88:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char pidstr[20];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:735:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:789:7:  [2] (buffer) MultiByteToWideChar:Requires maximum length in CHARACTERS, not bytes (CWE-120).  
+  n = MultiByteToWideChar (CP_UTF8, 0, str, -1, NULL, 0);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:805:7:  [2] (buffer) MultiByteToWideChar:Requires maximum length in CHARACTERS, not bytes (CWE-120).  
+  if (MultiByteToWideChar (CP_UTF8, 0, str, -1, retval, n) != n)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1181:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char msg[DBUS_POLL_CHAR_BUFFER_SIZE];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1200:11:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+  msgp += sprintf (msgp, "WSAEventSelect: to=%d\n\t", timeout_milliseconds);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1207:17:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+        msgp += sprintf (msgp, "R:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1210:17:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+        msgp += sprintf (msgp, "W:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1212:15:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      msgp += sprintf (msgp, "E:%Iu\n\t", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1262:15:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      msgp += sprintf (msgp, "WSAWaitForMultipleEvents: =%d\n\t", ready);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1283:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "R:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1286:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "W:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1289:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "E:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1291:19:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+          msgp += sprintf (msgp, "lNetworkEvents:%d ", ne.lNetworkEvents);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1322:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char msg[DBUS_POLL_CHAR_BUFFER_SIZE];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1339:11:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+  msgp += sprintf (msgp, "select: to=%d\n\t", timeout_milliseconds);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1346:17:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+        msgp += sprintf (msgp, "R:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1349:17:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+        msgp += sprintf (msgp, "W:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1351:15:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      msgp += sprintf (msgp, "E:%Iu\n\t", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1398:17:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+        msgp += sprintf (msgp, "select: = %d:\n\t", ready);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1405:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "R:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1408:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "W:%Iu ", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1411:23:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+              msgp += sprintf (msgp, "E:%Iu\n\t", fdp->fd.sock);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1773:15:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+              char portbuf[NI_MAXSERV];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2349:10:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  static char buf[1000];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2529:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buffer[sizeof(SYMBOL_INFO) + MAX_SYM_NAME * sizeof(char)];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3035:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char dbus_exe_path[MAX_PATH];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3036:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char dbus_args[MAX_PATH * 2];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3062:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char dbus_module_path[MAX_PATH];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3725:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3726:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char format[1024];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:266:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char dir[MAX_PATH + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:285:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char *environ[MAX_ENV + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:509:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (buf, asid, sizeof (asid));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:956:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (data, data_c, data_c_len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:967:9:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+        memcpy (lpData, data, data_len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1007:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (lpBuffer, &buffer_new, sizeof (buffer_new));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1073:3:  [2] (buffer) wchar_t:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  wchar_t dummy[1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1129:3:  [2] (buffer) wchar_t:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  wchar_t path[MAX_PATH];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.h:605:38:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+#    define DBUS_VA_COPY(ap1, ap2)   memcpy ((ap1), (ap2), sizeof (va_list))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-transport-unix.c:292:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+          char t[4+20+1]; /* "argv" plus space for a formatted base 10 64bit integer, plus NUL */
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-transport-unix.c:311:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+          char t[4+20+1];
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-types.h:139:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char bytes[8]; /**< as 8 individual bytes */
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-userdb-util.c:428:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (*group_ids, info->group_ids, info->n_group_ids * sizeof (dbus_gid_t));
+/home/capstone/Desktop/root/dbus-1.12.16/test/fdpass.c:290:18:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  f->fd_before = open ("/dev/null", O_RDONLY);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:194:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (&value, value_p, 4);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:245:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (&value, value_p, 8);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:296:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (&length, value, 4);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:359:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (&value, value_p, 4);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:366:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (&value, value_p, 4);
+/home/capstone/Desktop/root/dbus-1.12.16/test/marshal.c:260:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (aligned_le_blob, le_blob, sizeof (le_blob));
+/home/capstone/Desktop/root/dbus-1.12.16/test/marshal.c:262:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (aligned_be_blob, be_blob, sizeof (be_blob));  
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-echo.c:182:22:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+          sleep_ms = atoi (arg + strlen ("--sleep-ms="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:87:3:  [2] (buffer) wchar_t:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  wchar_t dbusDaemonPath[MAX_PATH * 2 + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:88:3:  [2] (buffer) wchar_t:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  wchar_t command[MAX_PATH * 2 + 1];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:408:7:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  f = fopen (session_file, "w");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:207:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (copy, str, len + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:228:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (ret, a, la);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:229:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (ret + la, b, lb + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:581:15:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+              char discard[512];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:785:7:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+      strcpy (envvar, "DBUS_SESSION_BUS_ADDRESS=");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1140:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char write_pid_fd_as_string[MAX_FD_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1141:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char write_address_fd_as_string[MAX_FD_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1208:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf (write_pid_fd_as_string,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1211:7:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+      sprintf (write_address_fd_as_string,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1293:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char bus_address[MAX_ADDR_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1294:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[MAX_PID_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-print-message.c:164:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (copy, bytes, len);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-print-message.c:188:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char hostip[INET6_ADDRSTRLEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:177:25:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+exec_dbus_daemon (const char *dbus_daemon,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:183:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char write_address_fd_as_string[MAX_FD_LEN];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:187:3:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+  sprintf (write_address_fd_as_string, "%d", bus_address_pipe[PIPE_WRITE_END]);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:220:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char bus_address[MAX_ADDR_LEN] = { 0 };
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-send.c:531:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	  char sig[5];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-send.c:554:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	  char sig[2];
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:203:19:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+          count = atoi (arg + strlen ("--count="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:324:23:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+          queue_len = atoi (arg + strlen ("--queue="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:335:31:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+          messages_per_conn = atoi (arg + strlen ("--messages-per-conn="));
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:3532:15:  [1] (buffer) equal:Function does not check the second iterator for over-read conditions (CWE-126).  This function is often discouraged by most C++ coding standards in favor of its safer alternatives provided since C++14. Consider using a form of this function that checks the second iterator before potentially overflowing it. 
+  dbus_bool_t equal;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:3601:10:  [1] (buffer) equal:Function does not check the second iterator for over-read conditions (CWE-126).  This function is often discouraged by most C++ coding standards in favor of its safer alternatives provided since C++14. Consider using a form of this function that checks the second iterator before potentially overflowing it. 
+	  if (! equal)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:3627:15:  [1] (buffer) equal:Function does not check the second iterator for over-read conditions (CWE-126).  This function is often discouraged by most C++ coding standards in favor of its safer alternatives provided since C++14. Consider using a form of this function that checks the second iterator before potentially overflowing it. 
+  dbus_bool_t equal;
+/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:3680:12:  [1] (buffer) equal:Function does not check the second iterator for over-read conditions (CWE-126).  This function is often discouraged by most C++ coding standards in favor of its safer alternatives provided since C++14. Consider using a form of this function that checks the second iterator before potentially overflowing it. 
+      if (!equal)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:66:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  ret = read (inotify_fd, buffer, INOTIFY_BUF_LEN);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:65:3:  [1] (obsolete) usleep:This C routine is considered obsolete (as opposed to the shell command by the same name).   The interaction of this function with SIGALRM and other timer functions such as sleep(), alarm(), setitimer(), and nanosleep() is unspecified (CWE-676).  Use nanosleep(2) or setitimer(2) instead. 
+  usleep(500000);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:3401:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (machine_id == NULL || strlen (machine_id) != 32)
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:5235:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if (read(one[1].fd, &r, 1) != 1 || r != 'X')
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:5237:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if (read(two[1].fd, &r, 1) != 1 || r != 'Y')
+/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:5239:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  if (read(two[1].fd, &r, 1) != 1 || r != 'Z')
+/home/capstone/Desktop/root/dbus-1.12.16/bus/driver.c:1968:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                     s, strlen (s) + 1))
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:101:48:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+            if (write (STDERR_FILENO, message, strlen (message)) !=
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:102:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                (ssize_t) strlen (message))
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:126:48:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+            if (write (STDERR_FILENO, message, strlen (message)) !=
+/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:127:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                (ssize_t) strlen (message))
+/home/capstone/Desktop/root/dbus-1.12.16/bus/policy.c:1351:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          next_char = data[strlen (rule->d.own.service_name)];
+/home/capstone/Desktop/root/dbus-1.12.16/bus/selinux.c:673:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				 strlen (context),
+/home/capstone/Desktop/root/dbus-1.12.16/bus/signals.c:851:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      int len1 = strlen ("path");
+/home/capstone/Desktop/root/dbus-1.12.16/bus/signals.c:1770:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  prefix_len = strlen (prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/signals.c:1952:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      len = strlen (rule->path);
+/home/capstone/Desktop/root/dbus-1.12.16/bus/signals.c:2003:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+              actual_length = strlen (actual_arg);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:546:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                     (int) strlen ("WRONG_USERID_HEX"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:578:61:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                _dbus_string_delete (&to_send, where, (int) strlen ("USERID_HEX"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:615:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                     (int) strlen ("WRONG_USERNAME_HEX"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:656:61:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                _dbus_string_delete (&to_send, where, (int) strlen ("USERNAME_HEX"));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-connection.c:5700:36:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (!_dbus_decompose_path (path, strlen (path), &decomposed_path, NULL))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-connection.c:5876:36:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (!_dbus_decompose_path (path, strlen (path), &decomposed_path, NULL))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-connection.c:5911:36:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (!_dbus_decompose_path (path, strlen (path), &decomposed_path, NULL))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-connection.c:5947:43:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (!_dbus_decompose_path (parent_path, strlen (parent_path), &decomposed_path, NULL))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:336:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  char *p = (char *)file + strlen(file);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:417:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (format);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:429:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  sprintf (buf+strlen(buf), "[%s(%d):%s] ",_dbus_file_path_extract_elements_from_tail(file,2),line,function);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:431:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  vsprintf (buf+strlen(buf),format, args);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:544:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (str);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-basic.c:764:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                        strlen (value),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-basic.c:776:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                        strlen (value),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2485:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                  v_string, strlen (v_string), old, strlen (old));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2485:53:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                  v_string, strlen (v_string), old, strlen (old));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-util.c:1655:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  for (i = strlen (basic_types) - 1; i > 0; i--)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message.c:3401:37:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      if (!_dbus_decompose_path (v, strlen (v),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message.c:5403:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  _dbus_assert (strlen (ret) == len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1113:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (name);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1627:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                 strlen (decompose_tests[i].path),
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:553:53:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  return check_sha_binary ((unsigned char *) input, strlen (input), expected);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-win.c:515:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    n += strlen (strings[i]) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-win.c:524:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      p += strlen (strings[i]);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:101:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      chunk = read (fd,
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:156:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      chunk = read (fd,
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:1212:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+          if (read (sigchld_pipe[READ_END], &b, 1) == -1)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string-util.c:57:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  c_str_len = strlen (c_str);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string-util.c:132:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    len = strlen (data);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string-util.c:343:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  _dbus_assert (((int)strlen (s)) == i);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:196:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                               strlen (value));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:943:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  buffer_len = strlen (buffer);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:726:16:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  bytes_read = read (fd, data, count);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:933:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  path_len = strlen (path);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:949:7:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+      strncpy (&addr.sun_path[1], path, sizeof (addr.sun_path) - 2);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:968:7:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+      strncpy (addr.sun_path, path, sizeof (addr.sun_path) - 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1135:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  path_len = strlen (path);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1154:7:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+      strncpy (&addr.sun_path[1], path, sizeof (addr.sun_path) - 2);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1191:7:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+      strncpy (addr.sun_path, path, sizeof (addr.sun_path) - 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1877:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen (_dbus_string_get_const_data (&buf)) != len)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3141:3:  [1] (obsolete) usleep:This C routine is considered obsolete (as opposed to the shell command by the same name).   The interaction of this function with SIGALRM and other timer functions such as sleep(), alarm(), setitimer(), and nanosleep() is unspecified (CWE-676).  Use nanosleep(2) or setitimer(2) instead. 
+  usleep (milliseconds * MICROSECONDS_PER_MILLISECOND);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3709:57:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          if (write (errors_pipe[WRITE_END], error_str, strlen (error_str)) < 0 ||
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3717:57:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          if (write (errors_pipe[WRITE_END], error_str, strlen (error_str)) < 0)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:132:11:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+          umask (022);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-win.c:120:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  bytes_to_write = strlen (pidstr);;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-win.c:1445:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+            path, 0, strlen (DBUS_PREFIX) + 1))
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:344:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (msg[strlen (msg) - 1] == '\n')
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:345:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    msg[strlen (msg) - 1] = '\0';
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:346:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (msg[strlen (msg) - 1] == '\r')
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:347:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    msg[strlen (msg) - 1] = '\0';
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1222:11:  [1] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source is a constant character.
+  msgp += sprintf (msgp, "\n");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1299:15:  [1] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source is a constant character.
+      msgp += sprintf (msgp, "\n");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1361:11:  [1] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source is a constant character.
+  msgp += sprintf (msgp, "\n");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1413:17:  [1] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source is a constant character.
+        msgp += sprintf (msgp, "\n");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2797:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  else if (strlen(scope) > 0)
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2904:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (address) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3303:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    _dbus_string_set_length (str, strlen ((char *) prefix));
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:224:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (tmp) + 5 + strlen (name) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:224:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (tmp) + 5 + strlen (name) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:248:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (tmp) + 1 + strlen (name) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:248:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (tmp) + 1 + strlen (name) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:275:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (dir) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:474:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  filename_len = strlen (filename) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:734:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+  strncpy (fda->cFileName, filename, len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:954:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      data_c_len = strlen (data_c) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1016:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+  strncpy (buffer_new, buffer_c, buffer_new_len);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1024:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  return strlen (buffer_new);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1061:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+  strncpy (lpFilename, filename_c, nSize);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1066:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  return strlen (lpFilename);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1114:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    len_c = strlen (buffer_c) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1142:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+  strncpy (lpszPath, path_c, MAX_PATH);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:130:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      len = strlen (varname);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:142:7:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+      strcat (putenv_value, "=");
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:158:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      varname_len = strlen (varname);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:159:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      value_len = strlen (value);
+/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:172:7:  [1] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant character.
+      strcpy (putenv_value + varname_len, "=");
+/home/capstone/Desktop/root/dbus-1.12.16/test/dbus-daemon.c:526:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          g_assert_cmpuint (strlen (label) + 1, ==, len);
+/home/capstone/Desktop/root/dbus-1.12.16/test/dbus-daemon.c:1264:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  g_assert_cmpuint (strlen (what_daemon_thinks), ==, 32);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:287:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                   (int) strlen (expected_value) + 9);
+/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:297:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  g_assert_cmpuint (length, ==, (int) strlen (expected_value));
+/home/capstone/Desktop/root/dbus-1.12.16/test/loopback.c:300:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  g_assert_cmpuint (strlen (guid), >=, 5 + 32);
+/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-ids.c:50:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen (server_id) != 32)
+/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-ids.c:63:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen (id) != 32)
+/home/capstone/Desktop/root/dbus-1.12.16/test/test-utils-glib.c:217:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      bytes = read (address_fd, buf, sizeof (buf));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:125:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (dir) + strlen (fname) + 2; /* 2 = nul and '/' */
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:125:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (dir) + strlen (fname) + 2; /* 2 = nul and '/' */
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:129:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+  strcat (se->name, "/");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:249:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+  strncpy (saddr.sun_path, se->name, sizeof (saddr.sun_path) - 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-echo.c:178:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          name = arg + strlen ("--name=");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-echo.c:182:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          sleep_ms = atoi (arg + strlen ("--sleep-ms="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-echo.c:223:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          name = arg + strlen ("--name=");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:43:31:  [1] (buffer) wcslen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  assert (sizeof (wchar_t) * (wcslen (dest) + wcslen (src) + 1) <= size);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:43:47:  [1] (buffer) wcslen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  assert (sizeof (wchar_t) * (wcslen (dest) + wcslen (src) + 1) <= size);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:52:31:  [1] (buffer) wcslen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  assert (sizeof (wchar_t) * (wcslen (src) + 1) <= size);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:59:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  plen = strlen (prefix);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:63:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      memmove (s, s + plen, strlen (s) - plen + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:154:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (home) + strlen (prefix) + strlen (machine) +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:154:36:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (home) + strlen (prefix) + strlen (machine) +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:154:54:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  result = malloc (strlen (home) + strlen (prefix) + strlen (machine) +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:155:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                   strlen (display) + 2);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:166:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+  strcat (result, "-");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:183:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  dir = malloc (strlen (home) + strlen (DBUS_DIR) + strlen (DBUS_SESSION_BUS_DIR) + 3);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:183:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  dir = malloc (strlen (home) + strlen (DBUS_DIR) + strlen (DBUS_SESSION_BUS_DIR) + 3);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:183:53:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  dir = malloc (strlen (home) + strlen (DBUS_DIR) + strlen (DBUS_SESSION_BUS_DIR) + 3);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:191:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+  strcat (dir, "/");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:201:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+  strcat (dir, "/");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:256:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  atom_name = malloc (strlen (machine) + strlen (user_name) + 2 +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:256:42:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  atom_name = malloc (strlen (machine) + strlen (user_name) + 2 +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:257:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                      MAX (strlen (selection_prefix),
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:258:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                           MAX (strlen (address_prefix),
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:259:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                                strlen (pid_prefix))));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:270:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+  strcat (atom_name, "_");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:375:46:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                   (unsigned char *)address, strlen (address));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:106:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen (uuid_arg) != 32)
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:201:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (str);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:220:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  la = strlen (a);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:221:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  lb = strlen (b);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:265:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      chunk = read (fd,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:318:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      chunk = read (fd,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:427:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      do_write (1, bus_address, strlen (bus_address) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:585:28:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+              bytes_read = read (tty_fd, discard, sizeof (discard));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:761:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      envvar = malloc (strlen ("DBUS_SESSION_BUS_ADDRESS=") +
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:762:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          strlen (bus_address) + 1);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:773:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          size_t len = strlen (argv[remaining_args+i-1])+1;
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:781:11:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+          strncpy (args[i], argv[remaining_args+i-1], len);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:988:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+         if (!strncmp (shname + strlen (shname) - 3, "csh", 3))
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-monitor.c:435:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          filter_len = strlen (EAVESDROPPING_RULE) + 1 + strlen (arg) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-monitor.c:435:58:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          filter_len = strlen (EAVESDROPPING_RULE) + 1 + strlen (arg) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-monitor.c:523:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+              offset = strlen (EAVESDROPPING_RULE) + 1;
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:143:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      chunk = read (fd,
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:203:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          count = atoi (arg + strlen ("--count="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:214:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          destination = arg + strlen ("--dest=");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:218:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          payload = arg + strlen ("--payload=");
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:324:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          queue_len = atoi (arg + strlen ("--queue="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:331:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          seed = strtoul (arg + strlen ("--seed="), NULL, 10);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:335:43:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+          messages_per_conn = atoi (arg + strlen ("--messages-per-conn="));
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:351:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      payload_len = strlen (payload);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-uuidgen.c:63:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen(arg) < strlen(option))
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-uuidgen.c:63:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (strlen(arg) < strlen(option))
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-uuidgen.c:66:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  fn = arg + strlen(option);
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-uuidgen.c:106:37:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      if (strncmp (arg, "--ensure", strlen("--ensure")) == 0)
+/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-uuidgen.c:111:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      else if (strncmp (arg, "--get", strlen("--get")) == 0)

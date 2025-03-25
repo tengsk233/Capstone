@@ -1,0 +1,366 @@
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:174:29:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  fd = ndbm_open_dir_file0 (strcat (strcpy (file_name, base), DIRSUF),
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:174:37:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  fd = ndbm_open_dir_file0 (strcat (strcpy (file_name, base), DIRSUF),
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:219:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (pag_file, file);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:24:3:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  fprintf (fp, fmt, *(type*) ptr);              \
+/home/capstone/Desktop/root/gdbm-1.18.1/src/err.c:28:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:168:4:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	  strcpy (dbf->last_errstr, errstr);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:170:4:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+	  strcat (dbf->last_errstr, syserrstr);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:94:4:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	  access (dbname, F_OK) == 0)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:190:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (fp, mesg, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:446:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf (param->fp, 
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:570:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1959:12:  [4] (shell) popen:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	  pagfp = popen (pager, "w");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2000:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access (GDBMTOOLRC, R_OK) == 0)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2019:11:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+      if (access (fname, R_OK) == 0)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2041:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:817:21:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#  define YYFPRINTF fprintf
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:136:7:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcpy (hname, HISTFILE_PREFIX);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:137:7:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+      strcat (hname, rl_readline_name);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:138:7:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+      strcat (hname, HISTFILE_SUFFIX);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2320:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mem.c:70:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (p, str);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:475:4:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	  strcpy (&buf[n], arg);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:504:4:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	  strcpy (&buf[n], opt->opt_long);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:509:8:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	      strcpy (&buf[n], arg);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:541:3:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  printf (version_etc_copyright, _("(C)"), "2011-2017");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:59:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcpy (buf, name);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:62:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (buf, INITIAL_SUFFIX);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:64:10:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  while (access (buf, F_OK) == 0)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:391:7:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+      strcat (strcpy (new_name, dbf->name), TMPSUF);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:391:15:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+      strcat (strcpy (new_name, dbf->name), TMPSUF);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:107:4:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	  vfprintf (stdout, prompt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/var.c:342:8:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	      fprintf (fp, (vp->flags & VARF_OCTAL) ? "%s=%03o" : "%s=%d",
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/d_creat_ce.c:84:4:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+   execl (argv[1], "fdop",
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:84:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+  strcat (strcpy (dbname, *argv), PAGSUF);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:84:11:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+  strcat (strcpy (dbname, *argv), PAGSUF);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:86:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+  if (access (dbname, F_OK))
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_open_ce.c:62:3:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  execl (argv[1], "fdop",
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_reorg_ce.c:68:3:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+  execl (argv[1], "fdop",
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:37:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:74:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtrecover.c:36:3:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+  vfprintf (stderr, fmt, ap);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:374:24:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	  const char *lines = getenv ("LINES");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:381:23:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  const char *lines = getenv ("LINES");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2007:17:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+      char *p = getenv ("HOME");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:2074:39:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+  variable_set ("pager", VART_STRING, getenv ("PAGER"));
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:578:12:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+      rc = getopt_long (argc, argv, short_options, long_options, NULL);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:580:12:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+      rc = getopt (argc, argv, short_options);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:406:7:  [3] (random) srandom:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+      srandom (time (NULL));
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:409:29:  [3] (random) random:This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327).  Use a more secure technique for acquiring random values. 
+	  numeral_t n = range_get (random () % range_total);
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:65:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  unsigned char dirbuf[DEF_DIR_SIZE];
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:112:9:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	  fd = open (file_name, flags);
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:144:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (file_name, flags | O_CREAT, pagst.st_mode & 0777);
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:220:3:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+  strcat (pag_file, ".pag");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/bucket.c:178:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (bucket, dbf->bucket, size);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/bucket.c:187:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy (bucket, dbf->bucket_cache[i].ca_bucket, size);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:219:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char *delim[2];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:308:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (xd->dptr + xd->off, val, size);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/debug.c:72:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+datbuf_format (char vbuf[DATBUFSIZE], const char *buf, size_t size)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/debug.c:119:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char vbuf[DATBUFSIZE];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_dump.c:60:15:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	    format = atoi (optarg);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_dump.c:107:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      fp = fopen (filename, "w");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbm_load.c:248:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      fp = fopen (filename, "r");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdefs.h:109:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char  key_start[SMALL]; /* Up to the first SMALL bytes of the key.  */
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdump.c:181:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      nfd = open (filename, O_WRONLY | O_CREAT | O_EXCL, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmdump.c:189:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      nfd = open (filename, O_WRONLY | O_CREAT | O_TRUNC, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:102:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+const char * const gdbm_errlist[_GDBM_MAX_ERRNO+1] = {
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:169:4:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+	  strcat (dbf->last_errstr, ": ");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:112:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      nfd = open (exportfile, O_WRONLY | O_CREAT | O_EXCL, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:120:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+      nfd = open (exportfile, O_WRONLY | O_CREAT | O_TRUNC, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmfetch.c:65:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (return_val.dptr, find_data, return_val.dsize);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmimp.c:177:8:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fp = fopen (importfile, "r");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:79:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[80];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:105:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy (file->linebuf + file->lblevel, buf, n);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:140:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (file->buffer + file->buflevel, file->linebuf, n);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:464:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[256];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:630:8:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fp = fopen (filename, "r");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:227:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (dbf->name, O_RDWR|O_TRUNC, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:565:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (dbf->header, &partial_header, sizeof (gdbm_file_header));
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmopen.c:710:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fd = open (file, fbits, mode);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmseq.c:90:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (return_val->dptr, find_data, return_val->dsize);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmstore.c:152:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (dbf->bucket->h_table[elem_loc].key_start, key.dptr,
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:440:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      char buf[128];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:529:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (key_data.dptr, PARAM_DATUM (param, 0).dptr, key_data.dsize);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1378:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  { S(open), T_CMD,
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1626:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (copy, s, l);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1872:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char argbuf[128];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:211:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char msg_ctxt_id[msgctxt_len + msgid_len];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:213:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:221:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (msg_ctxt_id, msgctxt, msgctxt_len - 1);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:223:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (msg_ctxt_id + msgctxt_len, msgid, msgid_len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:257:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char msg_ctxt_id[msgctxt_len + msgid_len];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:259:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:267:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (msg_ctxt_id, msgctxt, msgctxt_len - 1);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:269:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (msg_ctxt_id + msgctxt_len, msgid, msgid_len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:1120:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:1374:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char yymsgbuf[128];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-file.c:69:8:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+  fp = fopen (name, "r");
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:230:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (buf, input_ptr (), len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:1041:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (file, p, len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:1163:22:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+                     memcpy (yylval.string, yytext+1, yyleng-2);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2216:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char ptr[1];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2242:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (seg->ptr, s, l);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2271:7:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+      memcpy (p, seg->ptr, seg->len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:274:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy (cbuf, (char*) dbf->mapped_region + dbf->mapped_pos, nbytes);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:327:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy ((char*) dbf->mapped_region + dbf->mapped_pos, cbuf, nbytes);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:408:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[RMARGIN+1];
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:393:12:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+      fd = mkstemp (new_name);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:35:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (tmp, dir, dirlen);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:38:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (tmp + dirlen, file, fillen);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:40:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy (tmp + dirlen + fillen, suf, suflen);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:60:4:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	  memcpy (user, p, len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/var.c:130:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[128];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/d_creat_ce.c:49:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+   char fdbuf[2][80];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:37:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/fdop.c:31:15:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+      int n = atoi (*++argv);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_open_ce.c:47:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char fdbuf[80];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/g_reorg_ce.c:47:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char fdbuf[80];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:84:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char buf[1024];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:132:15:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	block_size = atoi (arg + 11);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtopt.c:328:15:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	block_size = atoi (arg + 11);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:75:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char buffer[1024];
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:91:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (buffer + bufoff, str, len);
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:119:8:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	  if (read (fd, dirbuf, sizeof (dirbuf)) != sizeof (dirbuf))
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:166:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  char *file_name = malloc (strlen (base) + sizeof (DIRSUF));
+/home/capstone/Desktop/root/gdbm-1.18.1/compat/dbmopen.c:212:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  pag_file = (char *) malloc (strlen (file) + 5);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:145:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  xd_store (xd, str, strlen (str) + 1);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:152:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  xd_store (xd, str, strlen (str));
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:239:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    fwrite (delim[1], strlen (delim[1]), 1, fp);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/datconv.c:251:25:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		    fwrite (delim[0], strlen (delim[0]), 1, fp);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:163:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  size_t len = strlen (errstr) + strlen (syserrstr) + 2;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmerrno.c:163:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  size_t len = strlen (errstr) + strlen (syserrstr) + 2;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:45:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (fwrite (header1, strlen (header1), 1, fp) != 1)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:47:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (fwrite (gdbm_version, strlen (gdbm_version), 1, fp) != 1)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmexp.c:49:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  if (fwrite (header2, strlen (header2), 1, fp) != 1)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmimp.c:49:19:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      if ((rret = fgetc (fp)) == -1)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:71:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      buf += strlen (buf) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:85:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  size_t n = strlen (buf);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:499:15:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  while ((c = fgetc (fp)) != EOF && c != '\n')
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:508:16:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+      if ((c = fgetc (fp)) == EOF)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:546:15:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  while ((c = fgetc (file->fp)) == ' ')
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmload.c:581:8:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  rc = fgetc (fp);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:353:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  int len = strlen (str);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1435:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      len = strlen (text);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gdbmtool.c:1492:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t len = strlen (str);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:207:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t msgctxt_len = strlen (msgctxt) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:208:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t msgid_len = strlen (msgid) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:253:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t msgctxt_len = strlen (msgctxt) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gettext.h:254:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t msgid_len = strlen (msgid) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/gram.c:1005:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#   define yystrlen strlen
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-argv.c:70:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	      len = strlen (i->cur);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:134:49:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      hname = emalloc (sizeof HISTFILE_PREFIX + strlen (rl_readline_name) +
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-rl.c:211:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  input_length = strlen (input_line);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/input-std.c:26:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  return strlen (buf);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:837:14:  [1] (buffer) getc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+			     (c = getc( yyin )) != EOF && c != '\n'; ++n ) \
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:1924:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return yy_scan_bytes(yystr,strlen(yystr) );
+/home/capstone/Desktop/root/gdbm-1.18.1/src/lex.c:2463:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    len += strlen (p->str);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mem.c:69:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  p = emalloc (strlen (str) + 1);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:261:10:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		  rc = read (dbf->desc, cbuf, len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/mmap.c:282:10:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  return read (dbf->desc, buffer, len);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:467:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  size_t len = 5 + strlen (arg) + 1;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:476:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  n += strlen (arg);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:497:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  size_t len = 3 + strlen (opt->opt_long)
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:498:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	                 + (arg ? 1 + strlen (arg) : 0);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:505:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	  n += strlen (opt->opt_long);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/parseopt.c:510:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	      n += strlen (arg);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/proto.h:96:10:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+  return read (dbf->desc, buf, size);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:55:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen (name) + sizeof (INITIAL_SUFFIX);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:60:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  suf_pos = strlen (buf) + 2; 
+/home/capstone/Desktop/root/gdbm-1.18.1/src/recover.c:384:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      len = strlen (dbf->name);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:25:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t dirlen = strlen (dir);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:26:25:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t suflen = suf ? strlen (suf) : 0;
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:27:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t fillen = strlen (file);
+/home/capstone/Desktop/root/gdbm-1.18.1/src/util.c:113:19:  [1] (buffer) getchar:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    } while ((c = getchar ()) != EOF);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtdel.c:85:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      key.dsize = strlen (arg) + !!data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtfetch.c:95:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      key.dsize = strlen (arg) + !!data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:80:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  dbname = malloc (strlen (*argv) + sizeof (PAGSUF));
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:108:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      size_t len = strlen (buf);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/dtload.c:142:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      data.dsize = strlen (data.dptr) + data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtdel.c:88:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      key.dsize = strlen (arg) + !!data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtfetch.c:103:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      key.dsize = strlen (arg) + !!data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:231:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      size_t len = strlen (buf);
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/gtload.c:265:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+      data.dsize = strlen (data.dptr) + data_z;
+/home/capstone/Desktop/root/gdbm-1.18.1/tests/num2word.c:85:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  size_t len = strlen (str);

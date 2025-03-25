@@ -1,0 +1,2003 @@
+<ul>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1338:15: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	    else if (chmod ((char *) d, 0755) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:253:43: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = mkdir ((char *) dir, 0755) == 0 &amp;&amp; chmod ((char *) dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:255:73: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = FcMakeDirectory (parent) &amp;&amp; (mkdir ((char *) dir, 0755) == 0) &amp;&amp; chmod ((char *) dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:268:12: <b>  [5] </b> (race) <i> readlink:
+  This accepts filename arguments; if an attacker can move those files or
+  change the link content, a race condition results. Also, it does not
+  terminate with ASCII NUL. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>).
+  Reconsider approach. </i>
+<pre>
+    return readlink ((const char *) pathname, (char *)buf, bufsiz);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:165:12: <b>  [5] </b> (race) <i> readlink:
+  This accepts filename arguments; if an attacker can move those files or
+  change the link content, a race condition results. Also, it does not
+  terminate with ASCII NUL. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>).
+  Reconsider approach. </i>
+<pre>
+	    len = readlink ("/proc/self/exe", buf, size - 1);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:72:34: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = mkdir (dir, 0755) == 0 &amp;&amp; chmod (dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:74:56: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = mkdir_p (parent) &amp;&amp; (mkdir (dir, 0755) == 0) &amp;&amp; chmod (dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:66:34: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = mkdir (dir, 0755) == 0 &amp;&amp; chmod (dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:68:56: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	ret = mkdir_p (parent) &amp;&amp; (mkdir (dir, 0755) == 0) &amp;&amp; chmod (dir, 0755) == 0;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/doc/edit-sgml.c:255:5: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    fprintf (stderr, format, line, arg);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:114:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy (path, dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:116:2: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+	strcat (path, file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:83:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) atomic-&gt;file, (char *) file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:86:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) atomic-&gt;new, (char *) file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:87:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) atomic-&gt;new, NEW_NAME);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:90:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) atomic-&gt;lck, (char *) file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:91:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) atomic-&gt;lck, LCK_NAME);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:109:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) atomic-&gt;tmp, (char *) atomic-&gt;file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcatomic.c:110:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) atomic-&gt;tmp, TMP_NAME);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:72:18: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (force || access ((const char *) uuidname, F_OK) &lt; 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:296:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) cache_base, "-" FC_ARCHITECTURE FC_CACHE_SUFFIX);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:316:2: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+	strcat ((char *) cache_base, "-" FC_ARCHITECTURE FC_CACHE_SUFFIX);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1316:6: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	if (access ((char *) d, W_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1326:10: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	    if (access ((char *) d, F_OK) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1461:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access ((char *) dir, W_OK) != 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1465:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+		    access ((char *) dir, F_OK) == 0 ? "unwritable" : "non-existent");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1937:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access ((char *) cache_dir, W_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1926:4: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+	  strcat ((char *) fontconfig_instprefix, (char *) fontconfig_path);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1969:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) path, (const char *) dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1984:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) path, (char *) file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1986:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access ((char *) path, R_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2054:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) path[i], (const char *) dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:252:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access ((char *) parent, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:254:14: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    else if (access ((char *) parent, F_OK) == -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:49:2: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	fprintf (f,
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:210:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) file, (char *) dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdir.c:236:6: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	    strcpy ((char *) base, (char *) e-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcformat.c:90:5: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    vfprintf (stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2563:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) complex_, OTLAYOUT_HEAD);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2564:5: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat ((char *) complex_, (char *) tagstring);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:679:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		sprintf ((char *) temp, "%4s=%g", tag, num);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:819:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+		    strcpy (x, s);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:340:22: <b>  [4] </b> (buffer) <i> sscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Specify
+  a limit to %s, or use a different input function. </i>
+<pre>
+	    if (sc &amp;&amp; ec &amp;&amp; sscanf ((char *) string, "[%s %[^]]]", sc, ec) == 2)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcpat.c:436:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *)new_path, (char *)relocated_font_file);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcserialize.c:151:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) str_serialize, (const char *) str);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:959:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy ((char *) full, (char *) home);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:960:2: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+	strcat ((char *) full, (char *) s + 1);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:599:5: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    vfprintf (stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy ((char *) s, (char *) attr[i]);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1373:6: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	    strcpy (buf + (dot - s), decimal_point);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1375:6: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	    strcpy (buf + (dot - s) + dlen, dot + 1);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2225:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy ((char *) prefix, (char *) fontconfig_instprefix);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3212:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy ((char *) file, (char *) dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3242:6: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	    strcpy ((char *) base, (char *) e-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/ftglue.c:23:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf( stderr, format, ap );
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:53:10: <b>  [4] </b> (tmpfile) <i> mktemp:
+  Temporary file race condition (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+    if (!mktemp (template) || mkdir (template, 0700))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:71:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access (parent, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:73:14: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    else if (access (parent, F_OK) == -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:112:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy (n, dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:114:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy (&amp;n[len + 1], e-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:201:5: <b>  [4] </b> (shell) <i> system:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+    system (cmd);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:204:5: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+    snprintf (conf, 1024, tconf, fontdir, cachedir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:230:5: <b>  [4] </b> (shell) <i> system:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+    system (cmd);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:269:5: <b>  [4] </b> (shell) <i> system:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+    system (cmd);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:47:10: <b>  [4] </b> (tmpfile) <i> mktemp:
+  Temporary file race condition (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+    if (!mktemp (template) || mkdir (template, 0700))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:65:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access (parent, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:67:14: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    else if (access (parent, F_OK) == -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:101:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy (n, dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:103:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy (&amp;n[len + 1], e-&gt;d_name);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:157:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (xdg, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:162:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (confd, xdg);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:167:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access (confd, F_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:179:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (fn, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:181:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (nfn, confd);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:196:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access (nfn, F_OK) != 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:208:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (ud, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:210:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (nud, confd);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:218:9: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+    if (access (nud, F_OK) != 0)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cache/fc-cache.c:308:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "Efrsy:Vvh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cache/fc-cache.c:310:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "Efrsy:Vvh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cat/fc-cat.c:277:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "Vvrh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-cat/fc-cat.c:279:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "Vvrh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-conflist/fc-conflist.c:108:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "Vh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-conflist/fc-conflist.c:110:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "Vh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:61:24: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    return (FcChar8 *) getenv ("HOME");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-list/fc-list.c:123:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "vbf:qVh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-list/fc-list.c:125:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "vbf:qVh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-match/fc-match.c:127:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "asvbf:Vh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-match/fc-match.c:129:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "asvbf:Vh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-pattern/fc-pattern.c:117:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "cdf:Vh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-pattern/fc-pattern.c:119:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "cdf:Vh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-query/fc-query.c:121:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "i:bf:Vh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-query/fc-query.c:123:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "i:bf:Vh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-scan/fc-scan.c:116:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "bf:Vh", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-scan/fc-scan.c:118:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "bf:Vh")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:124:17: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt_long (argc, argv, "i:l:mVhv", longopts, NULL)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:126:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt (argc, argv, "i:l:mVhv")) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:254:20: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	const char *env = getenv ("FONTCONFIG_USE_MMAP");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1083:25: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    source_date_epoch = getenv("SOURCE_DATE_EPOCH");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1116:9: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    if (getenv("SOURCE_DATE_EPOCH"))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2004:23: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    env = (FcChar8 *) getenv ("FONTCONFIG_PATH");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2082:22: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        char *home = getenv ("HOME");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2086:13: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	    home = getenv ("USERPROFILE");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2097:23: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    const char *env = getenv ("XDG_CACHE_HOME");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2125:23: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    const char *env = getenv ("XDG_CONFIG_HOME");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2153:23: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    const char *env = getenv ("XDG_DATA_HOME");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2193:20: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	url = (FcChar8 *) getenv ("FONTCONFIG_FILE");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2467:24: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+    return (FcChar8 *) getenv ("FONTCONFIG_SYSROOT");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:208:10: <b>  [3] </b> (random) <i> setstate:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+	state = setstate (statebuf);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:210:14: <b>  [3] </b> (random) <i> random:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+    result = random ();
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:212:5: <b>  [3] </b> (random) <i> setstate:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+    setstate (state);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:214:14: <b>  [3] </b> (random) <i> lrand48:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+    result = lrand48 ();
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:224:2: <b>  [3] </b> (random) <i> srand:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+	srand (time (NULL));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:229:12: <b>  [3] </b> (random) <i> random:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+# error no random number generator function available.
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:574:6: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	e = getenv ("FC_DEBUG");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:61:10: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	langs = getenv ("FC_LANG");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:63:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	    langs = getenv ("LC_ALL");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:65:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	    langs = getenv ("LC_CTYPE");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:67:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	    langs = getenv ("LANG");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:106:13: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	env_file = getenv ("FONTCONFIG_FILE");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:107:13: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	env_path = getenv ("FONTCONFIG_PATH");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmatch.c:791:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	char *env = getenv ("FC_DBG_MATCH_FILTER");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmutex.h:54:31: <b>  [3] </b> (misc) <i> InitializeCriticalSection:
+  Exceptions can be thrown in low-memory situations. Use
+  InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+#define fc_mutex_impl_init(M)	InitializeCriticalSection (M)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcmutex.h:55:31: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+#define fc_mutex_impl_lock(M)	EnterCriticalSection (M)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/doc/edit-sgml.c:529:9: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    f = fopen (argv[1], "r");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:264:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char    line[MAX_LINE];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:282:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char		line[MAX_LINE];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-case/fc-case.c:287:16: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    caseFile = fopen (argv[1], "r");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:109:9: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    f = fopen (file, "r");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:112:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	path[1024];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:117:6: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	f = fopen (path, "r");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:138:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char	    buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:266:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char		*names[MAX_LANG];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:267:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char		*langs[MAX_LANG];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-lang/fc-lang.c:277:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char		line[1024];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/fc-validate/fc-validate.c:132:18: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	    set_index = atoi (optarg);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:77:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char out[37];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:195:6: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	    char suuid[37];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:229:18: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+        unsigned char in[64];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:234:31: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static void MD5Final(unsigned char digest[16], struct MD5Context *ctx);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:278:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    unsigned char 	hash[16];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:642:41: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	while (next[i] &amp;&amp; (char *) object &gt;= ((char *) next[i]-&gt;cache + next[i]-&gt;size))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1749:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy(p, buf, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1752:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(p, buf, t);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1761:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(ctx-&gt;in, buf, 64);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1770:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(ctx-&gt;in, buf, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1777:31: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static void MD5Final(unsigned char digest[16], struct MD5Context *ctx)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccache.c:1814:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(digest, ctx-&gt;buf, 16);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:1927:4: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	  strcat ((char *) fontconfig_path, "\\etc\\fonts");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2029:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	    strncpy ((char *) path[i], (const char *) e, colon - e);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2047:3: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+		strcat ((char *) fontconfig_path, "\\fonts");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2054:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    strcpy ((char *) path[i], (const char *) dir);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2113:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy (ret, home, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2114:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy (&amp;ret[len], FC_DIR_SEPARATOR_S ".cache", 7);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2141:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy (ret, home, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2142:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy (&amp;ret[len], FC_DIR_SEPARATOR_S ".config", 8);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2169:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy (ret, home, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccfg.c:2170:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy (&amp;ret[len], FC_DIR_SEPARATOR_S ".local" FC_DIR_SEPARATOR_S "share", 13);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:790:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (map, ai.leaf-&gt;map, sizeof (ai.leaf-&gt;map));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:827:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (result, ai.leaf-&gt;map, sizeof (ai.leaf-&gt;map));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccharset.c:1187:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (FcCharSetNumbers (&amp;ent-&gt;set),
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:76:1: <b>  [2] </b> (tmpfile) <i> mkstemp:
+  Potential for temporary file vulnerability in some circumstances. Some
+  older Unix-like systems create temp files with permission to write by all
+  by default, so be sure to set the umask to override this. Also, some older
+  Unix systems might fail to use O_EXCL when opening the file, so make sure
+  that O_EXCL is used by the library (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+mkstemp (char *template)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:125:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(pathname, flags | FC_O_CLOEXEC | FC_O_LARGEFILE, mode);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:129:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(pathname, flags | FC_O_CLOEXEC | FC_O_LARGEFILE);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:143:10: <b>  [2] </b> (tmpfile) <i> mkstemp:
+  Potential for temporary file vulnerability in some circumstances. Some
+  older Unix-like systems create temp files with permission to write by all
+  by default, so be sure to set the umask to override this. Also, some older
+  Unix systems might fail to use O_EXCL when opening the file, so make sure
+  that O_EXCL is used by the library (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+    fd = mkstemp (template);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:174:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char statebuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fccompat.c:198:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char statebuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdbg.c:578:19: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	    FcDebugVal = atoi (e);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcdefault.c:120:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[MAX_PATH+1];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:103:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    const char	fromcode[12];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:131:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    const char	lang[8];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:535:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char	fromcode[12];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1397:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy ((void *)foundry_, os2-&gt;achVendID, sizeof (os2-&gt;achVendID));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:1658:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	    psname[256];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcfreetype.c:2684:9: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+        strcpy((char *) complex_, "ttable:Silf ");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcinit.c:128:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;prefix[plen], FC_DIR_SEPARATOR_S "fontconfig", 11);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcint.h:592:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char c[256]; /* Enlarge as needed */
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:302:14: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	    v.u.i = atoi ((char *) string);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:548:2: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	sprintf ((char *) temp, "%d", v.u.i);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:551:2: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	sprintf ((char *) temp, "%g", v.u.d);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:561:2: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	sprintf ((char *) temp, "%g %g %g %g",
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcname.c:571:2: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	sprintf ((char *) temp, "[%g %g]", v.u.r-&gt;begin, v.u.r-&gt;end);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcpat.c:541:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+			memcpy(e, e0, FcPatternObjectCount (p) * sizeof (FcPatternElt));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcrange.c:153:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (r_serialize, r, sizeof (FcRange));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:79:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char full_path_name[MAX_PATH];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:229:6: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	    memcpy (p, dent, dentlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:297:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (f, dir, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstat.c:299:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;f[len + 1], files[n]-&gt;d_name, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:49:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (s, s1, s1l);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:50:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy (s + s1l, s2, s2l + 1);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:119:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		    memcpy (w-&gt;utf8, fcCaseFoldChars + fold-&gt;offset, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:789:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (ret, buf-&gt;buf, buf-&gt;len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:830:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy (new, buf-&gt;buf, buf-&gt;len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:928:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (p, s, len);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcstr.c:1169:9: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+        memcpy (strs, set-&gt;strs, set-&gt;num * sizeof (FcChar8 *));
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:412:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    const char  name[16];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:474:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static const char *fcElementIgnoreName[16] = {
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:485:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	if (!strcmp ((char *) name, fcElementMap[i].name))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:488:17: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	if (!strncmp ((char *) name, fcElementIgnoreName[i], strlen (fcElementIgnoreName[i])))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1124:19: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	slen += strlen ((char *) attr[i]) + 1;
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	strcpy ((char *) s, (char *) attr[i]);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1143:23: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	strcpy ((char *) s, (char *) attr[i]);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:1358:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char	buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2105:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;prefix[plen + 1], data, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2127:2: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	strcat ((char *) data, "\\fonts");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2140:2: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	strcat ((char *) data, "\\..\\share\\fonts");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2154:2: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	strcat ((char *) data, "fonts");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2208:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;prefix[plen + 1], data, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2227:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;prefix[plen + 1], data, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2251:2: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+	strcat ((char *) data, "fontconfig\\cache");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2255:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char szFPath[MAX_PATH + 1];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2359:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (&amp;prefix[plen + 1], s, dlen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2484:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char    name[16];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:2494:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	if (!strcmp ((char *) op, map[i].name))
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3351:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy (buf, s, buflen);
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3412:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char            buf[BUFSIZ];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/src/fcxml.c:3471:6: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	    char ebuf[BUFSIZ+1];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:173:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char *basedir, template[512] = "/tmp/bz106632-XXXXXX";
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:174:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char cmd[512];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-bz106632.c:180:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char conf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-conf.c:277:15: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    if ((fp = fopen(file, "rb")) == NULL)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:149:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char template[32] = "fontconfig-XXXXXXXX";
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:152:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char xdg[256], confd[256], fn[256], nfn[256], ud[256], nud[256];
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:158:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;xdg[len], "/.config");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:163:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;confd[xlen], "/fontconfig");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:180:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;fn[len], "/.fonts.conf");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:182:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;nfn[dlen], "/fonts.conf");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:188:15: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    if ((fp = fopen (fn, "wb")) == NULL)
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:209:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;ud[len], "/.fonts.conf.d");
+</pre>
+<li>/home/capstone/Desktop/root/fontconfig-2.13.1/test/test-migration.c:211:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy (&amp;nud[dlen], "/conf.d");
+</pre>
+</ul>

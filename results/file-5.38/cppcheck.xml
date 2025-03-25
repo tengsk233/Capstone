@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="unknownMacro" severity="error" msg="There is an unknown macro here somewhere. Configuration is required. If FILE_RCSID is a macro then please configure it." verbose="There is an unknown macro here somewhere. Configuration is required. If FILE_RCSID is a macro then please configure it.">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/cherry-pick.FILE5_38-1-gd955cefc.-td-is-for-ptrdiff-t-not-for-off-t.patch/src/readelf.c" line="30" column="1"/>
+        </error>
+        <error id="unknownMacro" severity="error" msg="There is an unknown macro here somewhere. Configuration is required. If FILE_RCSID is a macro then please configure it." verbose="There is an unknown macro here somewhere. Configuration is required. If FILE_RCSID is a macro then please configure it.">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/cherry-pick.revert.FILE5_37-59-g24c9c086.revert-pr-93-iaeiaeiaeiae-do-as-the-comment-says-and-count-as-dynamically-linked.patch/src/readelf.c" line="30" column="1"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;*estr&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;*estr&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="2562" column="8" info="*estr is overwritten"/>
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="2560" column="8" info="*estr is assigned"/>
+            <symbol>*estr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;fileerr&apos; can be reduced." verbose="The scope of the variable &apos;fileerr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="660" column="6"/>
+            <symbol>fileerr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;diff&apos; can be reduced." verbose="The scope of the variable &apos;diff&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="1837" column="10"/>
+            <symbol>diff</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="1260" column="32"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;ml&apos; is not assigned a value." verbose="Variable &apos;ml&apos; is not assigned a value." cwe="665">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="434" column="16"/>
+            <symbol>ml</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;ml&apos; is not assigned a value." verbose="Variable &apos;ml&apos; is not assigned a value." cwe="665">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="614" column="16"/>
+            <symbol>ml</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;magindex&apos; is assigned a value that is never used." verbose="Variable &apos;magindex&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/.pc/local.support-local-definitions-in-etc-magic.patch/src/apprentice.c" line="1009" column="20"/>
+            <symbol>magindex</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;*estr&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;*estr&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="2562" column="8" info="*estr is overwritten"/>
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="2560" column="8" info="*estr is assigned"/>
+            <symbol>*estr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;fileerr&apos; can be reduced." verbose="The scope of the variable &apos;fileerr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="660" column="6"/>
+            <symbol>fileerr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;diff&apos; can be reduced." verbose="The scope of the variable &apos;diff&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="1837" column="10"/>
+            <symbol>diff</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="1260" column="32"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;ml&apos; is not assigned a value." verbose="Variable &apos;ml&apos; is not assigned a value." cwe="665">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="434" column="16"/>
+            <symbol>ml</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;ml&apos; is not assigned a value." verbose="Variable &apos;ml&apos; is not assigned a value." cwe="665">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="614" column="16"/>
+            <symbol>ml</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;magindex&apos; is assigned a value that is never used." verbose="Variable &apos;magindex&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="1009" column="20"/>
+            <symbol>magindex</symbol>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="473" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="1032" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="473" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apprentice.c" line="1032" column="4"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/apptype.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/ascmagic.c" line="0" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;subtype_mime&apos; is always false" verbose="Condition &apos;subtype_mime&apos; is always false" cwe="570">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/ascmagic.c" line="226" column="8" info="Condition &apos;subtype_mime&apos; is always false"/>
+            <location file="/home/capstone/Desktop/root/file-5.38/src/ascmagic.c" line="118" column="29" info="Assignment &apos;subtype_mime=NULL&apos;, assigned value is 0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/asctime_r.c" line="0" column="0"/>
+        </error>
+        <error id="asctimeCalled" severity="style" msg="Obsolete function &apos;asctime&apos; called. It is recommended to use &apos;strftime&apos; instead." verbose="Obsolete function &apos;asctime&apos; called. It is recommended to use &apos;strftime&apos; instead." cwe="477">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/asctime_r.c" line="14" column="12"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/asprintf.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/buffer.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="518" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1339" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1340" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1341" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1343" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1345" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1363" column="10"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1437" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1548" column="8"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="1567" column="3"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf_time.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rv&apos; can be reduced." verbose="The scope of the variable &apos;rv&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="355" column="10"/>
+            <symbol>rv</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous3::magic&apos; is never used." verbose="struct member &apos;Anonymous3::magic&apos; is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="164" column="14"/>
+            <symbol>Anonymous3::magic</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous3::maglen&apos; is never used." verbose="struct member &apos;Anonymous3::maglen&apos; is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="165" column="6"/>
+            <symbol>Anonymous3::maglen</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous3::argv&apos; is never used." verbose="struct member &apos;Anonymous3::argv&apos; is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="166" column="15"/>
+            <symbol>Anonymous3::argv</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous3::unused&apos; is never used." verbose="struct member &apos;Anonymous3::unused&apos; is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="167" column="8"/>
+            <symbol>Anonymous3::unused</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FD_ZERO&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FD_ZERO&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="398" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="390" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FD_ZERO;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="415" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="390" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FIONREAD&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/compress.c" line="415" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/ctime_r.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/der.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/der.c" line="268" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/der.c" line="268" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/der.c" line="318" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/der.c" line="318" column="4"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/dprintf.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/encoding.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/file.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nw&apos; can be reduced." verbose="The scope of the variable &apos;nw&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/file.c" line="398" column="18"/>
+            <symbol>nw</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cwid&apos; can be reduced." verbose="The scope of the variable &apos;cwid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/file.c" line="486" column="15"/>
+            <symbol>cwid</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bytesconsumed&apos; can be reduced." verbose="The scope of the variable &apos;bytesconsumed&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/file.c" line="557" column="9"/>
+            <symbol>bytesconsumed</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/fmtcheck.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 34 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/fsmagic.c" line="0" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK&apos; since the value of &apos;S_IFBLK&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK&apos; since the value of &apos;S_IFBLK&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/fsmagic.c" line="236" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK;dv_unit&apos; since the value of &apos;S_IFBLK&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK;dv_unit&apos; since the value of &apos;S_IFBLK&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/fsmagic.c" line="236" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK;dv_unit&apos; since the value of &apos;dv_unit&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;HAVE_STRUCT_STAT_ST_RDEV;S_IFBLK;dv_unit&apos; since the value of &apos;dv_unit&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/fsmagic.c" line="254" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/funcs.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/funcs.c" line="498" column="9"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bytesconsumed&apos; can be reduced." verbose="The scope of the variable &apos;bytesconsumed&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/funcs.c" line="450" column="10"/>
+            <symbol>bytesconsumed</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/getline.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/getopt_long.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cstart&apos; can be reduced." verbose="The scope of the variable &apos;cstart&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/getopt_long.c" line="143" column="6"/>
+            <symbol>cstart</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;pos&apos; can be reduced." verbose="The scope of the variable &apos;pos&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/getopt_long.c" line="143" column="55"/>
+            <symbol>pos</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/gmtime_r.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/is_csv.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/is_json.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/is_tar.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/localtime_r.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/pread.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/print.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/print.c" line="55" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/print.c" line="65" column="10"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/print.c" line="137" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tbuf&apos; can be reduced." verbose="The scope of the variable &apos;tbuf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/print.c" line="53" column="7"/>
+            <symbol>tbuf</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readcdf.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readcdf.c" line="270" column="9"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readcdf.c" line="271" column="7"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ce&apos; can be reduced." verbose="The scope of the variable &apos;ce&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readcdf.c" line="272" column="23"/>
+            <symbol>ce</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;str&apos; can be reduced." verbose="The scope of the variable &apos;str&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readcdf.c" line="309" column="15"/>
+            <symbol>str</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readelf.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ibuf&apos; can be reduced." verbose="The scope of the variable &apos;ibuf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readelf.c" line="1609" column="7"/>
+            <symbol>ibuf</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bufsize&apos; can be reduced." verbose="The scope of the variable &apos;bufsize&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readelf.c" line="1611" column="10"/>
+            <symbol>bufsize</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;align&apos; can be reduced." verbose="The scope of the variable &apos;align&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/readelf.c" line="1612" column="17"/>
+            <symbol>align</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/seccomp.c" line="0" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;FIONREAD;HAVE_LIBSECCOMP&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;FIONREAD;HAVE_LIBSECCOMP&apos; since the value of &apos;FIONREAD&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/seccomp.c" line="186" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;HAVE_LIBSECCOMP;TIOCGWINSZ&apos; since the value of &apos;TIOCGWINSZ&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;HAVE_LIBSECCOMP;TIOCGWINSZ&apos; since the value of &apos;TIOCGWINSZ&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/seccomp.c" line="190" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rv&apos; can be reduced." verbose="The scope of the variable &apos;rv&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="121" column="6"/>
+            <symbol>rv</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;lhs&apos; can be reduced." verbose="The scope of the variable &apos;lhs&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1525" column="11"/>
+            <symbol>lhs</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;in_type&apos; can be reduced." verbose="The scope of the variable &apos;in_type&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1527" column="27"/>
+            <symbol>in_type</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;search&apos; can be reduced." verbose="The scope of the variable &apos;search&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="2109" column="15"/>
+            <symbol>search</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1298" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 7) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 7) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="958" column="12"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1298" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1551" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1551" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="958" column="12"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1298" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 5) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 5) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1508" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 4) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 4) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1551" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%I64u in format string (no. 5) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%I64u in format string (no. 5) requires &apos;unsigned __int64&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/softmagic.c" line="1551" column="3"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strcasestr.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;sc&apos; can be reduced." verbose="The scope of the variable &apos;sc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strcasestr.c" line="69" column="10"/>
+            <symbol>sc</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strcasestr.c" line="70" column="9"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strlcat.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strlcpy.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/vasprintf.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;dummy_base&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;dummy_base&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/vasprintf.c" line="600" column="14" info="dummy_base is overwritten"/>
+            <location file="/home/capstone/Desktop/root/file-5.38/src/vasprintf.c" line="598" column="14" info="dummy_base is assigned"/>
+            <symbol>dummy_base</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;result&apos; can be reduced." verbose="The scope of the variable &apos;result&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/tests/test.c" line="71" column="14"/>
+            <symbol>result</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;desired&apos; can be reduced." verbose="The scope of the variable &apos;desired&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/tests/test.c" line="72" column="8"/>
+            <symbol>desired</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;fp&apos; can be reduced." verbose="The scope of the variable &apos;fp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/file-5.38/tests/test.c" line="75" column="8"/>
+            <symbol>fp</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563">
+            <location file="/home/capstone/Desktop/root/file-5.38/tests/test.c" line="74" column="6"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;DllMain&apos; is never used." verbose="The function &apos;DllMain&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="163" column="0"/>
+            <symbol>DllMain</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cdf_timespec_to_timestamp&apos; is never used." verbose="The function &apos;cdf_timespec_to_timestamp&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf_time.c" line="147" column="0"/>
+            <symbol>cdf_timespec_to_timestamp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cdf_tole4&apos; is never used." verbose="The function &apos;cdf_tole4&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="197" column="0"/>
+            <symbol>cdf_tole4</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cdf_tole8&apos; is never used." verbose="The function &apos;cdf_tole8&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/cdf.c" line="203" column="0"/>
+            <symbol>cdf_tole8</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;enable_sandbox_basic&apos; is never used." verbose="The function &apos;enable_sandbox_basic&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/seccomp.c" line="63" column="0"/>
+            <symbol>enable_sandbox_basic</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getopt&apos; is never used." verbose="The function &apos;getopt&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/getopt_long.c" line="322" column="0"/>
+            <symbol>getopt</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_buffer&apos; is never used." verbose="The function &apos;magic_buffer&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="530" column="0"/>
+            <symbol>magic_buffer</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_descriptor&apos; is never used." verbose="The function &apos;magic_descriptor&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="383" column="0"/>
+            <symbol>magic_descriptor</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_errno&apos; is never used." verbose="The function &apos;magic_errno&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="556" column="0"/>
+            <symbol>magic_errno</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_getflags&apos; is never used." verbose="The function &apos;magic_getflags&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="564" column="0"/>
+            <symbol>magic_getflags</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_getparam&apos; is never used." verbose="The function &apos;magic_getparam&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="625" column="0"/>
+            <symbol>magic_getparam</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;magic_load_buffers&apos; is never used." verbose="The function &apos;magic_load_buffers&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/magic.c" line="310" column="0"/>
+            <symbol>magic_load_buffers</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;strlcat&apos; is never used." verbose="The function &apos;strlcat&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/file-5.38/src/strlcat.c" line="33" column="0"/>
+            <symbol>strlcat</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

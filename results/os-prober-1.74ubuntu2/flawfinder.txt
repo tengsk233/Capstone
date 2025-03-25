@@ -1,0 +1,2 @@
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c:25:2:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execvp(argv[1], argv + 1);

@@ -1,0 +1,2360 @@
+<ul>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:334:7: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+  if (chmod (filename_c, 0644) == -1)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1222:20: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+  if (!abstract &amp;&amp; chmod (path, 0777) &lt; 0)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/activation-helper.c:354:7: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  if (execv (argv[0], argv) &lt; 0)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:187:12: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+      goto syslog;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:194:14: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+        goto syslog;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:205:1: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+syslog:
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:73:16: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+  unsigned int syslog : 1;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:309:20: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+      if (context-&gt;syslog)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:984:20: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+      if (context-&gt;syslog)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/bus.c:1371:19: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+  return context-&gt;syslog;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:119:16: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+  unsigned int syslog : 1; /**&lt; TRUE to enable syslog */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/config-parser.c:2950:18: <b>  [4] </b> (format) <i> syslog:
+  If syslog's format strings can be influenced by an attacker, they can be
+  exploited (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant format string for syslog. </i>
+<pre>
+  return parser-&gt;syslog;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:151:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/selinux.c:140:5: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+    vsnprintf(buf, sizeof(buf), fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:311:11: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+          strcpy(module_name,last_slash+1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:427:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy(buf,module_name);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:429:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+  sprintf (buf+strlen(buf), "[%s(%d):%s] ",_dbus_file_path_extract_elements_from_tail(file,2),line,function);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:431:3: <b>  [4] </b> (format) <i> vsprintf:
+  Potential format string problem (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
+  format string constant. </i>
+<pre>
+  vsprintf (buf+strlen(buf),format, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:440:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, format, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2767:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (buf, sample_signatures[seed % _DBUS_N_ELEMENTS(sample_signatures)]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-win.c:523:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy (p, strings[i]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1095:3: <b>  [4] </b> (format) <i> vsprintf:
+  Potential format string problem (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
+  format string constant. </i>
+<pre>
+  vsprintf ((char*) (real-&gt;str + (real-&gt;len - len)),
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1073:7: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+      execvp (path, (char * const *) argv);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3517:9: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+  len = vsnprintf (static_buf, bufsize, format, args_copy);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3536:11: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+      if (vsnprintf (static_buf, 1, format, args_copy) == 1)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3556:13: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+      len = vsnprintf (buf, bufsize, format, args_copy);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3741:11: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+          execv (progpath, (char * const *) argv);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3750:13: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+            execvp (strrchr (progpath, '/')+1, (char * const *) argv);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3753:9: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+        execvp (progpath, (char * const *) argv);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4728:7: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+      vfprintf (stderr, msg, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:550:11: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  return (access (file, F_OK) == 0);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2449:27: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#define DPRINTF(fmt, ...) fprintf (stderr, fmt, ##__VA_ARGS__)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2915:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy( shared_addr, address);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3730:7: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+      vsnprintf(buf, sizeof(buf), format, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3739:7: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+      vfprintf (stderr, msg, tmp);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:231:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (stpcpy (stpcpy (result, tmp), "\\bin\\"), name);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:255:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (stpcpy (stpcpy (result, tmp), "\\"), name);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:278:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (result, dir);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:481:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (lpBuffer, filename);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1118:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy (lpBuffer, buffer_c);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:140:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy (putenv_value, varname);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:171:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy (putenv_value, varname);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:173:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy (putenv_value + varname_len + 1, value);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-userdb-util.c:59:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access ("/run/systemd/seats/", F_OK) &gt;= 0)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-privserver-client.c:12:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, message, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-privserver.c:12:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, message, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:128:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (se-&gt;name, dir);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-cleanup-sockets.c:130:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (se-&gt;name, fname);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:44:3: <b>  [4] </b> (buffer) <i> wcscat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). </i>
+<pre>
+  wcscat (dest, src);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:53:3: <b>  [4] </b> (buffer) <i> wcscpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using a function version that stops copying at the end of the
+  buffer. </i>
+<pre>
+  wcscpy (dest, src);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:163:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (result, home);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:164:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (result, prefix);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:165:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (result, machine);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:167:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (result, display);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:190:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (dir, home);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:192:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (dir, DBUS_DIR);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:202:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (dir, DBUS_SESSION_BUS_DIR);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:268:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (atom_name, selection_prefix);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:269:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (atom_name, user_name);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:271:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat (atom_name, machine);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:275:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (atom_name, address_prefix);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:279:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (atom_name, pid_prefix);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:162:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, format, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:786:7: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+      strcat (envvar, bus_address);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:789:7: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+      execvp (runprog, args);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1235:13: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+            execl (test_daemon,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1253:7: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+      execl (DBUS_DAEMONDIR"/dbus-daemon",
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1273:7: <b>  [4] </b> (shell) <i> execlp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+      execlp ("dbus-daemon",
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:189:3: <b>  [4] </b> (shell) <i> execlp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  execlp (dbus_daemon,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:206:3: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  execvp (argv[prog_arg], argv + prog_arg);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:93:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf (stderr, format, ap);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/tool-common.h:30:17: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#define VERBOSE fprintf
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:46:3: <b>  [3] </b> (misc) <i> InitializeCriticalSection:
+  Exceptions can be thrown in low-memory situations. Use
+  InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  InitializeCriticalSection (&amp;init_lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:173:3: <b>  [3] </b> (misc) <i> InitializeCriticalSection:
+  Exceptions can be thrown in low-memory situations. Use
+  InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  InitializeCriticalSection (&amp;cond-&gt;lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:202:3: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  EnterCriticalSection (&amp;cond-&gt;lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:220:7: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+      EnterCriticalSection (&amp;cond-&gt;lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:233:3: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  EnterCriticalSection (&amp;cond-&gt;lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:262:3: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  EnterCriticalSection (&amp;cond-&gt;lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-thread-win.c:296:3: <b>  [3] </b> (misc) <i> EnterCriticalSection:
+  On some versions of Windows, exceptions can be thrown in low-memory
+  situations. Use InitializeCriticalSectionAndSpinCount instead. </i>
+<pre>
+  EnterCriticalSection (&amp;init_lock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3593:18: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        tmpdir = getenv("TMPDIR");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3599:18: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        tmpdir = getenv("TMP");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3601:18: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        tmpdir = getenv("TEMP");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:122:21: <b>  [3] </b> (misc) <i> LoadLibrary:
+  Ensure that the full path to the library is specified, or current directory
+  may be used (<a
+  href="https://cwe.mitre.org/data/definitions/829.html">CWE-829</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Use
+  registry entry or GetWindowsDirectory to find library path, if you aren't
+  already. </i>
+<pre>
+  HMODULE hModule = LoadLibrary ("iphlpapi.dll");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:288:1: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+getenv (const char *name)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.h:89:9: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+#define getenv _dbus_wince_getenv
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.h:90:7: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+char *getenv (const char *name);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.c:194:10: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  return getenv (varname);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/name-test/test-shutdown.c:26:34: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  session_addr_no_guid = strdup (getenv ("DBUS_SESSION_BUS_ADDRESS"));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:96:13: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  char *s = getenv("DBUS_VERBOSE");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:72:10: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  home = getenv ("HOME");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:107:22: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  display = xstrdup (getenv ("DISPLAY"));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:422:12: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+           getenv ("DISPLAY"),
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:153:17: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+      verbose = getenv ("DBUS_VERBOSE") != NULL;
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:644:7: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  s = getenv ("DBUS_DEBUG_OUTPUT");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:986:21: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+      if ((shname = getenv ("SHELL")) != NULL)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1219:35: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        const char *test_daemon = getenv ("DBUS_TEST_DAEMON");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1223:40: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+            if (config_file == NULL &amp;&amp; getenv ("DBUS_TEST_DATA") != NULL)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1225:40: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+                config_file = concat2 (getenv ("DBUS_TEST_DATA"),
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:346:3: <b>  [3] </b> (random) <i> srand:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (<a
+  href="https://cwe.mitre.org/data/definitions/327.html">CWE-327</a>). Use a
+  more secure technique for acquiring random values. </i>
+<pre>
+  srand (seed);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:102:27: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  char *xdg_runtime_dir = getenv ("XDG_RUNTIME_DIR");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-update-activation-environment.c:303:21: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+              val = getenv (var);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/activation.c:2409:10: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  file = fopen (_dbus_string_get_const_data (&amp;full_path), "w");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/apparmor.c:141:15: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  mask_file = open (_dbus_string_get_const_data (&amp;aa_dbus),
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/desktop-file.c:71:17: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static unsigned char valid[256] = { 
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:51:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char *dirs[MAX_DIRS_TO_WATCH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:60:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buffer[INOTIFY_BUF_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-inotify.c:99:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *new_dirs[MAX_DIRS_TO_WATCH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:48:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char *dirs[MAX_DIRS_TO_WATCH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:202:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *new_dirs[MAX_DIRS_TO_WATCH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:267:16: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+          fd = open (new_dirs[i], O_RDONLY | O_CLOEXEC);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dir-watch-kqueue.c:273:20: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+              fd = open (new_dirs[i], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/dispatch.c:4133:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  const char *argv[7] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL};
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:79:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+        char action[2] = { ACTION_RELOAD, '\0' };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/main.c:113:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+        char action[2] = { ACTION_QUIT, '\0' };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/bus/selinux.c:137:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buf[PATH_MAX*2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-address.c:291:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+          char buf[3];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-auth-script.c:210:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (array[k],
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-bus.c:93:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char *bus_connection_addresses[N_BUS_TYPES] = { NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:70:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (filename_c, O_RDONLY | O_BINARY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:215:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (tmp_filename_c, O_WRONLY | O_BINARY | O_EXCL | O_CREAT,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-file-unix.c:363:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (filename_c, O_WRONLY | O_BINARY | O_EXCL | O_CREAT,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-hash.c:1617:13: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      len = sprintf (keys[i], "Hash key %d", i);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:291:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char module_name[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:312:9: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+        strcat(module_name,": ");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:426:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:550:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (copy, str, len + 1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.c:573:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (copy, mem, n_bytes);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.h:397:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char as_bytes[DBUS_UUID_LENGTH_BYTES];                /**&lt; guid as 16 single-byte values */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-internals.h:422:20: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  typedef struct { char _assertion[(expr) ? 1 : -1]; } \
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-basic.c:1611:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char array1[5] = { 3, 4, 0, 1, 9 };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-header.c:296:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:1925:7: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+      atoi (_dbus_getenv ("DBUS_TEST_SLOW")) &lt; 1)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2006:7: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+  if (atoi (_dbus_getenv ("DBUS_TEST_SLOW")) &lt; 2)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2429:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_STRING_LEN + 1]="";
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2447:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_STRING_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2474:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_STRING_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2701:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2717:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2742:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_OBJECT_PATH_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2776:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2792:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-marshal-recursive-util.c:2818:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[MAX_SAMPLE_SIGNATURE_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-memory.c:135:15: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	  fail_nth = atoi (_dbus_getenv ("DBUS_MALLOC_FAIL_NTH"));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-memory.c:142:23: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+          fail_size = atoi (_dbus_getenv ("DBUS_MALLOC_FAIL_GREATER_THAN"));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-mempool.c:92:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char elements[ELEMENT_PADDING]; /**&lt; the block data, actually allocated to required size */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:431:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH+2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:467:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH*2+4];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-factory.c:687:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char long_sig[DBUS_MAXIMUM_TYPE_RECURSION_DEPTH*4+10];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-util.c:1232:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char sig[64];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message-util.c:1606:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char garbage_header[DBUS_MINIMUM_HEADER_SIZE] = "xxx";
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-message.c:1875:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+          char buf[2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-nonce.c:128:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buffer[17];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-nonce.c:138:8: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fp = fopen (_dbus_string_get_const_data (fname), "rb");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:81:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char                               name[1]; /**&lt; Allocated as large as necessary */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1120:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (subtree-&gt;name, name, len + 1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-object-tree.c:1598:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  const char *result[20];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:364:47: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+sha_finish (DBusSHAContext *context, unsigned char digest[20])
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:459:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char digest[20];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sha.c:937:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char all_bytes[256];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:61:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  const char *argv[4] = { NULL, NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:103:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:158:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn-test.c:209:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *argv[4] = { NULL, NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:1404:16: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+          fd = open ("/proc/self/oom_score_adj", O_WRONLY | O_CLOEXEC);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-spawn.c:1409:20: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+              fd = open ("/proc/self/oom_score_adj", O_WRONLY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string-util.c:197:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    unsigned char buf[512];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:682:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (*data_return, real-&gt;str, real-&gt;len + 1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:706:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (buffer, real-&gt;str, real-&gt;len);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:728:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (buffer, real-&gt;str, real-&gt;len+1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:920:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (real-&gt;str + (real-&gt;len - buffer_len),
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:974:47: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                               const unsigned char octets[2])
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:998:47: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                               const unsigned char octets[4])
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1022:47: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                               const unsigned char octets[8])
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:1472:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char byte_string[2] = "";
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.c:2228:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  const char hexdigits[16] = {
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:209:66: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                                                  const unsigned char octets[2]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:212:66: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                                                  const unsigned char octets[4]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-string.h:215:66: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+                                                  const unsigned char octets[8]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:177:19: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+        devnull = open ("/dev/null", O_RDWR);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:485:13: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+            memcpy (fds, payload, fds_to_use * sizeof (int));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:594:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy(CMSG_DATA(cm), fds, n_fds * sizeof(int));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1651:15: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+              char portbuf[50];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1737:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1] = { '\0' };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1741:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	  char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:1962:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3169:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open ("/dev/urandom", O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3511:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char static_buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:3861:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  const char *argv[6];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4035:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *argv[4];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-unix.c:4577:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char hostip[INET6_ADDRSTRLEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:179:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (cfilename, O_WRONLY|O_CREAT|O_EXCL|O_BINARY, 0644);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-unix.c:1152:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open (_dbus_string_get_const_data (&amp;path), O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-util-win.c:88:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char pidstr[20];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:735:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:789:7: <b>  [2] </b> (buffer) <i> MultiByteToWideChar:
+  Requires maximum length in CHARACTERS, not bytes (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). </i>
+<pre>
+  n = MultiByteToWideChar (CP_UTF8, 0, str, -1, NULL, 0);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:805:7: <b>  [2] </b> (buffer) <i> MultiByteToWideChar:
+  Requires maximum length in CHARACTERS, not bytes (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). </i>
+<pre>
+  if (MultiByteToWideChar (CP_UTF8, 0, str, -1, retval, n) != n)
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1181:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char msg[DBUS_POLL_CHAR_BUFFER_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1200:11: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+  msgp += sprintf (msgp, "WSAEventSelect: to=%d\n\t", timeout_milliseconds);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1207:17: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+        msgp += sprintf (msgp, "R:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1210:17: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+        msgp += sprintf (msgp, "W:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1212:15: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      msgp += sprintf (msgp, "E:%Iu\n\t", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1262:15: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      msgp += sprintf (msgp, "WSAWaitForMultipleEvents: =%d\n\t", ready);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1283:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "R:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1286:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "W:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1289:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "E:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1291:19: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+          msgp += sprintf (msgp, "lNetworkEvents:%d ", ne.lNetworkEvents);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1322:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char msg[DBUS_POLL_CHAR_BUFFER_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1339:11: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+  msgp += sprintf (msgp, "select: to=%d\n\t", timeout_milliseconds);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1346:17: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+        msgp += sprintf (msgp, "R:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1349:17: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+        msgp += sprintf (msgp, "W:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1351:15: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      msgp += sprintf (msgp, "E:%Iu\n\t", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1398:17: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+        msgp += sprintf (msgp, "select: = %d:\n\t", ready);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1405:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "R:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1408:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "W:%Iu ", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1411:23: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+              msgp += sprintf (msgp, "E:%Iu\n\t", fdp-&gt;fd.sock);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:1773:15: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+              char portbuf[NI_MAXSERV];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2349:10: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static char buf[1000];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:2529:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buffer[sizeof(SYMBOL_INFO) + MAX_SYM_NAME * sizeof(char)];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3035:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char dbus_exe_path[MAX_PATH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3036:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char dbus_args[MAX_PATH * 2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3062:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char dbus_module_path[MAX_PATH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3725:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-win.c:3726:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char format[1024];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:266:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char dir[MAX_PATH + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:285:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char *environ[MAX_ENV + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:509:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (buf, asid, sizeof (asid));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:956:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (data, data_c, data_c_len);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:967:9: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+        memcpy (lpData, data, data_len);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1007:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (lpBuffer, &amp;buffer_new, sizeof (buffer_new));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1073:3: <b>  [2] </b> (buffer) <i> wchar_t:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  wchar_t dummy[1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps-wince-glue.c:1129:3: <b>  [2] </b> (buffer) <i> wchar_t:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  wchar_t path[MAX_PATH];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-sysdeps.h:605:38: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+#    define DBUS_VA_COPY(ap1, ap2)   memcpy ((ap1), (ap2), sizeof (va_list))
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-transport-unix.c:292:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+          char t[4+20+1]; /* "argv" plus space for a formatted base 10 64bit integer, plus NUL */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-transport-unix.c:311:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+          char t[4+20+1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-types.h:139:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  unsigned char bytes[8]; /**&lt; as 8 individual bytes */
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/dbus/dbus-userdb-util.c:428:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (*group_ids, info-&gt;group_ids, info-&gt;n_group_ids * sizeof (dbus_gid_t));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/fdpass.c:290:18: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  f-&gt;fd_before = open ("/dev/null", O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:194:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (&amp;value, value_p, 4);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:245:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (&amp;value, value_p, 8);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:296:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (&amp;length, value, 4);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:359:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (&amp;value, value_p, 4);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/internals/variant.c:366:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (&amp;value, value_p, 4);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/marshal.c:260:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (aligned_le_blob, le_blob, sizeof (le_blob));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/test/marshal.c:262:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (aligned_be_blob, be_blob, sizeof (be_blob));  
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-echo.c:182:22: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+          sleep_ms = atoi (arg + strlen ("--sleep-ms="));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:87:3: <b>  [2] </b> (buffer) <i> wchar_t:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  wchar_t dbusDaemonPath[MAX_PATH * 2 + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-win.c:88:3: <b>  [2] </b> (buffer) <i> wchar_t:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  wchar_t command[MAX_PATH * 2 + 1];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch-x11.c:408:7: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  f = fopen (session_file, "w");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:207:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (copy, str, len + 1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:228:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (ret, a, la);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:229:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy (ret + la, b, lb + 1);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:581:15: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+              char discard[512];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:785:7: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+      strcpy (envvar, "DBUS_SESSION_BUS_ADDRESS=");
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1140:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char write_pid_fd_as_string[MAX_FD_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1141:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char write_address_fd_as_string[MAX_FD_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1208:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf (write_pid_fd_as_string,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1211:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf (write_address_fd_as_string,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1293:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char bus_address[MAX_ADDR_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-launch.c:1294:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[MAX_PID_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-print-message.c:164:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (copy, bytes, len);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-print-message.c:188:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char hostip[INET6_ADDRSTRLEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:177:25: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+exec_dbus_daemon (const char *dbus_daemon,
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:183:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char write_address_fd_as_string[MAX_FD_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:187:3: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+  sprintf (write_address_fd_as_string, "%d", bus_address_pipe[PIPE_WRITE_END]);
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-run-session.c:220:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char bus_address[MAX_ADDR_LEN] = { 0 };
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-send.c:531:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	  char sig[5];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-send.c:554:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	  char sig[2];
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:203:19: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+          count = atoi (arg + strlen ("--count="));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:324:23: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+          queue_len = atoi (arg + strlen ("--queue="));
+</pre>
+<li>/home/capstone/Desktop/root/dbus-1.12.16/tools/dbus-spam.c:335:31: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+          messages_per_conn = atoi (arg + strlen ("--messages-per-conn="));
+</pre>
+</ul>

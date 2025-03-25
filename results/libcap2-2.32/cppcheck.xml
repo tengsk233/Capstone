@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/Spelling-fixes.patch/progs/capsh.c" line="618" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/Spelling-fixes.patch/progs/capsh.c" line="826" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/Spelling-fixes.patch/progs/capsh.c" line="835" column="3"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;status&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;status&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/Spelling-fixes.patch/progs/capsh.c" line="561" column="13" info="status is overwritten"/>
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/Spelling-fixes.patch/progs/capsh.c" line="552" column="13" info="status is assigned"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!explained&apos; is always true" verbose="Condition &apos;!explained&apos; is always true" cwe="571">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/setcap-error-message.patch/progs/setcap.c" line="220" column="7" info="Condition &apos;!explained&apos; is always true"/>
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/setcap-error-message.patch/progs/setcap.c" line="195" column="19" info="Assignment &apos;explained=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;text&apos; can be reduced." verbose="The scope of the variable &apos;text&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/.pc/setcap-error-message.patch/progs/setcap.c" line="79" column="14"/>
+            <symbol>text</symbol>
+        </error>
+        <error id="assignmentInAssert" severity="warning" msg="Assert statement modifies &apos;caps&apos;." verbose="Variable &apos;caps&apos; is modified inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/contrib/bug400591/bug.c" line="18" column="16"/>
+            <symbol>caps</symbol>
+        </error>
+        <error id="uselessAssignmentPtrArg" severity="warning" msg="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" verbose="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c" line="147" column="7"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_libcap_strdup&apos; argument 1 names different: declaration &apos;text&apos; definition &apos;old&apos;." verbose="Function &apos;_libcap_strdup&apos; argument 1 names different: declaration &apos;text&apos; definition &apos;old&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c" line="76" column="34"/>
+            <location file0="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c" file="/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h" line="181" column="41"/>
+            <symbol>_libcap_strdup</symbol>
+        </error>
+        <error id="noValidConfiguration" severity="information" msg="This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details." verbose="This file is not analyzed. Cppcheck failed to extract a valid configuration. The tested configurations have these preprocessor errors:\012&apos;&apos; : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012DEBUG : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012GPERF_DOWNCASE : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012INCLUDE_GPERF_OUTPUT : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012VFS_CAP_REVISION_MASK;VFS_CAP_U32 : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012_LINUX_CAPABILITY_VERSION : [/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:305] #error Recompile with correctly sized numeric array\012_LINUX_CAPABILITY_VERSION_2 : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library\012_LINUX_CAPABILITY_VERSION_3 : [/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:39] #error Kernel &lt;linux/capability.h&gt; does not support library">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;state&apos; can be reduced." verbose="The scope of the variable &apos;state&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/psx.c" line="213" column="25"/>
+            <symbol>state</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;status&apos; is assigned a value that is never used." verbose="Variable &apos;status&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/pam_cap/test_pam_cap.c" line="168" column="12"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c" line="618" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c" line="826" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c" line="835" column="3"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;status&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;status&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c" line="561" column="13" info="status is overwritten"/>
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c" line="552" column="13" info="status is assigned"/>
+            <symbol>status</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!explained&apos; is always true" verbose="Condition &apos;!explained&apos; is always true" cwe="571">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c" line="239" column="7" info="Condition &apos;!explained&apos; is always true"/>
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c" line="214" column="19" info="Assignment &apos;explained=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;text&apos; can be reduced." verbose="The scope of the variable &apos;text&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c" line="98" column="14"/>
+            <symbol>text</symbol>
+        </error>
+        <error id="identicalInnerCondition" severity="warning" msg="Identical inner &apos;if&apos; condition is always true." verbose="Identical inner &apos;if&apos; condition is always true (outer condition is &apos;i&lt;3&apos; and inner condition is &apos;i&lt;3&apos;)." cwe="398">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/tests/psx_test.c" line="82" column="19" info="identical inner condition: i&lt;3"/>
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/tests/psx_test.c" line="77" column="8" info="outer condition: i&lt;3"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;__psx_syscall&apos; is never used." verbose="The function &apos;__psx_syscall&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/psx.c" line="313" column="0"/>
+            <symbol>__psx_syscall</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;_initialize_libcap&apos; is never used." verbose="The function &apos;_initialize_libcap&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c" line="15" column="0"/>
+            <symbol>_initialize_libcap</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;_libcap_strdup&apos; is never used." verbose="The function &apos;_libcap_strdup&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c" line="76" column="0"/>
+            <symbol>_libcap_strdup</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cap_clear&apos; is never used." verbose="The function &apos;cap_clear&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_flag.c" line="80" column="0"/>
+            <symbol>cap_clear</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cap_get_fd&apos; is never used." verbose="The function &apos;cap_get_fd&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_file.c" line="333" column="0"/>
+            <symbol>cap_get_fd</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;cap_set_fd&apos; is never used." verbose="The function &apos;cap_set_fd&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_file.c" line="351" column="0"/>
+            <symbol>cap_set_fd</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

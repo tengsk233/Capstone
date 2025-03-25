@@ -1,0 +1,216 @@
+<ul>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:92:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy((char *) raw_data, old);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:378:9: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+    p = sprintf(buf, "=%s%s%s",
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:396:15: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	        p += sprintf(p, "%s,", this_cap_name);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:403:11: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	    p += sprintf(p, "+%s%s%s",
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:410:11: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	    p += sprintf(p, "-%s%s%s",
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:439:8: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		p += sprintf(p, "%s,", this_cap_name);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:444:7: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	p += sprintf(p, "+%s%s%s",
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:161:5: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    fprintf(stderr, f, ## x); \
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:392:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		sprintf(ptr, "%s %s+i", text, argv[i]+6);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:394:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+		strcpy(ptr, text);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/old/execcap.c:60:5: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+    execvp(argv[2], argv+2);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/old/sucap.c:175:2: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	execvp(argv[3], argv+3);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:552:15: <b>  [3] </b> (misc) <i> chroot:
+  chroot can be very helpful, but is hard to use correctly (<a
+  href="https://cwe.mitre.org/data/definitions/250.html">CWE-250</a>, <a
+  href="https://cwe.mitre.org/data/definitions/22.html">CWE-22</a>). Make
+  sure the program immediately chdir("/"), closes file descriptors, and drops
+  root privileges, and that all necessary files (and no more!) are in the new
+  root. </i>
+<pre>
+	    status = chroot(argv[i]+9);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/getcap.c:84:17: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+    while ((c = getopt(argc, argv, "rvhn")) &gt; 0) {
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:119:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(result, cap_d, sizeof(*cap_d));
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_extint.c:56:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(&amp;result-&gt;magic, external_magic, CAP_EXT_MAGIC_SIZE);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:346:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buf[CAP_TEXT_SIZE+CAP_TEXT_BUFFER_ZONE];
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:80:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buffer[CAP_FILE_BUFFER_SIZE], *line;
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:90:16: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    cap_file = fopen(source, "r");
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:32:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char string[8*sizeof(unsigned long) + 1];
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/getpcaps.c:53:8: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	pid = atoi(argv[0]);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/old/setpcaps.c:66:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buffer[MAXCAP+1];
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/old/setpcaps.c:110:8: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	pid = atoi(*++argv);
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/old/sucap.c:45:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buf[1];
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c:81:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char buffer[MAXCAP+1];
+</pre>
+<li>/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c:115:23: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	    rootid = (uid_t) atoi(*++argv);
+</pre>
+</ul>

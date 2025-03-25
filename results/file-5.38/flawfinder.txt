@@ -1,0 +1,414 @@
+/home/capstone/Desktop/root/file-5.38/src/fsmagic.c:295:14:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+		if ((nch = readlink(fn, buf, BUFSIZ-1)) <= 0) {
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:209:13:  [5] (race) readlink:This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20).  Reconsider approach. 
+	ALLOW_RULE(readlink);
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:3252:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		if (access(buf, R_OK) != -1) {
+/home/capstone/Desktop/root/file-5.38/src/apptype.c:62:8:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	(void)sprintf(path, "%s%s%s%s", drive,
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:63:20:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define DPRINTF(a) printf a, fflush(stdout)
+/home/capstone/Desktop/root/file-5.38/src/compress.c:453:15:  [4] (tmpfile) mktemp:Temporary file race condition (CWE-377).  
+		char *ptr = mktemp(buf);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:888:9:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		(void)execvp(compr[method].argv[0],
+/home/capstone/Desktop/root/file-5.38/src/der.c:119:20:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define DPRINTF(a) printf a
+/home/capstone/Desktop/root/file-5.38/src/dprintf.c:48:8:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	len = vsnprintf(buf, sizeof(buf), fmt, ap);
+/home/capstone/Desktop/root/file-5.38/src/encoding.c:57:20:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define DPRINTF(a) printf a
+/home/capstone/Desktop/root/file-5.38/src/file.c:594:8:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	(void)fprintf(stderr, USAGE, pn, pn, pn);
+/home/capstone/Desktop/root/file-5.38/src/file.c:647:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf(stdout, "  -%c, --" longname, shortname), \
+/home/capstone/Desktop/root/file-5.38/src/file.c:650:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf(stdout, "      --" longname),	\
+/home/capstone/Desktop/root/file-5.38/src/file.c:681:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, ap);
+/home/capstone/Desktop/root/file-5.38/src/file.c:694:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, ap);
+/home/capstone/Desktop/root/file-5.38/src/file.c:708:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, ap);
+/home/capstone/Desktop/root/file-5.38/src/file.c:722:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, ap);
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:42:15:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define warnx printf
+/home/capstone/Desktop/root/file-5.38/src/is_csv.c:47:27:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define DPRINTF(fmt, ...) printf(fmt, __VA_ARGS__)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:102:6:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	if (access(tmppath, R_OK) == -1)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:201:8:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+			if (access(hmagicpath, R_OK) == -1)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:271:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		if (access(file, W_OK) == 0)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:274:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		if (access(file, X_OK) == 0)
+/home/capstone/Desktop/root/file-5.38/src/print.c:227:9:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	(void) vfprintf(stderr, f, va);
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:357:2:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	snprintf(buf, len, "%.8" PRIx64 "-%.4" PRIx64 "-%.4" PRIx64 "-%.4"
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:125:12:  [4] (format) syslog:If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant format string for syslog. 
+	DENY_RULE(syslog);
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:167:13:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	ALLOW_RULE(access);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:212:18:  [4] (format) vsprintf:Potential format string problem (CWE-134).  Make format string constant. 
+  vsprintf_len = vsprintf(s->dest_string, format_string, varg);
+/home/capstone/Desktop/root/file-5.38/src/apptype.c:56:23:  [3] (tmpfile) tempnam:Temporary file race condition (CWE-377).  
+	else if ((filename = tempnam("./", "tmp")) == NULL) {
+/home/capstone/Desktop/root/file-5.38/src/file.c:64:5:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+int getopt_long(int, char * const *, const char *,
+/home/capstone/Desktop/root/file-5.38/src/file.c:200:12:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	posixly = getenv("POSIXLY_CORRECT") != NULL;
+/home/capstone/Desktop/root/file-5.38/src/file.c:203:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long(argc, argv, OPTSTRING, long_options,
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:61:14:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+__weak_alias(getopt,_getopt)
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:73:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+__weak_alias(getopt_long,_getopt_long)
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:79:29:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+#define IS_POSIXLY_CORRECT (getenv("POSIXLY_CORRECT") != NULL)
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:322:1:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+getopt(nargc, nargv, options)
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:356:1:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+getopt_long(nargc, nargv, options, long_options, idx)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:186:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((home = getenv("HOME")) == NULL)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:223:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((home = getenv("LOCALAPPDATA")) != NULL)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:227:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((home = getenv("USERPROFILE")) != NULL)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:232:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((home = getenv("COMMONPROGRAMFILES")) != NULL)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:253:14:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	magicfile = getenv("MAGIC");
+/home/capstone/Desktop/root/file-5.38/src/mygetopt.h:65:5:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+int getopt_long(int, char * const *, const char *,
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:81:12:  [3] (misc) chroot:chroot can be very helpful, but is hard to use correctly (CWE-250, CWE-22).  Make sure the program immediately chdir("/"), closes file descriptors, and drops root privileges, and that all necessary files (and no more!) are in the new root. 
+	DENY_RULE(chroot);
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:106:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+const char *file_names[FILE_NAMES_SIZE];
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:198:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char name[16];
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:1157:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	FILE *f = fopen(ms->file = fn, "r");
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:1314:9:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		(void)memcpy(*ma + mentrycount, me[i].mp,
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:1616:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char name[8];
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:3049:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(dbname, O_RDONLY|O_BINARY)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:3186:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(dbname, O_WRONLY|O_CREAT|O_TRUNC|O_BINARY, 0644)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:3194:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(hdr.h + 2, map->nmagic, nm);
+/home/capstone/Desktop/root/file-5.38/src/apptype.c:49:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char            path[_MAX_PATH], drive[_MAX_DRIVE], dir[_MAX_DIR],
+/home/capstone/Desktop/root/file-5.38/src/apptype.c:68:13:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((fp = fopen(path, "wb")) == NULL) {
+/home/capstone/Desktop/root/file-5.38/src/asctime_r.c:17:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(dst, p, 26);
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:69:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char s[4];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:186:11:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    (void)memcpy(&(a), &buf[len], sizeof(a)), len += sizeof(a)
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:188:11:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    (void)memcpy((a), &buf[len], sizeof(a)), len += sizeof(a)
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:358:9:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		(void)memcpy(buf, &info->i_buf[off], len);
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:377:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[512];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:379:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(cdf_bo.s, "\01\02\03\04", 4);
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:440:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(RCAST(char *, buf) + offs,
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:952:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(&inp->pi_val, p, len);
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1378:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char abuf[16];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1408:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[__arraycount(d->d_name)];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1416:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char buf[26];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1466:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[64];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1513:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+				char tbuf[26];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1534:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1561:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char tbuf[64], sbuf[256];
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:1599:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((info.i_fd = open(argv[1], O_RDONLY)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/cdf_time.c:185:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[25];
+/home/capstone/Desktop/root/file-5.38/src/compress.c:83:9:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		tty = open("/dev/tty", O_RDWR); \
+/home/capstone/Desktop/root/file-5.38/src/compress.c:265:39:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			zm = (RCAST(int (*)(const unsigned char *),
+/home/capstone/Desktop/root/file-5.38/src/compress.c:446:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[4096];
+/home/capstone/Desktop/root/file-5.38/src/compress.c:454:9:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		tfd = open(ptr, O_RDWR|O_TRUNC|O_EXCL|O_CREAT, 0600);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:463:9:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+		tfd = mkstemp(buf);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:856:8:  [2] (race) vfork:On some old systems, vfork() permits race conditions, and it's very difficult to use correctly (CWE-362).  Use fork() instead. 
+	pid = vfork();
+/home/capstone/Desktop/root/file-5.38/src/compress.c:889:13:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		    RCAST(char *const *, RCAST(intptr_t, compr[method].argv)));
+/home/capstone/Desktop/root/file-5.38/src/ctime_r.c:17:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(dst, p, 26);
+/home/capstone/Desktop/root/file-5.38/src/der.c:281:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/file-5.38/src/der.c:361:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/file-5.38/src/der.c:397:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(argv[1], O_RDONLY)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/dprintf.c:44:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[1024];
+/home/capstone/Desktop/root/file-5.38/src/elfclass.h:31:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(&elfhdr, buf, sizeof elfhdr);
+/home/capstone/Desktop/root/file-5.38/src/encoding.c:230:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+private char text_chars[256] = {
+/home/capstone/Desktop/root/file-5.38/src/file.c:447:17:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+		pm[i].value = atoi(s + 1);
+/home/capstone/Desktop/root/file-5.38/src/file.c:493:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((f = fopen(fn, "r")) == NULL) {
+/home/capstone/Desktop/root/file-5.38/src/file.h:169:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char s[MAXstring];	/* the search string or regex pattern */
+/home/capstone/Desktop/root/file-5.38/src/file.h:170:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	unsigned char us[MAXstring];
+/home/capstone/Desktop/root/file-5.38/src/file.h:322:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char desc[MAXDESC];	/* description */
+/home/capstone/Desktop/root/file-5.38/src/file.h:324:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char mimetype[MAXMIME]; /* MIME type */
+/home/capstone/Desktop/root/file-5.38/src/file.h:326:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char apple[8];		/* APPLE CREATOR/TYPE */
+/home/capstone/Desktop/root/file-5.38/src/file.h:328:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char ext[64];		/* Popular extensions */
+/home/capstone/Desktop/root/file-5.38/src/fsmagic.c:112:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[BUFSIZ+4];
+/home/capstone/Desktop/root/file-5.38/src/fsmagic.c:328:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char buf2[BUFSIZ+BUFSIZ+4];
+/home/capstone/Desktop/root/file-5.38/src/funcs.c:468:11:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+				(void)memcpy(np, op, bytesconsumed);
+/home/capstone/Desktop/root/file-5.38/src/funcs.c:598:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char errmsg[512];
+/home/capstone/Desktop/root/file-5.38/src/gmtime_r.c:17:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(tm, tmp, sizeof(*tm));
+/home/capstone/Desktop/root/file-5.38/src/is_csv.c:182:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(argv[1], O_RDONLY)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/is_json.c:445:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(argv[1], O_RDONLY)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/localtime_r.c:17:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(tm, tmp, sizeof(*tm));
+/home/capstone/Desktop/root/file-5.38/src/magic.c:139:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char exepath[MAX_PATH];
+/home/capstone/Desktop/root/file-5.38/src/magic.c:441:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((fd = open(inname, flags)) < 0) {
+/home/capstone/Desktop/root/file-5.38/src/print.c:53:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char tbuf[26];
+/home/capstone/Desktop/root/file-5.38/src/print.c:263:9:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+	return strcpy(buf, "*Invalid time*");
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:95:15:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+private const char *
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:154:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[64];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:197:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+				char vbuf[1024];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:229:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+				char tbuf[64];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:271:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[256];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:355:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+private char *
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:356:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+format_clsid(char *buf, size_t len, const uint64_t uuid[2]) {
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:395:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[__arraycount(d->d_name)];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:437:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char *sections[5];
+/home/capstone/Desktop/root/file-5.38/src/readcdf.c:599:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char clsbuf[128];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:80:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char c[2];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:99:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char c[4];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:120:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char c[8];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:353:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	unsigned char nbuf[BUFSIZ];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:563:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(desc, &nbuf[doff], descsz);
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:766:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char sbuf[512];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1026:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(xauxv_addr, &nbuf[doff + off], xauxv_sizeof);
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1068:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char buf[256];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1105:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(xdh_addr, &dbuf[offset], xdh_sizeof);
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1147:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(xnh_addr, &nbuf[offset], xnh_sizeof);
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1328:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[50];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1457:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+				char cbuf[/*CONSTCOND*/
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1497:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+				memcpy(xcap_addr, cbuf, xcap_sizeof);
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1608:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	unsigned char nbuf[BUFSIZ];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1609:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char ibuf[BUFSIZ];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1610:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char interp[BUFSIZ];
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1698:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+				memcpy(interp, nbuf, CAST(size_t, bufsize));
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1742:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char c[sizeof(int32_t)];
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:205:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	ALLOW_RULE(open);
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:241:54:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	 if (seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 1,
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:245:62:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	 if (seccomp_rule_add(ctx, SCMP_ACT_ERRNO(EACCES), SCMP_SYS(open), 1,
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:249:62:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	 if (seccomp_rule_add(ctx, SCMP_ACT_ERRNO(EACCES), SCMP_SYS(open), 1,
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:499:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(copy, str, len);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:515:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(buf, sptr, l);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:544:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(buf, ptr, l);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:554:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(buf, sptr, l);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:567:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+ 	char buf[128], tbuf[26], sbuf[512], ebuf[512];
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:1419:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(p, s + offset, nbytes);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:2134:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+			    memcpy(copy, ms->search.s, slen);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:2301:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char buf[1024];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:52:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	unsigned char	charptr[RECORDSIZE];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:54:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	name[NAMSIZ];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:55:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	mode[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:56:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	uid[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:57:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	gid[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:58:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	size[12];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:59:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	mtime[12];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:60:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	chksum[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:62:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	linkname[NAMSIZ];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:63:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	magic[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:64:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	uname[TUNMLEN];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:65:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	gname[TGNMLEN];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:66:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	devmajor[8];
+/home/capstone/Desktop/root/file-5.38/src/tar.h:67:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	devminor[8];
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:188:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(s->dest_string, s->src_string, len);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:297:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char format_string[24]; /* max length may be something like  "% +-#032768.32768Ld" */
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:438:5:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+    sprintf(format_ptr, "%i", width);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:445:5:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+    sprintf(format_ptr, "%i", prec);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:638:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy (&s.vargs, &vargs, sizeof (s.va_args));
+/home/capstone/Desktop/root/file-5.38/tests/test.c:96:10:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+				fp = fopen(argv[2], "r");
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:671:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		file_oomem(ms, strlen(fn));
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:1373:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				    strlen(fn) + strlen(d->d_name) + 2);
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:1373:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				    strlen(fn) + strlen(d->d_name) + 2);
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:2297:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		len = nt ? strlen(buf) : len;
+/home/capstone/Desktop/root/file-5.38/src/apprentice.c:3076:6:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if (read(fd, map->p, map->len) != (ssize_t)map->len) {
+/home/capstone/Desktop/root/file-5.38/src/cdf.c:861:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t i, name_len = strlen(name) + 1;
+/home/capstone/Desktop/root/file-5.38/src/compress.c:426:17:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		switch ((rv = read(fd, buf, n))) {
+/home/capstone/Desktop/root/file-5.38/src/compress.c:462:15:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		mode_t ou = umask(0);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:464:9:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		(void)umask(ou);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:593:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	*n = strlen(RCAST(char *, *newch));
+/home/capstone/Desktop/root/file-5.38/src/compress.c:636:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	*n = strlen(RCAST(char *, *newch));
+/home/capstone/Desktop/root/file-5.38/src/compress.c:676:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	*n = strlen(RCAST(char *, *newch));
+/home/capstone/Desktop/root/file-5.38/src/compress.c:698:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	*len = strlen(msg);
+/home/capstone/Desktop/root/file-5.38/src/compress.c:776:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		n = strlen(p);
+/home/capstone/Desktop/root/file-5.38/src/der.c:295:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t slen = strlen(buf);
+/home/capstone/Desktop/root/file-5.38/src/file.c:561:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	old_n = n = strlen(s);
+/home/capstone/Desktop/root/file-5.38/src/file.c:586:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return strlen(s);
+/home/capstone/Desktop/root/file-5.38/src/funcs.c:433:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(ms->o.buf);
+/home/capstone/Desktop/root/file-5.38/src/funcs.c:521:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return ms->o.buf == NULL ? 0 : strlen(ms->o.buf);
+/home/capstone/Desktop/root/file-5.38/src/getline.c:53:11:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		int c = fgetc(fp);
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:406:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			current_argv_len = strlen(current_argv);
+/home/capstone/Desktop/root/file-5.38/src/getopt_long.c:414:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			if (strlen(long_options[i].name) ==
+/home/capstone/Desktop/root/file-5.38/src/is_csv.c:191:6:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if (read(fd, p, st.st_size) != st.st_size)
+/home/capstone/Desktop/root/file-5.38/src/is_json.c:454:6:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if (read(fd, p, st.st_size) != st.st_size)
+/home/capstone/Desktop/root/file-5.38/src/magic.c:146:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	sp = strlen(dllpath);
+/home/capstone/Desktop/root/file-5.38/src/magic.c:503:17:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		if ((nbytes = read(fd, RCAST(void *, buf), howmany)) == -1) {
+/home/capstone/Desktop/root/file-5.38/src/pread.c:16:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if ((rv = read(fd, buf, len)) == -1)
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1462:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+				if (read(fd, cbuf, CAST(size_t, xcap_sizeof)) !=
+/home/capstone/Desktop/root/file-5.38/src/readelf.c:1481:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+					p += strlen(p) + 1;
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:208:13:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	ALLOW_RULE(read);
+/home/capstone/Desktop/root/file-5.38/src/seccomp.c:217:13:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+	ALLOW_RULE(umask);	// Used in file_pipe2file()
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:550:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	l = strlen(sptr);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:679:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			t = ms->offset + strlen(str);
+/home/capstone/Desktop/root/file-5.38/src/softmagic.c:887:37:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			o = CAST(uint32_t, (ms->offset + strlen(p->s)));
+/home/capstone/Desktop/root/file-5.38/src/strcasestr.c:74:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		len = strlen(find);
+/home/capstone/Desktop/root/file-5.38/src/strlcat.c:47:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		return(dlen + strlen(s));
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:222:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+  len = strlen(s->dest_string);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:439:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    format_ptr += strlen(format_ptr);
+/home/capstone/Desktop/root/file-5.38/src/vasprintf.c:446:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    format_ptr += strlen(format_ptr);
+/home/capstone/Desktop/root/file-5.38/tests/test.c:51:11:  [1] (buffer) getc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	for (c = getc(fp); c != EOF; c = getc(fp)) {
+/home/capstone/Desktop/root/file-5.38/tests/test.c:51:35:  [1] (buffer) getc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	for (c = getc(fp); c != EOF; c = getc(fp)) {

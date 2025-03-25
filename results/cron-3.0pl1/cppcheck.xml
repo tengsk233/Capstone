@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x&apos; can be reduced." verbose="The scope of the variable &apos;x&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-helpful-header-to-new-crontab.patch/crontab.c" line="301" column="6"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-helpful-header-to-new-crontab.patch/crontab.c" line="354" column="7"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-helpful-header-to-new-crontab.patch/crontab.c" line="355" column="6"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/cron.c" line="110" column="3"/>
+            <symbol>cron_default_mail_charset</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/cron.c" line="132" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/cron.c" line="133" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/cron.c" line="134" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/cron.c" line="165" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;msg&apos; can be reduced." verbose="The scope of the variable &apos;msg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="465" column="9"/>
+            <symbol>msg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="599" column="6"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;buf&apos; shadows outer variable" verbose="Local variable &apos;buf&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="624" column="8" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="598" column="7" info="Shadowed declaration"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="66" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Add-option-to-include-FQDN-in-email.patch/do_command.c" line="60" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Avoid-a-mailcmd-timeout.patch/do_command.c" line="64" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Avoid-a-mailcmd-timeout.patch/do_command.c" line="58" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/cron.c" line="121" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/cron.c" line="122" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/cron.c" line="123" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/do_command.c" line="64" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/do_command.c" line="58" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/entry.c" line="525" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="502" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="449" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="455" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="459" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="463" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="522" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="525" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Better-timeskip-handling.patch/misc.c" line="544" column="0"/>
+        </error>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/cron.c" line="110" column="3"/>
+            <symbol>cron_default_mail_charset</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/cron.c" line="132" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/cron.c" line="133" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/cron.c" line="134" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/cron.c" line="165" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;syscrond_fname&apos; can be reduced." verbose="The scope of the variable &apos;syscrond_fname&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/database.c" line="68" column="8"/>
+            <symbol>syscrond_fname</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/database.c" line="68" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/database.c" line="173" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/database.c" line="214" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Check-orphaned-crontabs-for-adoption.patch/database.c" line="225" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="472" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="439" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="490" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="446" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="452" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="456" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="460" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="510" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="513" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Debian-paths-and-commands.patch/misc.c" line="532" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Dont-fail-on-missing-MTA.patch/do_command.c" line="574" column="6"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;buf&apos; shadows outer variable" verbose="Local variable &apos;buf&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Dont-fail-on-missing-MTA.patch/do_command.c" line="599" column="8" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Dont-fail-on-missing-MTA.patch/do_command.c" line="573" column="7" info="Shadowed declaration"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Dont-fail-on-missing-MTA.patch/do_command.c" line="64" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Dont-fail-on-missing-MTA.patch/do_command.c" line="58" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Drop-in-drop.d-directory-support.patch/cron.c" line="121" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Drop-in-drop.d-directory-support.patch/cron.c" line="122" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Drop-in-drop.d-directory-support.patch/cron.c" line="123" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Drop-in-drop.d-directory-support.patch/database.c" line="116" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Drop-in-drop.d-directory-support.patch/database.c" line="127" column="0"/>
+        </error>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-running-daemon-in-foreground.patch/cron.c" line="110" column="3"/>
+            <symbol>cron_default_mail_charset</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-running-daemon-in-foreground.patch/cron.c" line="132" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-running-daemon-in-foreground.patch/cron.c" line="133" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-running-daemon-in-foreground.patch/cron.c" line="134" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-running-daemon-in-foreground.patch/cron.c" line="165" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/cron.c" line="0" column="0"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/cron.c" line="116" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/cron.c" line="117" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/cron.c" line="118" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/cron.c" line="149" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Enable-setting-content-headers-in-email.patch/do_command.c" line="0" column="0"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Improved-debugging-options-handling.patch/cron.c" line="111" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Improved-debugging-options-handling.patch/cron.c" line="112" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Improved-debugging-options-handling.patch/cron.c" line="113" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="472" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="439" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="490" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="446" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="452" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="456" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="460" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="510" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="513" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Linux-Audit-support.patch/misc.c" line="532" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="475" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="442" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="502" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="449" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="455" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="459" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="463" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="522" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="525" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/misc.c" line="544" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;retval&apos; can be reduced." verbose="The scope of the variable &apos;retval&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/user.c" line="40" column="6"/>
+            <symbol>retval</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;retval&apos; is assigned a value that is never used." verbose="Variable &apos;retval&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Logging-enhancements.patch/user.c" line="40" column="12"/>
+            <symbol>retval</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="476" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="443" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="503" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="450" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="456" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="460" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="464" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="523" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="526" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Make-crontab-SGID-crontab.patch/misc.c" line="545" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="509" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="476" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gr&apos; can be reduced." verbose="The scope of the variable &apos;gr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="203" column="16"/>
+            <symbol>gr</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="536" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="483" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="489" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="493" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="497" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="556" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="559" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Open-close-syslog-on-every-call.patch/misc.c" line="578" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x&apos; can be reduced." verbose="The scope of the variable &apos;x&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Prompt-on-crontab-deletion.patch/crontab.c" line="295" column="6"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;syscrond_fname&apos; can be reduced." verbose="The scope of the variable &apos;syscrond_fname&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Recover-from-crontab-errors.patch/database.c" line="65" column="8"/>
+            <symbol>syscrond_fname</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Recover-from-crontab-errors.patch/database.c" line="65" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Recover-from-crontab-errors.patch/database.c" line="169" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Recover-from-crontab-errors.patch/database.c" line="210" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Recover-from-crontab-errors.patch/database.c" line="221" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/SELinux-support.patch/database.c" line="116" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/SELinux-support.patch/database.c" line="127" column="0"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/SELinux-support.patch/do_command.c" line="59" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/SELinux-support.patch/do_command.c" line="53" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/cron.c" line="110" column="3"/>
+            <symbol>cron_default_mail_charset</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/cron.c" line="132" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/cron.c" line="133" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/cron.c" line="134" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/cron.c" line="165" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="588" column="6"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;buf&apos; shadows outer variable" verbose="Local variable &apos;buf&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="613" column="8" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="587" column="7" info="Shadowed declaration"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;jobenv&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="66" column="9" info="jobenv is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/features/Selective-logging.patch/do_command.c" line="60" column="16" info="jobenv is initialized"/>
+            <symbol>jobenv</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;remove&apos; is not used." verbose="Label &apos;remove&apos; is not used." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Allow-editors-with-tmpfiles.patch/crontab.c" line="520" column="2"/>
+            <symbol>remove</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;remove&apos; is not used." verbose="Label &apos;remove&apos; is not used." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Avoid-predictable-filenames.patch/crontab.c" line="505" column="2"/>
+            <symbol>remove</symbol>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Backport-crontab-envparser-from-v4.1.patch/env.c" line="157" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Backport-crontab-envparser-from-v4.1.patch/env.c" line="198" column="21"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;remove&apos; is not used." verbose="Label &apos;remove&apos; is not used." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Cleanup-tmpfiles.patch/crontab.c" line="505" column="2"/>
+            <symbol>remove</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-die-on-missing-spool-dir.patch/database.c" line="117" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-die-on-missing-spool-dir.patch/database.c" line="128" column="0"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-run-reboot-jobs-on-restart.patch/cron.c" line="109" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-run-reboot-jobs-on-restart.patch/cron.c" line="110" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-run-reboot-jobs-on-restart.patch/cron.c" line="111" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Dont-silently-truncate-commands.patch/entry.c" line="515" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Entry-symbolic-name-fixes.patch/entry.c" line="487" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Entry-time-range-check.patch/entry.c" line="504" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Improve-mode-checks-for-crontabs.patch/database.c" line="116" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Improve-mode-checks-for-crontabs.patch/database.c" line="127" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/compat.c" line="0" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/compat.c" line="130" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/entry.c" line="447" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/env.c" line="133" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/env.c" line="172" column="21"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="468" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="439" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="440" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="484" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="488" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Memory-allocation-issues.patch/misc.c" line="507" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/compat.c" line="0" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/compat.c" line="130" column="0"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="error" msg="fprintf format string requires 1 parameter but only 0 are given." verbose="fprintf format string requires 1 parameter but only 0 are given." cwe="685">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/crontab.c" line="476" column="3"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;exitstatus&apos; is assigned a value that is never used." verbose="Variable &apos;exitstatus&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/crontab.c" line="125" column="17"/>
+            <symbol>exitstatus</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/database.c" line="117" column="0"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/env.c" line="130" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/env.c" line="169" column="21"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="464" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="435" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="436" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_DAEMON;SYSLOG&apos; since the value of &apos;LOG_DAEMON&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_DAEMON;SYSLOG&apos; since the value of &apos;LOG_DAEMON&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="522" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="484" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="488" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Miscellaneous-coding-errors.patch/misc.c" line="507" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="475" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="442" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="493" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="449" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="455" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="459" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="463" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="513" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="517" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Proper-use-of-error-functions.patch/misc.c" line="536" column="0"/>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;remove&apos; is not used." verbose="Label &apos;remove&apos; is not used." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Set-umask-while-editing-crontab.patch/crontab.c" line="506" column="2"/>
+            <symbol>remove</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Signal-handling-issues.patch/cron.c" line="109" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Signal-handling-issues.patch/cron.c" line="110" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Signal-handling-issues.patch/cron.c" line="111" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="472" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="439" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="490" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="446" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="452" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="456" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="460" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="510" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="513" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Swap-both-uid-and-gid.patch/misc.c" line="532" column="0"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-basename-for-syslog-tag.patch/cron.c" line="110" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-basename-for-syslog-tag.patch/cron.c" line="111" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-basename-for-syslog-tag.patch/cron.c" line="112" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/compat.c" line="0" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;NEED_GETDTABLESIZE;_SC_OPEN_MAX&apos; since the value of &apos;_SC_OPEN_MAX&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/compat.c" line="133" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;MAXPATHLEN&apos; since the value of &apos;MAXPATHLEN&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/database.c" line="117" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/entry.c" line="487" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/env.c" line="155" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/env.c" line="194" column="21"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="468" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="439" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="440" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="489" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="493" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-safe-string-functions.patch/misc.c" line="512" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;isallowed&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="472" column="13" info="isallowed is overwritten"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="439" column="12" info="isallowed is assigned"/>
+            <symbol>isallowed</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="490" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="446" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="452" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="456" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="460" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="510" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="513" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/Use-strftime-to-print-time.patch/misc.c" line="532" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/cron-report-missing-newline-before-EOF.patch/entry.c" line="490" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="0" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="468" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;ALLOW_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="439" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;ALLOW_FILE;DENY_FILE&apos; since the value of &apos;DENY_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="440" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="488" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="492" column="0"/>
+        </error>
+        <error id="ConfigurationNotChecked" severity="information" msg="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly." verbose="Skipping configuration &apos;LOG_FILE&apos; since the value of &apos;LOG_FILE&apos; is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-allow-deny-logic-fix.patch/misc.c" line="511" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-entry-parsing-fixes.patch/entry.c" line="494" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;remove&apos; is not used." verbose="Label &apos;remove&apos; is not used." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/.pc/fixes/crontab-must-be-regular-file.patch/crontab.c" line="510" column="2"/>
+            <symbol>remove</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 32 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/compat.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="0" column="0"/>
+        </error>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;cron_default_mail_charset&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="110" column="3"/>
+            <symbol>cron_default_mail_charset</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="132" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="133" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function freopen() is not used." verbose="Return value of function freopen() is not used." cwe="252">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="134" column="4"/>
+            <symbol>freopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wakeupKind&apos; can be reduced." verbose="The scope of the variable &apos;wakeupKind&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="165" column="7"/>
+            <symbol>wakeupKind</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;pid&apos; can be reduced." verbose="The scope of the variable &apos;pid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/cron.c" line="410" column="9"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/crontab.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x&apos; can be reduced." verbose="The scope of the variable &apos;x&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/crontab.c" line="301" column="6"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/crontab.c" line="354" column="7"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/crontab.c" line="355" column="6"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="0" column="0"/>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: db" verbose="Possible null pointer dereference: db" cwe="476">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="299" column="11" info="Null pointer dereference"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="565" column="16" info="Calling function &apos;find_user&apos;, 1st argument &apos;old_db&apos; value is 0"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="350" column="22" info="Calling function &apos;force_rescan_user&apos;, 1st argument &apos;old_db&apos; value is 0"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="619" column="19" info="Calling function &apos;process_crontab&apos;, 6th argument &apos;NULL&apos; value is 0"/>
+            <symbol>db</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;syscrond_fname&apos; can be reduced." verbose="The scope of the variable &apos;syscrond_fname&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="71" column="8"/>
+            <symbol>syscrond_fname</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/do_command.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;msg&apos; can be reduced." verbose="The scope of the variable &apos;msg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/do_command.c" line="465" column="9"/>
+            <symbol>msg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/do_command.c" line="600" column="6"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;buf&apos; shadows outer variable" verbose="Local variable &apos;buf&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/do_command.c" line="625" column="8" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/do_command.c" line="599" column="7" info="Shadowed declaration"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/entry.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/entry.c" line="533" column="11"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/env.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/env.c" line="279" column="21"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/job.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 32 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/misc.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gr&apos; can be reduced." verbose="The scope of the variable &apos;gr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/misc.c" line="199" column="16"/>
+            <symbol>gr</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pid&apos; is assigned a value that is never used." verbose="Variable &apos;pid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/misc.c" line="532" column="14"/>
+            <symbol>pid</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/popen.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/user.c" line="0" column="0"/>
+        </error>
+        <error id="ctunullpointer" severity="error" msg="Null pointer dereference: db" verbose="Null pointer dereference: db" cwe="476">
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="299" column="11" info="Dereferencing argument db that is null"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="565" column="6" info="Calling function find_user, 1st argument is null"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="350" column="21" info="Calling function force_rescan_user, 1st argument is null"/>
+            <location file="/home/capstone/Desktop/root/cron-3.0pl1/database.c" line="619" column="19" info="Calling function &apos;process_crontab&apos;, 6th argument &apos;NULL&apos; value is 0"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

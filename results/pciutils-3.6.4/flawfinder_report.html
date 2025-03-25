@@ -1,0 +1,1665 @@
+<ul>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:130:7: <b>  [5] </b> (race) <i> readlink:
+  This accepts filename arguments; if an attacker can move those files or
+  change the link content, a race condition results. Also, it does not
+  terminate with ASCII NUL. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>).
+  Reconsider approach. </i>
+<pre>
+  if (readlink(path, rel_path, sizeof(rel_path)) &lt; 0)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:238:7: <b>  [5] </b> (race) <i> readlink:
+  This accepts filename arguments; if an attacker can move those files or
+  change the link content, a race condition results. Also, it does not
+  terminate with ASCII NUL. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>).
+  Reconsider approach. </i>
+<pre>
+  n = readlink(name, buf, DRIVER_BUF_SIZE);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/common.c:24:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stderr, msg, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:246:21: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  p = pci_malloc(d-&gt;access, sizeof(*p) + strlen(value));
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:250:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy(p-&gt;value, value);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:93:3: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+  snprintf(command, sizeof (command), AIX_ODMGET_CMD, name);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:94:17: <b>  [4] </b> (shell) <i> popen:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  odmget_pipe = popen(command, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:135:16: <b>  [4] </b> (shell) <i> popen:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+  lsdev_pipe = popen(command, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:149:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy(name, buf);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:224:24: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  fd = aix_bus_open(d-&gt;access, d-&gt;bus);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:246:24: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  fd = aix_bus_open(d-&gt;access, d-&gt;bus);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/caps.c:16:39: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_cap *cap = pci_malloc(d-&gt;access, sizeof(*cap));
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:37:42: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct dump_data *dd = pci_malloc(dev-&gt;access, sizeof(struct dump_data) + len - 1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:46:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(name, R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c:80:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:75:26: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  d-&gt;aux = pci_malloc(d-&gt;access, sizeof(mach_port_t));
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-ports.c:32:27: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+#error Do not know how to access I/O ports on this OS.
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:128:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stderr, msg, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:141:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stderr, msg, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:152:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stdout, msg, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:40:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+  sprintf(buf, "%s%s", pw-&gt;pw_dir, name+1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:137:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+  sprintf(tmpname, "%s.tmp-%s-%d", name, hostname, this_pid);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:77:11: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+    res = snprintf(buf, size, ((flags &amp; PCI_LOOKUP_MIXED) ? "%s [%s]" : "%s %s"), unknown, num);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:210:4: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	  sprintf(pifbuf, "%s%s%s%s%s",
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:36:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(name, R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:42:8: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (!access(name, W_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/obsd-device.c:30:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(name, R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/pci.h:147:22: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/pread.h:38:30: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	  struct pci_access *a = d-&gt;access;							\
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:32:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(name, R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:74:13: <b>  [4] </b> (buffer) <i> sscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Specify
+  a limit to %s, or use a different input function. If the scanf format is
+  influenceable by an attacker, it's exploitable. </i>
+<pre>
+      cnt = sscanf(buf, "%x %x %x" F F F F F F F F F F F F F F,
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:118:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sylixos-device.c:42:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(name, R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysdep.h:69:11: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+  #define snprintf _snprintf
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysdep.h:69:20: <b>  [4] </b> (format) <i> _snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+  #define snprintf _snprintf
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:40:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  if (access(sysfs_name(a), R_OK))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:83:20: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+		   sysfs_name(d-&gt;access), d-&gt;domain, d-&gt;bus, d-&gt;dev, d-&gt;func, object);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:93:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:134:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+  strcat(path, rel_path);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:154:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:310:27: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+      sysfs_fill_slots(d-&gt;access);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:356:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:460:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  struct pci_access *a = d-&gt;access;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/types.h:72:47: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#define PCI_PRINTF(x,y) __attribute__((format(printf, x, y)))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:432:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf(fmt,
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:446:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf(fmt,
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:464:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf(fmt,
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:134:7: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+      sprintf(name, "/lib/modules/%s/modules.pcimap", uts.release);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:166:7: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+      strcpy(e-&gt;module, line);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:229:29: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+  base = pci_get_param(dev-&gt;access, "sysfs.path");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:160:28: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+static char * FORMAT_CHECK(printf, 3, 4)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:170:13: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+  int res = vsnprintf(p, end - p, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:383:9: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+        printf(" %016" PCI_U64_FMT_X "-%016" PCI_U64_FMT_X, base, limit);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:453:6: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	    printf(PCIADDR_PORT_FMT, a);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:472:6: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	    printf(PCIADDR_T_FMT, a);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:518:5: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    printf(PCIADDR_T_FMT, rom &amp; PCI_ROM_ADDRESS_MASK);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:840:2: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	printf(", IRQ " PCIIRQ_FMT, irq);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:920:7: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+      printf((opt_machine &gt;= 2) ? "Slot:\t" : "Device:\t");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:1089:2: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	fprintf(stderr, help_msg, pacc-&gt;id_file_name);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:69:5: <b>  [4] </b> (format) <i> vprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    vprintf(fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:173:7: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+      printf(formats[width]+1, x);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:396:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stderr, msg, args);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:172:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+extern char *getenv(const char *name);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:179:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+extern char *getenv();
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:354:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+		} else if (getenv("POSIXLY_CORRECT") != NULL)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:617:5: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+int getopt(int argc, char *const *argv, const char *optstring)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:622:5: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+int getopt_long(int argc, char *const *argv, const char *options, const struct option *long_options, int *opt_index)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c:642:7: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+		c = getopt(argc, argv, "abc:d:0123456789");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:102:12: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+extern int getopt (int argc, char *const *argv, const char *shortopts);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:104:12: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+extern int getopt_long (int argc, char *const *argv, const char *shortopts,
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:116:12: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+extern int getopt ();
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h:117:12: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+extern int getopt_long ();
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-io-windows.h:39:9: <b>  [3] </b> (misc) <i> LoadLibrary:
+  Ensure that the full path to the library is specified, or current directory
+  may be used (<a
+  href="https://cwe.mitre.org/data/definitions/829.html">CWE-829</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Use
+  registry entry or GetWindowsDirectory to find library path, if you aren't
+  already. </i>
+<pre>
+  lib = LoadLibrary("WinIo.dll");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:137:10: <b>  [3] </b> (buffer) <i> realpath:
+  This function does not protect against buffer overflows, and some
+  implementations can overflow internally (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>/<a
+  href="https://cwe.mitre.org/data/definitions/785.html">CWE-785</a>!).
+  Ensure that the destination buffer is at least of size MAXPATHLEN, andto
+  protect against implementation problems, the input argument should also be
+  checked to ensure it is no larger than MAXPATHLEN. </i>
+<pre>
+  return realpath(path, NULL);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:1020:15: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+  while ((i = getopt(argc, argv, options)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/common.c:52:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy(copy, str, len);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/example.c:17:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char namebuf[1024], *name;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:98:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(buf, d-&gt;cache + pos, len);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:145:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(d-&gt;cache + pos, buf, len);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c:175:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy(d-&gt;cache + pos, buf, l);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:69:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char devbuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:73:20: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      bp-&gt;bus_fd = open(devbuf, mode, 0);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:88:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char command[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:89:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c:132:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:61:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:67:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen(name, "r")))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:108:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		  memcpy(((struct dump_data *) dev-&gt;aux)-&gt;data, dd-&gt;data, 256);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c:154:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy(buf, dd-&gt;data + pos, len);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:69:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open(name, O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c:72:12: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      fd = open(name, O_RDONLY, 0);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:98:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char path[NAME_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:99:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char server[NAME_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:239:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy(buf, data, nread);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:304:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy(&amp;regions, buf, size);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c:341:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy(&amp;rom, buf, size);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-io-haiku.h:67:20: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  poke_driver_fd = open(POKE_DEVICE_FULLNAME, O_RDWR);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c:117:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy(t, s, len);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/internal.h:81:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char value[1];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:50:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char line[MAX_LINE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:66:7: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  f = fopen(name, "rb");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:121:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char hostname[256], *tmpname, *name;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c:139:7: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  f = fopen(tmpname, "wb");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hash.c:79:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy(n-&gt;name, text, len+1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:24:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char modalias[64];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:28:19: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+  if (disabled &amp;&amp; atoi(disabled))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:34:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v%08X*", id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:38:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v%08Xd%08X*", id1, id2);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:42:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v%08Xd%08Xsv%08Xsd%08X*", id1, id2, id3, id4);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:46:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v*d*sv%08Xsd%08X*", id1, id2);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:50:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02X*", id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:54:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02Xsc%02X*", id1, id2);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c:58:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(modalias, "pci:v*d*sv*sd*bc%02Xsc%02Xi%02X*", id1, id2, id3);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:163:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char name[256], dnsname[512], txt[256], *domain;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:176:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%04x", id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:179:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%04x.%04x", id2, id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:182:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%04x.%04x.%04x.%04x", id4, id3, id2, id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:185:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%04x.%04x.s", id2, id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:188:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%02x.c", id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:191:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%02x.%02x.c", id2, id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:194:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(name, "%02x.%02x.%02x.c", id3, id2, id1);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c:231:4: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	  memcpy(txt, &amp;data[j+1], data[j]);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:36:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+  memcpy(new_name, a-&gt;id_file_name, len - 3);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:55:22: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+#define pci_open(a)		fopen(a-&gt;id_file_name, "r")
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c:87:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char line[MAX_LINE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:128:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char numbuf[16], pifbuf[32];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:150:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x", iv);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:156:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x", id);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:162:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x:%04x", iv, id);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:169:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x", isv);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:178:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x", isd);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:188:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x:%04x", isv, isd);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:193:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%04x", icls);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c:205:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+      sprintf(numbuf, "%02x", ipif);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.h:18:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char name[1];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c:54:11: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  a-&gt;fd = open(name, mode, 0);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/obsd-device.c:44:11: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  a-&gt;fd = open(name, O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:61:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[512];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:65:7: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  f = fopen(buf, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:122:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[1024];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:132:15: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      a-&gt;fd = open(buf, a-&gt;fd_rw ? O_RDWR : O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c:140:12: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	  a-&gt;fd = open(buf, a-&gt;fd_rw ? O_RDWR : O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:95:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char namebuf[OBJNAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:99:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  fd = open(namebuf, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:125:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char path[2*OBJNAMELEN], rel_path[OBJNAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:143:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[OBJBUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:155:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char namebuf[OBJNAMELEN], buf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:160:10: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  file = fopen(namebuf, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:194:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char dirname[1024];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:247:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char dirname[1024];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:261:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char namebuf[OBJNAMELEN], buf[16];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:274:14: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      file = fopen(namebuf, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:317:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[OBJBUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:324:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char buf[OBJBUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:357:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char namebuf[OBJNAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:370:16: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	  a-&gt;fd_vpd = open(namebuf, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c:380:15: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      a-&gt;fd = open(namebuf, a-&gt;fd_rw ? O_RDWR : O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:62:7: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	c += sprintf(c, "x%d", 1 &lt;&lt; (i + 2*agp3));
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:67:5: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+    strcpy(buf, "&lt;none&gt;");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:74:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char rate[16];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:158:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static const char * const sec_clock_freq[8] = { "conv", "66MHz", "100MHz", "133MHz", "?4", "?5", "?6", "?7" };
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:217:10: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static char * const widths[8] = { "8bit", "16bit", "[2]", "32bit", "2bit", "4bit", "[6]", "N/C" };
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:224:10: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static char * const freqs[16] = { "200MHz", "300MHz", "400MHz", "500MHz", "600MHz", "800MHz", "1.0GHz", "1.2GHz",
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c:1366:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char ssnamebuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:495:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static const char arb_selects[8][7] = { "Fixed", "WRR32", "WRR64", "WRR128", "??4", "??5", "??6", "??7" };
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:496:16: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static const char vc_arb_selects[8][8] = { "Fixed", "WRR32", "WRR64", "WRR128", "TWRR128", "WRR256", "??6", "??7" };
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:497:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[8];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:582:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[8];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c:804:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char been_there[0x1000];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:106:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char module[1];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:116:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char *name, line[1024];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:125:11: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      f = fopen(name, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:135:11: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      f = fopen(name, "r");
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:223:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char name[1024], *drv, *base;
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:254:10: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  static char prev_module[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:273:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[DRIVER_BUF_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c:292:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char buf[DRIVER_BUF_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:188:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char namebuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c:262:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char line[LINE_BUF_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/ls-vpd.c:165:8: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	      memcpy(id, buf, 2);
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:312:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char classbuf[128], devbuf[128];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:344:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char ssnamebuf[256];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c:912:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char classbuf[128], vendbuf[128], devbuf[128], svbuf[128], sdbuf[128];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/lspci.h:64:76: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+#define TABLE(tab,x,buf) ((x) &lt; sizeof(tab)/sizeof((tab)[0]) ? (tab)[x] : (sprintf((buf), "??%d", (x)), (buf)))
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:81:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char slot[16];
+</pre>
+<li>/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c:83:3: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+  sprintf(slot, "%04x:%02x:%02x.%x", dev-&gt;domain, dev-&gt;bus, dev-&gt;dev, dev-&gt;func);
+</pre>
+</ul>

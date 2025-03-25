@@ -1,0 +1,366 @@
+<html>
+<head>
+<title>Desktop - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>Desktop - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>capstone@ubuntu</td></tr>
+<tr><th>Working Directory:</th><td>/home/capstone/Desktop</td></tr>
+<tr><th>Command Line:</th><td>make -C /home/capstone/Desktop/root/gettext-0.19.8.1 clean all</td></tr>
+<tr><th>Clang Version:</th><td>Ubuntu clang version 18.1.8 (11~20.04.2)
+</td></tr>
+<tr><th>Date:</th><td>Mon Mar 24 22:58:10 2025</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">88</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>API</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Argument with 'nonnull' attribute passed null</td><td class="Q">3</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_api_argument_with_nonnull_attribute_passed_null');" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Branch condition evaluates to a garbage value</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_branch_condition_evaluates_to_a_garbage_value');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Dereference of null pointer</td><td class="Q">12</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_dereference_of_null_pointer');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Division by zero</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_division_by_zero');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">5</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+<tr><th>Memory error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Memory leak</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_memory_error_memory_leak');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Use-after-free</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_memory_error_use-after-free');" checked/></center></td></tr>
+<tr><th>Unused code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead assignment</td><td class="Q">60</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_assignment');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Dead nested assignment</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_nested_assignment');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_api_argument_with_nonnull_attribute_passed_null"><td class="DESC">API</td><td class="DESC">Argument with 'nonnull' attribute passed null</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_margin_x_from_value</td><td class="Q">787</td><td class="Q">22</td><td><a href="report-145c8f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-145c8f.html" -->
+</tr>
+<tr class="bt_api_argument_with_nonnull_attribute_passed_null"><td class="DESC">API</td><td class="DESC">Argument with 'nonnull' attribute passed null</td><td>runtime/intl/loadmsgcat.c</td><td class="DESC">_nl_load_domain</td><td class="Q">1067</td><td class="Q">87</td><td><a href="report-37c759.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-37c759.html" -->
+</tr>
+<tr class="bt_api_argument_with_nonnull_attribute_passed_null"><td class="DESC">API</td><td class="DESC">Argument with 'nonnull' attribute passed null</td><td>tools/gnulib-lib/unilbrk/ulc-width-linebreaks.c</td><td class="DESC">ulc_width_linebreaks</td><td class="Q">81</td><td class="Q">19</td><td><a href="report-bcce3f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-bcce3f.html" -->
+</tr>
+<tr class="bt_logic_error_branch_condition_evaluates_to_a_garbage_value"><td class="DESC">Logic error</td><td class="DESC">Branch condition evaluates to a garbage value</td><td>runtime/gnulib-lib/mbsstr.c</td><td class="DESC">knuth_morris_pratt_multibyte</td><td class="Q">145</td><td class="Q">15</td><td><a href="report-3aa9d8.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-3aa9d8.html" -->
+</tr>
+<tr class="bt_logic_error_branch_condition_evaluates_to_a_garbage_value"><td class="DESC">Logic error</td><td class="DESC">Branch condition evaluates to a garbage value</td><td>runtime/gnulib-lib/mbsstr.c</td><td class="DESC">knuth_morris_pratt_multibyte</td><td class="Q">101</td><td class="Q">14</td><td><a href="report-8997b9.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8997b9.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_any_core</td><td class="Q">1206</td><td class="Q">1</td><td><a href="report-02931b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-02931b.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_uri</td><td class="Q">1209</td><td class="Q">1</td><td><a href="report-05ee18.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-05ee18.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_import</td><td class="Q">3609</td><td class="Q">1</td><td><a href="report-0b7e33.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0b7e33.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_border_x_from_value</td><td class="Q">1160</td><td class="Q">1</td><td><a href="report-0c5c46.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0c5c46.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_position_from_value</td><td class="Q">906</td><td class="Q">1</td><td><a href="report-11c439.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-11c439.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_simple_selector</td><td class="Q">1857</td><td class="Q">1</td><td><a href="report-132d51.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-132d51.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_font_size_from_value</td><td class="Q">1551</td><td class="Q">1</td><td><a href="report-16293c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-16293c.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_ruleset</td><td class="Q">3464</td><td class="Q">1</td><td><a href="report-1c52c6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1c52c6.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_nl</td><td class="Q">364</td><td class="Q">1</td><td><a href="report-1d89e3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1d89e3.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_w</td><td class="Q">303</td><td class="Q">1</td><td><a href="report-20520c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-20520c.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_declaration</td><td class="Q">3217</td><td class="Q">1</td><td><a href="report-2988aa.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-2988aa.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_uri</td><td class="Q">1177</td><td class="Q">1</td><td><a href="report-30dc8a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-30dc8a.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_font_size_from_value</td><td class="Q">1534</td><td class="Q">1</td><td><a href="report-3c2977.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-3c2977.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_stylesheet_core</td><td class="Q">698</td><td class="Q">1</td><td><a href="report-40b879.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-40b879.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_simple_selector</td><td class="Q">1699</td><td class="Q">1</td><td><a href="report-469c4e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-469c4e.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_utf8_to_ucs1</td><td class="Q">1027</td><td class="Q">1</td><td><a href="report-4762de.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-4762de.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_stylesheet</td><td class="Q">2394</td><td class="Q">1</td><td><a href="report-534220.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-534220.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_read_char_from_utf8_buf</td><td class="Q">452</td><td class="Q">1</td><td><a href="report-55db39.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-55db39.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2419</td><td class="Q">1</td><td><a href="report-5738ce.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-5738ce.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-statement.c</td><td class="DESC">cr_statement_at_page_rule_parse_from_buf</td><td class="Q">1541</td><td class="Q">1</td><td><a href="report-5e9da0.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-5e9da0.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_utf8_to_ucs1</td><td class="Q">1097</td><td class="Q">1</td><td><a href="report-63210d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-63210d.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_stylesheet</td><td class="Q">2541</td><td class="Q">1</td><td><a href="report-63e686.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-63e686.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_ident</td><td class="Q">977</td><td class="Q">1</td><td><a href="report-65d14e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-65d14e.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_utf8_to_ucs1</td><td class="Q">1106</td><td class="Q">1</td><td><a href="report-6e6b4c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-6e6b4c.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_selector</td><td class="Q">2055</td><td class="Q">1</td><td><a href="report-71f719.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-71f719.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_stylesheet</td><td class="Q">2485</td><td class="Q">1</td><td><a href="report-722df0.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-722df0.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_nmstart</td><td class="Q">843</td><td class="Q">1</td><td><a href="report-781673.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-781673.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>runtime/gnulib-lib/canonicalize-lgpl.c</td><td class="DESC">rpl_realpath</td><td class="Q">181</td><td class="Q">1</td><td><a href="report-82a83d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-82a83d.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2412</td><td class="Q">1</td><td><a href="report-849e1d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-849e1d.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-sel-eng.c</td><td class="DESC">cr_sel_eng_get_matched_properties_from_cascade</td><td class="Q">1489</td><td class="Q">1</td><td><a href="report-860ad7.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-860ad7.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>runtime/gnulib-lib/canonicalize-lgpl.c</td><td class="DESC">rpl_realpath</td><td class="Q">316</td><td class="Q">1</td><td><a href="report-95f6fe.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-95f6fe.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_uri</td><td class="Q">1199</td><td class="Q">1</td><td><a href="report-96e487.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-96e487.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_uri</td><td class="Q">1217</td><td class="Q">1</td><td><a href="report-9d4c4a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-9d4c4a.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_stylesheet</td><td class="Q">2507</td><td class="Q">1</td><td><a href="report-a3c6e8.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a3c6e8.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_ucs1_str_to_utf8</td><td class="Q">973</td><td class="Q">1</td><td><a href="report-b0ec1b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b0ec1b.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2513</td><td class="Q">1</td><td><a href="report-b6a325.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b6a325.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_rgb</td><td class="Q">1340</td><td class="Q">1</td><td><a href="report-b75b6a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b75b6a.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-declaration.c</td><td class="DESC">cr_declaration_parse_list_from_buf</td><td class="Q">230</td><td class="Q">1</td><td><a href="report-b864b2.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b864b2.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2462</td><td class="Q">1</td><td><a href="report-bb5e5e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-bb5e5e.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_value_core</td><td class="Q">1110</td><td class="Q">1</td><td><a href="report-bea869.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-bea869.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-input.c</td><td class="DESC">cr_input_new_from_uri</td><td class="Q">237</td><td class="Q">1</td><td><a href="report-c08db3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c08db3.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_ruleset_core</td><td class="Q">888</td><td class="Q">1</td><td><a href="report-c53028.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c53028.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_term</td><td class="Q">1563</td><td class="Q">1</td><td><a href="report-c7ea07.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c7ea07.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_ruleset</td><td class="Q">3410</td><td class="Q">1</td><td><a href="report-cea1bc.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-cea1bc.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-style.c</td><td class="DESC">set_prop_padding_x_from_value</td><td class="Q">472</td><td class="Q">1</td><td><a href="report-cfcbfe.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-cfcbfe.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_rgb</td><td class="Q">1286</td><td class="Q">1</td><td><a href="report-d1aeda.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d1aeda.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2486</td><td class="Q">1</td><td><a href="report-d1c2ca.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d1c2ca.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_string</td><td class="Q">756</td><td class="Q">1</td><td><a href="report-d909c5.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d909c5.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_simple_sels</td><td class="Q">1976</td><td class="Q">1</td><td><a href="report-d9b248.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d9b248.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_ucs1_to_utf8</td><td class="Q">910</td><td class="Q">1</td><td><a href="report-daa23a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-daa23a.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_any_core</td><td class="Q">1235</td><td class="Q">1</td><td><a href="report-de1e57.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-de1e57.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-utils.c</td><td class="DESC">cr_utils_utf8_to_ucs1</td><td class="Q">1116</td><td class="Q">1</td><td><a href="report-e331c8.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-e331c8.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2405</td><td class="Q">1</td><td><a href="report-ea4d0c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-ea4d0c.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_selector</td><td class="Q">2040</td><td class="Q">1</td><td><a href="report-ed56a4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-ed56a4.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-rgb.c</td><td class="DESC">cr_rgb_parse_from_buf</td><td class="Q">665</td><td class="Q">1</td><td><a href="report-ef4a5f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-ef4a5f.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-statement.c</td><td class="DESC">cr_statement_at_import_rule_parse_from_buf</td><td class="Q">1415</td><td class="Q">1</td><td><a href="report-f4e8d3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f4e8d3.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_nmchar</td><td class="Q">910</td><td class="Q">1</td><td><a href="report-f5b303.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f5b303.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-statement.c</td><td class="DESC">parse_at_media_end_media_cb</td><td class="Q">377</td><td class="Q">1</td><td><a href="report-f5d6d4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f5d6d4.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_get_next_token</td><td class="Q">2499</td><td class="Q">1</td><td><a href="report-f5f027.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f5f027.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>tools/gnulib-lib/libcroco/cr-parser.c</td><td class="DESC">cr_parser_parse_ruleset_core</td><td class="Q">857</td><td class="Q">1</td><td><a href="report-fd071f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-fd071f.html" -->
+</tr>
+<tr class="bt_unused_code_dead_nested_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead nested assignment</td><td>tools/gnulib-lib/libcroco/cr-sel-eng.c</td><td class="DESC">cr_sel_eng_get_matched_rulesets</td><td class="Q">1371</td><td class="Q">1</td><td><a href="report-38a8ea.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-38a8ea.html" -->
+</tr>
+<tr class="bt_unused_code_dead_nested_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead nested assignment</td><td>runtime/intl/explodename.c</td><td class="DESC">_nl_explode_name</td><td class="Q">70</td><td class="Q">1</td><td><a href="report-dbe715.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-dbe715.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_string</td><td class="Q">733</td><td class="Q">46</td><td><a href="report-237909.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-237909.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/obstack.c</td><td class="DESC">_obstack_newchunk</td><td class="Q">204</td><td class="Q">8</td><td><a href="report-299909.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-299909.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-prop-list.c</td><td class="DESC">cr_prop_list_destroy</td><td class="Q">393</td><td class="Q">18</td><td><a href="report-2b83e1.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-2b83e1.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/obstack.c</td><td class="DESC">_obstack_begin_worker</td><td class="Q">141</td><td class="Q">11</td><td><a href="report-52507d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-52507d.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-statement.c</td><td class="DESC">cr_statement_destroy</td><td class="Q">2767</td><td class="Q">37</td><td><a href="report-64b83c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-64b83c.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/libgrep/kwset.c</td><td class="DESC">cwexec</td><td class="Q">682</td><td class="Q">11</td><td><a href="report-7dd16c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-7dd16c.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_string</td><td class="Q">723</td><td class="Q">42</td><td><a href="report-8f3a58.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8f3a58.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/unilbrk/ulc-width-linebreaks.c</td><td class="DESC">ulc_width_linebreaks</td><td class="Q">95</td><td class="Q">22</td><td><a href="report-a01ef4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a01ef4.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-prop-list.c</td><td class="DESC">cr_prop_list_append</td><td class="Q">92</td><td class="Q">23</td><td><a href="report-a63afb.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a63afb.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_string</td><td class="Q">754</td><td class="Q">43</td><td><a href="report-b15b6d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b15b6d.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-tknzr.c</td><td class="DESC">cr_tknzr_parse_string</td><td class="Q">761</td><td class="Q">46</td><td><a href="report-bf55f1.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-bf55f1.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>tools/gnulib-lib/libcroco/cr-sel-eng.c</td><td class="DESC">put_css_properties_in_props_list</td><td class="Q">1070</td><td class="Q">53</td><td><a href="report-c9b2e7.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c9b2e7.html" -->
+</tr>
+<tr class="bt_logic_error_division_by_zero"><td class="DESC">Logic error</td><td class="DESC">Division by zero</td><td>runtime/intl/eval-plural.h</td><td class="DESC">plural_eval</td><td class="Q">67</td><td class="Q">58</td><td><a href="report-b2b6dd.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b2b6dd.html" -->
+</tr>
+<tr class="bt_logic_error_division_by_zero"><td class="DESC">Logic error</td><td class="DESC">Division by zero</td><td>runtime/intl/eval-plural.h</td><td class="DESC">plural_eval</td><td class="Q">73</td><td class="Q">58</td><td><a href="report-f8e4d1.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f8e4d1.html" -->
+</tr>
+<tr class="bt_memory_error_memory_leak"><td class="DESC">Memory error</td><td class="DESC">Memory leak</td><td>tools/libgrep/m-fgrep.c</td><td class="DESC">Fexecute</td><td class="Q">239</td><td class="Q">14</td><td><a href="report-a6506d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a6506d.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>tools/gnulib-lib/striconveh.c</td><td class="DESC">iconveh_open</td><td class="Q">76</td><td class="Q">10</td><td><a href="report-14d270.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-14d270.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>tools/libgrep/m-fgrep.c</td><td class="DESC">Fexecute</td><td class="Q">220</td><td class="Q">20</td><td><a href="report-375efc.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-375efc.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>tools/libgrep/m-fgrep.c</td><td class="DESC">Fexecute</td><td class="Q">255</td><td class="Q">19</td><td><a href="report-a6e5f7.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a6e5f7.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>tools/libgrep/m-fgrep.c</td><td class="DESC">Fexecute</td><td class="Q">237</td><td class="Q">7</td><td><a href="report-f3da71.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f3da71.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>tools/libgrep/m-fgrep.c</td><td class="DESC">Fexecute</td><td class="Q">178</td><td class="Q">9</td><td><a href="report-fafddd.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-fafddd.html" -->
+</tr>
+<tr class="bt_memory_error_use-after-free"><td class="DESC">Memory error</td><td class="DESC">Use-after-free</td><td>tools/gnulib-lib/libcroco/cr-fonts.c</td><td class="DESC">cr_font_family_destroy</td><td class="Q">307</td><td class="Q">13</td><td><a href="report-0cba0e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0cba0e.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>

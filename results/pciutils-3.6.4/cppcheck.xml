@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/common.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;name&apos; can be reduced." verbose="The scope of the variable &apos;name&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/common.c" line="59" column="9"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="va_end_missing" severity="error" msg="va_list &apos;args&apos; was opened but not closed by va_end()." verbose="va_list &apos;args&apos; was opened but not closed by va_end()." cwe="664">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/common.c" line="27" column="1"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;option_index&apos; can be reduced." verbose="The scope of the variable &apos;option_index&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="332" column="6"/>
+            <symbol>option_index</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;my_strlen&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;str&apos;." verbose="Function &apos;my_strlen&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;str&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="182" column="34"/>
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="176" column="34"/>
+            <symbol>my_strlen</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;optstring&apos;." verbose="Function &apos;_getopt_internal&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;optstring&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="329" column="63"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h" line="112" column="21"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;options&apos;." verbose="Function &apos;getopt_long&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="622" column="58"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h" line="104" column="66"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 4 names different: declaration &apos;longopts&apos; definition &apos;long_options&apos;." verbose="Function &apos;getopt_long&apos; argument 4 names different: declaration &apos;longopts&apos; definition &apos;long_options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="622" column="88"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h" line="105" column="32"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 5 names different: declaration &apos;longind&apos; definition &apos;opt_index&apos;." verbose="Function &apos;getopt_long&apos; argument 5 names different: declaration &apos;longind&apos; definition &apos;opt_index&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="622" column="107"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h" line="105" column="47"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;optstring&apos;." verbose="Function &apos;getopt&apos; argument 3 names different: declaration &apos;shortopts&apos; definition &apos;optstring&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="617" column="53"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.h" line="102" column="61"/>
+            <symbol>getopt</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="636" column="6"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 9) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 9) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/example.c" line="27" column="7"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/example.c" line="16" column="16"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;name&apos; can be reduced." verbose="The scope of the variable &apos;name&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/example.c" line="17" column="24"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" line="0" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pci_scan_bus&apos; argument 1 names different: declaration &apos;acc&apos; definition &apos;a&apos;." verbose="Function &apos;pci_scan_bus&apos; argument 1 names different: declaration &apos;acc&apos; definition &apos;a&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" line="17" column="33"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/pci.h" line="93" column="38"/>
+            <symbol>pci_scan_bus</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pci_get_dev&apos; argument 1 names different: declaration &apos;acc&apos; definition &apos;a&apos;." verbose="Function &apos;pci_get_dev&apos; argument 1 names different: declaration &apos;acc&apos; definition &apos;a&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" line="59" column="32"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/pci.h" line="94" column="48"/>
+            <symbol>pci_get_dev</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bp&apos; can be reduced." verbose="The scope of the variable &apos;bp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="90" column="9"/>
+            <symbol>bp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="128" column="7"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;name&apos; can be reduced." verbose="The scope of the variable &apos;name&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="170" column="9"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bp&apos; can be reduced." verbose="The scope of the variable &apos;bp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="183" column="16"/>
+            <symbol>bp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bus_number&apos; can be reduced." verbose="The scope of the variable &apos;bus_number&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="201" column="7"/>
+            <symbol>bus_number</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;mode&apos; is assigned a value that is never used." verbose="Variable &apos;mode&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/aix-device.c" line="129" column="12"/>
+            <symbol>mode</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/caps.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/darwin.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="0" column="0"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="82" column="45"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 2) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 2) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="82" column="45"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="83" column="43"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 2) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 2) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="83" column="43"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 3) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 3) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="83" column="43"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="93" column="9"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 1) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="98" column="4"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/dump.c" line="63" column="7"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/fbsd-device.c" line="169" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bus&apos; can be reduced." verbose="The scope of the variable &apos;bus&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="34" column="13"/>
+            <symbol>bus</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;multi&apos; can be reduced." verbose="The scope of the variable &apos;multi&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c" line="16" column="12"/>
+            <symbol>multi</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/generic.c" line="95" column="20"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 5) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c" line="170" column="4"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/hurd.c" line="277" column="12"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/i386-ports.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 30 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/init.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-cache.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hash.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;best&apos; can be reduced." verbose="The scope of the variable &apos;best&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hash.c" line="88" column="24"/>
+            <symbol>best</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-hwdb.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-net.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names-parse.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/names.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/nbsd-libpci.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/obsd-device.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/params.c" line="0" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pci_define_param&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." verbose="Function &apos;pci_define_param&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/params.c" line="27" column="61"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/lib/params.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/internal.h" line="87" column="66"/>
+            <symbol>pci_define_param</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pci_set_param_internal&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." verbose="Function &apos;pci_set_param_internal&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/params.c" line="40" column="67"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/lib/params.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/internal.h" line="88" column="71"/>
+            <symbol>pci_set_param_internal</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c" line="0" column="0"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%x in format string (no. 3) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." verbose="%x in format string (no. 3) requires &apos;unsigned int *&apos; but the argument type is &apos;signed int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/proc.c" line="74" column="13"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/sylixos-device.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c" line="0" column="0"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%d in format string (no. 4) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%d in format string (no. 4) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/sysfs.c" line="215" column="11"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps-vendor.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 9) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 9) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="138" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 11) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 11) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="138" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="245" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%c in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed char *&apos;." verbose="%c in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed char *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="464" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%c in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed char *&apos;." verbose="%c in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed char *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="464" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="558" column="7"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="1467" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="1500" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="1500" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="1511" column="7"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="1528" column="7"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-caps.c" line="818" column="52"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c" line="0" column="0"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-ecaps.c" line="561" column="2" info="Shift"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="0" column="0"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 1) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 1) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 2) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 2) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 3) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 3) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 4) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 4) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 5) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 5) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="invalidScanfArgType_int" severity="warning" msg="%i in format string (no. 6) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." verbose="%i in format string (no. 6) requires &apos;int *&apos; but the argument type is &apos;unsigned int *&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-kernel.c" line="159" column="11"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-map.c" line="0" column="0"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;verbose&apos; shadows outer variable" verbose="Local variable &apos;verbose&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-map.c" line="56" column="7" info="Shadow variable"/>
+            <location file0="/home/capstone/Desktop/root/pciutils-3.6.4/ls-map.c" file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.h" line="28" column="12" info="Shadowed declaration"/>
+            <symbol>verbose</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;namebuf&apos; can be reduced." verbose="The scope of the variable &apos;namebuf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-tree.c" line="188" column="8"/>
+            <symbol>namebuf</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/ls-vpd.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="813" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="840" column="2"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ssnamebuf&apos; can be reduced." verbose="The scope of the variable &apos;ssnamebuf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="344" column="12"/>
+            <symbol>ssnamebuf</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dt_node&apos; can be reduced." verbose="The scope of the variable &apos;dt_node&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="913" column="9"/>
+            <symbol>dt_node</symbol>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%I64x in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;unsigned int&apos;." verbose="%I64x in format string (no. 1) requires &apos;unsigned __int64&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="383" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%I64x in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;unsigned int&apos;." verbose="%I64x in format string (no. 2) requires &apos;unsigned __int64&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lspci.c" line="383" column="9"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="0" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="78" column="16"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y&apos; can be reduced." verbose="The scope of the variable &apos;y&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="78" column="22"/>
+            <symbol>y</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;pdev&apos; can be reduced." verbose="The scope of the variable &apos;pdev&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="182" column="20"/>
+            <symbol>pdev</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dev&apos; can be reduced." verbose="The scope of the variable &apos;dev&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="182" column="27"/>
+            <symbol>dev</symbol>
+        </error>
+        <error id="va_end_missing" severity="error" msg="va_list &apos;args&apos; was opened but not closed by va_end()." verbose="va_list &apos;args&apos; was opened but not closed by va_end()." cwe="664">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="399" column="1"/>
+        </error>
+        <error id="ctunullpointer" severity="error" msg="Null pointer dereference: arg" verbose="Null pointer dereference: arg" cwe="476">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/common.c" line="62" column="15" info="Dereferencing argument arg that is null"/>
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/common.c" line="123" column="7" info="Calling function set_pci_method, 2nd argument is null"/>
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="462" column="28" info="Calling function parse_generic_option, 3rd argument is null"/>
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/setpci.c" line="461" column="11" info="Assignment &apos;arg=NULL&apos;, assigned value is 0"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getopt_long&apos; is never used." verbose="The function &apos;getopt_long&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/compat/getopt.c" line="622" column="0"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pci_filter_init_v30&apos; is never used." verbose="The function &apos;pci_filter_init_v30&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="185" column="0"/>
+            <symbol>pci_filter_init_v30</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pci_filter_match_v30&apos; is never used." verbose="The function &apos;pci_filter_match_v30&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="219" column="0"/>
+            <symbol>pci_filter_match_v30</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pci_filter_parse_id_v30&apos; is never used." verbose="The function &apos;pci_filter_parse_id_v30&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="205" column="0"/>
+            <symbol>pci_filter_parse_id_v30</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pci_filter_parse_slot_v30&apos; is never used." verbose="The function &apos;pci_filter_parse_slot_v30&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/filter.c" line="193" column="0"/>
+            <symbol>pci_filter_parse_slot_v30</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pci_write_block&apos; is never used." verbose="The function &apos;pci_write_block&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/pciutils-3.6.4/lib/access.c" line="170" column="0"/>
+            <symbol>pci_write_block</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

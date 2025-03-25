@@ -1,0 +1,78 @@
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:92:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy((char *) raw_data, old);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:378:9:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+    p = sprintf(buf, "=%s%s%s",
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:396:15:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	        p += sprintf(p, "%s,", this_cap_name);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:403:11:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	    p += sprintf(p, "+%s%s%s",
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:410:11:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	    p += sprintf(p, "-%s%s%s",
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:439:8:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		p += sprintf(p, "%s,", this_cap_name);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:444:7:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	p += sprintf(p, "+%s%s%s",
+/home/capstone/Desktop/root/libcap2-2.32/libcap/libcap.h:161:5:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+    fprintf(stderr, f, ## x); \
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:392:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		sprintf(ptr, "%s %s+i", text, argv[i]+6);
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:394:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+		strcpy(ptr, text);
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/execcap.c:60:5:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+    execvp(argv[2], argv+2);
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/sucap.c:175:2:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execvp(argv[3], argv+3);
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:552:15:  [3] (misc) chroot:chroot can be very helpful, but is hard to use correctly (CWE-250, CWE-22).  Make sure the program immediately chdir("/"), closes file descriptors, and drops root privileges, and that all necessary files (and no more!) are in the new root. 
+	    status = chroot(argv[i]+9);
+/home/capstone/Desktop/root/libcap2-2.32/progs/getcap.c:84:17:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+    while ((c = getopt(argc, argv, "rvhn")) > 0) {
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:119:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(result, cap_d, sizeof(*cap_d));
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_extint.c:56:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(&result->magic, external_magic, CAP_EXT_MAGIC_SIZE);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:346:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buf[CAP_TEXT_SIZE+CAP_TEXT_BUFFER_ZONE];
+/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:80:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buffer[CAP_FILE_BUFFER_SIZE], *line;
+/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:90:16:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    cap_file = fopen(source, "r");
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:32:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char string[8*sizeof(unsigned long) + 1];
+/home/capstone/Desktop/root/libcap2-2.32/progs/getpcaps.c:53:8:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	pid = atoi(argv[0]);
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/setpcaps.c:66:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buffer[MAXCAP+1];
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/setpcaps.c:110:8:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	pid = atoi(*++argv);
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/sucap.c:45:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buf[1];
+/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c:81:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buffer[MAXCAP+1];
+/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c:115:23:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	    rootid = (uid_t) atoi(*++argv);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/_makenames.c:45:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int n = strlen(list[i].name);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:85:40:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    raw_data = malloc( sizeof(__u32) + strlen(old) + 1 );
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_alloc.c:143:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t length = strlen(data_p) + sizeof(__u32);
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:391:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	        if ((strlen(this_cap_name) + (p - buf)) > CAP_TEXT_SIZE) {
+/home/capstone/Desktop/root/libcap2-2.32/libcap/cap_text.c:434:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	        if ((strlen(this_cap_name) + (p - buf)) > CAP_TEXT_SIZE) {
+/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:214:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    ssize_t conf_caps_length = strlen(conf_caps);
+/home/capstone/Desktop/root/libcap2-2.32/pam_cap/pam_cap.c:275:10:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    if (strlen(token) < 4) {
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:98:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	       (unsigned) strlen(b), b);
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:386:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    ptr = malloc(10 + strlen(argv[i]+6) + strlen(text));
+/home/capstone/Desktop/root/libcap2-2.32/progs/capsh.c:386:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	    ptr = malloc(10 + strlen(argv[i]+6) + strlen(text));
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/setpcaps.c:40:10:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	int j = read(STDIN_FILENO, buffer, i);
+/home/capstone/Desktop/root/libcap2-2.32/progs/old/sucap.c:46:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+    while (read(fd, buf, sizeof(buf)) == -1 && errno == EINTR) {
+/home/capstone/Desktop/root/libcap2-2.32/progs/setcap.c:54:10:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	int j = read(STDIN_FILENO, buffer, i);

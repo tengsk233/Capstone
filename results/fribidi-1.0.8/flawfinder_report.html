@@ -1,0 +1,988 @@
+<ul>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-benchmark.c:80:5: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    fprintf (stderr, fmt, arg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-benchmark.c:120:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf (appname " %s", fribidi_version_info);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:77:5: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    fprintf (stderr, fmt, arg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:168:3: <b>  [4] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  printf (appname " %s", fribidi_version_info);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:183:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+  strcpy (m, s);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:65:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:75:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:76:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:88:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:89:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:101:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:102:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:65:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:75:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:76:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:88:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:89:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:67:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:77:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:78:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:90:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:91:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:104:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:105:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:67:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:77:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:78:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:91:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:92:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:65:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:75:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:76:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:88:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:89:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:101:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:102:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:65:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:75:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:76:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:89:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:90:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, l, p, q);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:63:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": %s\n", msg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:73:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, appname ": ");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:74:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  fprintf (stderr, fmt, p);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:93:16: <b>  [4] </b> (buffer) <i> sscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Specify
+  a limit to %s, or use a different input function. If the scanf format is
+  influenceable by an attacker, it's exploitable. </i>
+<pre>
+			      (3 == sscanf (where, \
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/debug.h:50:26: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+# define FRIBIDI_FPRINTF fprintf
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets-cap-rtl.c:331:8: <b>  [4] </b> (format) <i> sprintf:
+  Potential format string problem (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
+  format string constant. </i>
+<pre>
+  i += sprintf (s + i,		/*l - i, */
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets-cap-rtl.c:343:12: <b>  [4] </b> (format) <i> sprintf:
+  Potential format string problem (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
+  format string constant. </i>
+<pre>
+      i += sprintf (s + i, /*l - i, */ "  * 0x%02x %c%c %-3s ", j,
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets-cap-rtl.c:348:8: <b>  [4] </b> (format) <i> sprintf:
+  Potential format string problem (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
+  format string constant. </i>
+<pre>
+  i += sprintf (s + i,		/*l - i, */
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c:113:3: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+  vfprintf(stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c:114:5: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+    vfprintf(stderr, fmt, ap);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-benchmark.c:265:11: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+      c = getopt_long (argc, argv, "hVn:", long_options, &amp;option_index);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:216:21: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  if ((s = (char *) getenv ("COLUMNS")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:267:2: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	getopt_long (argc, argv, "hVvdtc:w:B:E:", long_options,
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c:145:9: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+#ifndef getenv
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c:146:14: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+extern char *getenv (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c:291:28: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+  d-&gt;__posixly_correct = !!getenv ("POSIXLY_CORRECT");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c:1185:1: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+getopt (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c:1215:11: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+      c = getopt (argc, argv, "abc:d:0123456789");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h:152:14: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+  extern int getopt (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h:158:14: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+  extern int getopt (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h:163:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+  extern int getopt_long (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c:63:1: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+getopt_long (
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c:148:11: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+      c = getopt_long (argc, argv, "abc:d:0123456789",
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-benchmark.c:280:12: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	  niter = atoi (optarg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-caprtl2utf8.c:5:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char buf[BUFSIZ];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-caprtl2utf8.c:18:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char eol[5];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:220:11: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+      i = atoi (s);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:286:17: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	  text_width = atoi (optarg);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:363:9: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	  IN = fopen (filename, "r");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:375:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char S_[MAX_STR_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c:385:6: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	    char outstring[MAX_STR_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:135:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:136:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char tag[sizeof (buf)], buf2[sizeof (buf)];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:215:17: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      if (!(f = fopen (data_file_name[0], "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c:292:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:120:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static const char *names[type_names_count];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:140:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:141:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char tp[sizeof (buf)];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:299:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (data_file_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c:350:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:115:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:141:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:157:7: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+      char ce_string[256]; /* For parsing the equivalence */
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:265:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (uni_datafile_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:274:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (bracket_datafile_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c:334:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:101:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:171:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (data_file_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c:227:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:129:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static const char *names[type_names_count];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:182:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:183:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char tp[sizeof (buf)], tp_gen[sizeof (buf)], tp_bidi[sizeof (buf)];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:291:17: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+      if (!(f = fopen (data_file_name[0], "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c:346:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:99:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:174:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (data_file_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c:232:21: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+    int max_depth = atoi (argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:80:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char unicode_version[100];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:81:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char buf[4000];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:89:3: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+  strcpy (unicode_version, "(unknown)");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:119:3: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+  sprintf (unicode_version, "%d.%d.%d", version_major, version_minor,
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c:133:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  if (!(f = fopen (data_file_name, "rt")))
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:64:15: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  FriBidiRun *open;
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:408:60: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+                                               FriBidiRun *open,
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:412:16: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+  node-&gt;open = open;
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:1104:30: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+          for (ppn = ppairs-&gt;open; ppn!= ppairs-&gt;close; ppn = ppn-&gt;next)
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:1116:35: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+                  RL_TYPE(ppairs-&gt;open) = RL_TYPE(ppairs-&gt;close) = this_level%2 ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR;
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:1128:56: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+              int iso_level = RL_ISOLATE_LEVEL(ppairs-&gt;open);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:1141:34: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+              for (ppn = ppairs-&gt;open; ppn!= ppairs-&gt;close; ppn = ppn-&gt;next)
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c:1150:39: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+                      RL_TYPE(ppairs-&gt;open) = RL_TYPE(ppairs-&gt;close) = prec_strong_level % 2 ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR;
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets-cap-rtl.c:84:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char mark[CAPRTL_CHARS];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi.c:245:7: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+      memcpy (visual_str, str, len * sizeof (*visual_str));
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c:173:20: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+  *paragraph_dir = atoi(line);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c:185:41: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+  *resolved_paragraph_embedding_level = atoi(line);
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c:250:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+  char line[LINE_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c:287:15: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    channel = fopen(filename, "r");
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c:256:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char line[LINE_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c:286:15: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    channel = fopen(filename, "r");
+</pre>
+</ul>

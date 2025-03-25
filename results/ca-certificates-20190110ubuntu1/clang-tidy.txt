@@ -1,0 +1,8 @@
+1 warning generated.
+/home/capstone/Desktop/root/ca-certificates-20190110ubuntu1/mozilla/nssckbi.h:5:9: warning: header guard does not follow preferred style [llvm-header-guard]
+    5 | #ifndef NSSCKBI_H
+      |         ^~~~~~~~~
+      |         HOME_CAPSTONE_DESKTOP_ROOT_CA_CERTIFICATES_20190110UBUNTU1_MOZILLA_NSSCKBI_H
+    6 | #define NSSCKBI_H
+      |         ~~~~~~~~~
+      |         HOME_CAPSTONE_DESKTOP_ROOT_CA_CERTIFICATES_20190110UBUNTU1_MOZILLA_NSSCKBI_H

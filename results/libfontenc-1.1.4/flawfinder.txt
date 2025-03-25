@@ -1,0 +1,30 @@
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:903:17:  [4] (buffer) fscanf:The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20).  Specify a limit to %s, or use a different input function. If the scanf format is influenceable by an attacker, it's exploitable.
+        count = fscanf(file, format, encoding_name, file_name);
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:836:25:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+        const char *c = getenv("FONT_ENCODINGS_DIRECTORY");
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:74:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char keyword_value[MAXKEYWORDLEN + 1];
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:508:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char *aliases[MAXALIASES] = { NULL };
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:879:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char file_name[MAXFONTFILENAMELEN], encoding_name[MAXFONTNAMELEN],
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:882:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char format[24] = "";
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:887:17:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+    if ((file = fopen(dirname, "r")) == NULL) {
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:943:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char dir[MAXFONTFILENAMELEN], dirname[MAXFONTFILENAMELEN];
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:581:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char *iso8859_15_aliases[2] = { "fcd8859-15", NULL };
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:637:12:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    static char charset[MAXFONTNAMELEN];
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:662:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+    memcpy(charset, p + 1, len);
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:817:17:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+                memcpy(new_aliases, encoding->aliases,
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:867:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    if (buf && strlen(dir) + 14 < MAXFONTFILENAMELEN) {
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:912:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                if (strlen(dir) + strlen(file_name) >= MAXFONTFILENAMELEN) {
+/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:912:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+                if (strlen(dir) + strlen(file_name) >= MAXFONTFILENAMELEN) {

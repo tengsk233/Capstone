@@ -1,0 +1,115 @@
+<ul>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:903:17: <b>  [4] </b> (buffer) <i> fscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Specify
+  a limit to %s, or use a different input function. If the scanf format is
+  influenceable by an attacker, it's exploitable. </i>
+<pre>
+        count = fscanf(file, format, encoding_name, file_name);
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:836:25: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+        const char *c = getenv("FONT_ENCODINGS_DIRECTORY");
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:74:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char keyword_value[MAXKEYWORDLEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:508:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char *aliases[MAXALIASES] = { NULL };
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:879:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char file_name[MAXFONTFILENAMELEN], encoding_name[MAXFONTNAMELEN],
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:882:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char format[24] = "";
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:887:17: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+    if ((file = fopen(dirname, "r")) == NULL) {
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/encparse.c:943:5: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    char dir[MAXFONTFILENAMELEN], dirname[MAXFONTFILENAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:581:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char *iso8859_15_aliases[2] = { "fcd8859-15", NULL };
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:637:12: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    static char charset[MAXFONTNAMELEN];
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:662:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+    memcpy(charset, p + 1, len);
+</pre>
+<li>/home/capstone/Desktop/root/libfontenc-1.1.4/src/fontenc.c:817:17: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+                memcpy(new_aliases, encoding-&gt;aliases,
+</pre>
+</ul>

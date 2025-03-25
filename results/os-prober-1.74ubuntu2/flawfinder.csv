@@ -1,0 +1,2 @@
+File,Line,Column,Level,Category,Name,Warning,Suggestion,Note,CWEs,Context,Fingerprint
+/home/capstone/Desktop/root/os-prober-1.74ubuntu2/newns.c,25,2,4,shell,execvp,This causes a new program to execute and is difficult to use safely (CWE-78),try using a library call that implements the same functionality if available,,CWE-78,"	execvp(argv[1], argv + 1);",0bb378604343d2ff3d8e1975a391c154988a8d675c962713bfcbbb8e04bcb5fa

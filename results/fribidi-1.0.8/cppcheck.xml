@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="terminateStrncpy" severity="warning" msg="The buffer &apos;eol&apos; may not be null-terminated after the call to strncpy()." verbose="The buffer &apos;eol&apos; may not be null-terminated after the call to strncpy(). If the source string&apos;s size fits or exceeds the given size, strncpy() does not add a zero at the end of the buffer. This causes bugs later in the code if the code assumes buffer is null-terminated." cwe="170" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-caprtl2utf8.c" line="23" column="7"/>
+            <symbol>eol</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;outstring&apos; can be reduced." verbose="The scope of the variable &apos;outstring&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c" line="385" column="11"/>
+            <symbol>outstring</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: exit_val" verbose="Unused variable: exit_val" cwe="563">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/fribidi-main.c" line="194" column="7"/>
+            <symbol>exit_val</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="400" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="118" column="7"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="401" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="119" column="16"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="402" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="120" column="15"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;longopts&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;longopts&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="403" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="121" column="24"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;longind&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;longind&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="404" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="122" column="8"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 6 names different: declaration &apos;__long_only&apos; definition &apos;long_only&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 6 names different: declaration &apos;__long_only&apos; definition &apos;long_only&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="405" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="123" column="7"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal_r&apos; argument 7 names different: declaration &apos;__data&apos; definition &apos;d&apos;." verbose="Function &apos;_getopt_internal_r&apos; argument 7 names different: declaration &apos;__data&apos; definition &apos;d&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="406" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="124" column="24"/>
+            <symbol>_getopt_internal_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;_getopt_internal&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1161" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="24" column="7"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;_getopt_internal&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1162" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="25" column="16"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." verbose="Function &apos;_getopt_internal&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1163" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="26" column="15"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;longopts&apos;." verbose="Function &apos;_getopt_internal&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;longopts&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1164" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="27" column="24"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;longind&apos;." verbose="Function &apos;_getopt_internal&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;longind&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1165" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="28" column="8"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_internal&apos; argument 6 names different: declaration &apos;__long_only&apos; definition &apos;long_only&apos;." verbose="Function &apos;_getopt_internal&apos; argument 6 names different: declaration &apos;__long_only&apos; definition &apos;long_only&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1166" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="29" column="7"/>
+            <symbol>_getopt_internal</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1208" column="7"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;getopt&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1186" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="153" column="7"/>
+            <symbol>getopt</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;getopt&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1187" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="154" column="16"/>
+            <symbol>getopt</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." verbose="Function &apos;getopt&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;optstring&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" line="1188" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="155" column="15"/>
+            <symbol>getopt</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;getopt_long&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="64" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="164" column="7"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;getopt_long&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="65" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="165" column="16"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." verbose="Function &apos;getopt_long&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="66" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="166" column="15"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." verbose="Function &apos;getopt_long&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="67" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="167" column="24"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." verbose="Function &apos;getopt_long&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="68" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="168" column="8"/>
+            <symbol>getopt_long</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="76" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="128" column="7"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="77" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="129" column="16"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="78" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="130" column="15"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="79" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="131" column="24"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="80" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="132" column="8"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_r&apos; argument 6 names different: declaration &apos;__data&apos; definition &apos;d&apos;." verbose="Function &apos;_getopt_long_r&apos; argument 6 names different: declaration &apos;__data&apos; definition &apos;d&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="81" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="133" column="24"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long_only&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;getopt_long_only&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="95" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="171" column="7"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long_only&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;getopt_long_only&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="96" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="172" column="16"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long_only&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." verbose="Function &apos;getopt_long_only&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="97" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="173" column="15"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long_only&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." verbose="Function &apos;getopt_long_only&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="98" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="174" column="24"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getopt_long_only&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." verbose="Function &apos;getopt_long_only&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="99" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt.h" line="175" column="8"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 1 names different: declaration &apos;___argc&apos; definition &apos;argc&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="107" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="137" column="7"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 2 names different: declaration &apos;___argv&apos; definition &apos;argv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="108" column="16"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="138" column="16"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 3 names different: declaration &apos;__shortopts&apos; definition &apos;options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="109" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="139" column="15"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 4 names different: declaration &apos;__longopts&apos; definition &apos;long_options&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="110" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="140" column="24"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 5 names different: declaration &apos;__longind&apos; definition &apos;opt_index&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="111" column="8"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="141" column="8"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_getopt_long_only_r&apos; argument 6 names different: declaration &apos;__data&apos; definition &apos;d&apos;." verbose="Function &apos;_getopt_long_only_r&apos; argument 6 names different: declaration &apos;__data&apos; definition &apos;d&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="112" column="24"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt_int.h" line="142" column="24"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="131" column="7"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="identicalConditionAfterEarlyExit" severity="warning" msg="Identical condition &apos;i!=3&apos;, second condition is always false" verbose="Identical condition &apos;i!=3&apos;, second condition is always false" cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="189" column="13" info="Testing identical condition &apos;i!=3&apos;"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="186" column="13" info="If condition &apos;i!=3&apos; is true, the function will return/exit"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="102" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="portability" msg="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="245" column="3"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="184" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;f&apos; can be reduced." verbose="The scope of the variable &apos;f&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-arabic-shaping-tab.c" line="210" column="9"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c" line="89" column="3"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c" line="242" column="11"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c" line="276" column="11"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-bidi-type-tab.c" line="280" column="6"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c" line="105" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c" line="172" column="11"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-tab.c" line="169" column="11"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;key_bytes==1&apos; is always true" verbose="Condition &apos;key_bytes==1&apos; is always true" cwe="571">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c" line="200" column="24" info="Condition &apos;key_bytes==1&apos; is always true"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c" line="199" column="15" info="Assignment &apos;key_bytes=1&apos;, assigned value is 1"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-brackets-type-tab.c" line="92" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c" line="102" column="3"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c" line="232" column="11"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c" line="265" column="11"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c" line="269" column="6"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;f&apos; can be reduced." verbose="The scope of the variable &apos;f&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-joining-type-tab.c" line="286" column="9"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-mirroring-tab.c" line="90" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;data_file_type&apos; can be reduced." verbose="The scope of the variable &apos;data_file_type&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c" line="168" column="15"/>
+            <symbol>data_file_type</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c" line="169" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;found&apos; can be reduced." verbose="The scope of the variable &apos;found&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/gen-unicode-version.c" line="170" column="7"/>
+            <symbol>found</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="148" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="169" column="14"/>
+            <symbol>k</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y&apos; can be reduced." verbose="The scope of the variable &apos;y&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="169" column="17"/>
+            <symbol>y</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;sbak&apos; can be reduced." verbose="The scope of the variable &apos;sbak&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="169" column="20"/>
+            <symbol>sbak</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;key_bytes&apos; can be reduced." verbose="The scope of the variable &apos;key_bytes&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="170" column="8"/>
+            <symbol>key_bytes</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 5 names different: declaration &apos;max_depth&apos; definition &apos;p_max_depth&apos;." verbose="Function &apos;pack_table&apos; argument 5 names different: declaration &apos;max_depth&apos; definition &apos;p_max_depth&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="414" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="39" column="7"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 6 names different: declaration &apos;tab_width&apos; definition &apos;p_tab_width&apos;." verbose="Function &apos;pack_table&apos; argument 6 names different: declaration &apos;tab_width&apos; definition &apos;p_tab_width&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="415" column="7"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="40" column="7"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 7 names different: declaration &apos;name&apos; definition &apos;p_name&apos;." verbose="Function &apos;pack_table&apos; argument 7 names different: declaration &apos;name&apos; definition &apos;p_name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="416" column="22"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="41" column="22"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 8 names different: declaration &apos;key_type_name&apos; definition &apos;p_key_type_name&apos;." verbose="Function &apos;pack_table&apos; argument 8 names different: declaration &apos;key_type_name&apos; definition &apos;p_key_type_name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="417" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="42" column="15"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 9 names different: declaration &apos;table_name&apos; definition &apos;p_table_name&apos;." verbose="Function &apos;pack_table&apos; argument 9 names different: declaration &apos;table_name&apos; definition &apos;p_table_name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="418" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="43" column="15"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;pack_table&apos; argument 10 names different: declaration &apos;macro_name&apos; definition &apos;p_macro_name&apos;." verbose="Function &apos;pack_table&apos; argument 10 names different: declaration &apos;macro_name&apos; definition &apos;p_macro_name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" line="419" column="15"/>
+            <location file0="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.c" file="/home/capstone/Desktop/root/fribidi-1.0.8/gen.tab/packtab.h" line="44" column="15"/>
+            <symbol>pack_table</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi-types.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="0" column="0"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="1106" column="43"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="1131" column="47"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;ppn-&gt;type==(32L|512L)&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="1143" column="47"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;isolate_level&apos; shadows outer variable" verbose="Local variable &apos;isolate_level&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="787" column="11" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="579" column="9" info="Shadowed declaration"/>
+            <symbol>isolate_level</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;%&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a%b?c:d&apos;&apos; should be written as either &apos;&apos;(a%b)?c:d&apos;&apos; or &apos;&apos;a%(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="1116" column="81"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;%&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a%b?c:d&apos;&apos; should be written as either &apos;&apos;(a%b)?c:d&apos;&apos; or &apos;&apos;a%(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="1150" column="94"/>
+        </error>
+        <error id="noValidConfiguration" severity="information" msg="This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details." verbose="This file is not analyzed. Cppcheck failed to extract a valid configuration. The tested configurations have these preprocessor errors:\012&apos;&apos; : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_FRIBIDI_ALL_TYPES;_FRIBIDI_ALL_TYPES;_FRIBIDI_PAR_TYPES : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_FRIBIDI_ALL_TYPES;_FRIBIDI_PAR_TYPES : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_FRIBIDI_ALL_TYPES;_FRIBIDI_PAR_TYPES;_FRIBIDI_ALL_TYPES;_FRIBIDI_SENTINEL_TYPE : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_FRIBIDI_ENUM_TYPES : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets-cap-rtl.c" line="0" column="0"/>
+        </error>
+        <error id="noValidConfiguration" severity="information" msg="This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details." verbose="This file is not analyzed. Cppcheck failed to extract a valid configuration. The tested configurations have these preprocessor errors:\012&apos;&apos; : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012DONT_HAVE_FRIBIDI_CONFIG_H : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012FRIBIDI_BEGIN_DECLS : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012FRIBIDI_BUILT_WITH_MSVC;FRIBIDI_STATIC;_MSC_VER : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012HAVE_FRIBIDI_CUSTOM_H : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012SVR4;_SVR4;__HP_cc;__OpenBSD__;__digital__;__sun;_sgi;sun : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_AIX : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012_MSC_VER : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012__GNUC__ : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012__ICC : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;\012__clang__ : [/home/capstone/Desktop/root/fribidi-1.0.8/lib/common.h:114] #error &quot;No stringize operator available?&quot;">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-char-sets.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-joining-types.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-joining.c" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-run.c" line="0" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;matches&apos; is always true" verbose="Condition &apos;matches&apos; is always true" cwe="571">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="382" column="13" info="Condition &apos;matches&apos; is always true"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="381" column="19" info="Assignment &apos;matches=1&apos;, assigned value is 1"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;level&apos; shadows outer variable" verbose="Local variable &apos;level&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="195" column="20" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="138" column="7" info="Shadowed declaration"/>
+            <symbol>level</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;end&apos; shadows outer variable" verbose="Local variable &apos;end&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="196" column="13" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="137" column="9" info="Shadowed declaration"/>
+            <symbol>end</symbol>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128" verbose="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128" cwe="570">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="51" column="42" info="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="50" column="17" info="arr-&gt;capacity is assigned value 32"/>
+        </error>
+        <error id="va_end_missing" severity="error" msg="va_list &apos;ap&apos; was opened but not closed by va_end()." verbose="va_list &apos;ap&apos; was opened but not closed by va_end()." cwe="664">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiCharacterTest.c" line="115" column="1"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;base_dir&apos; shadows outer variable" verbose="Local variable &apos;base_dir&apos; shadows outer variable" cwe="398">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c" line="423" column="22" info="Shadow variable"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c" line="330" column="21" info="Shadowed declaration"/>
+            <symbol>base_dir</symbol>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128" verbose="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128" cwe="570">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c" line="52" column="42" info="Argument &apos;arr-&gt;capacity*sizeof(int)&apos; to function malloc is always 128"/>
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c" line="51" column="17" info="arr-&gt;capacity is assigned value 32"/>
+        </error>
+        <error id="va_end_missing" severity="error" msg="va_list &apos;ap&apos; was opened but not closed by va_end()." verbose="va_list &apos;ap&apos; was opened but not closed by va_end()." cwe="664">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/test/unicode-conformance/BidiTest.c" line="116" column="1"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;_getopt_long_only_r&apos; is never used." verbose="The function &apos;_getopt_long_only_r&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="106" column="0"/>
+            <symbol>_getopt_long_only_r</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;_getopt_long_r&apos; is never used." verbose="The function &apos;_getopt_long_r&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="75" column="0"/>
+            <symbol>_getopt_long_r</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_debug_status&apos; is never used." verbose="The function &apos;fribidi_debug_status&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi.c" line="39" column="0"/>
+            <symbol>fribidi_debug_status</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_joining_type&apos; is never used." verbose="The function &apos;fribidi_get_joining_type&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-joining-types.c" line="45" column="0"/>
+            <symbol>fribidi_get_joining_type</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_joining_type_name&apos; is never used." verbose="The function &apos;fribidi_get_joining_type_name&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-joining-types.c" line="71" column="0"/>
+            <symbol>fribidi_get_joining_type_name</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_par_direction&apos; is never used." verbose="The function &apos;fribidi_get_par_direction&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-bidi.c" line="388" column="0"/>
+            <symbol>fribidi_get_par_direction</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_par_embedding_levels&apos; is never used." verbose="The function &apos;fribidi_get_par_embedding_levels&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/.pc/revert_log2vis_get_embedding_levels.diff/lib/fribidi-deprecated.c" line="97" column="0"/>
+            <symbol>fribidi_get_par_embedding_levels</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_type&apos; is never used." verbose="The function &apos;fribidi_get_type&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/.pc/revert_log2vis_get_embedding_levels.diff/lib/fribidi-deprecated.c" line="80" column="0"/>
+            <symbol>fribidi_get_type</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_get_type_internal&apos; is never used." verbose="The function &apos;fribidi_get_type_internal&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/.pc/revert_log2vis_get_embedding_levels.diff/lib/fribidi-deprecated.c" line="88" column="0"/>
+            <symbol>fribidi_get_type_internal</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_log2vis_get_embedding_levels&apos; is never used." verbose="The function &apos;fribidi_log2vis_get_embedding_levels&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/lib/fribidi-deprecated.c" line="80" column="0"/>
+            <symbol>fribidi_log2vis_get_embedding_levels</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_mirroring_status&apos; is never used." verbose="The function &apos;fribidi_mirroring_status&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/.pc/revert_log2vis_get_embedding_levels.diff/lib/fribidi-deprecated.c" line="52" column="0"/>
+            <symbol>fribidi_mirroring_status</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fribidi_reorder_nsm_status&apos; is never used." verbose="The function &apos;fribidi_reorder_nsm_status&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/.pc/revert_log2vis_get_embedding_levels.diff/lib/fribidi-deprecated.c" line="69" column="0"/>
+            <symbol>fribidi_reorder_nsm_status</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getopt_long_only&apos; is never used." verbose="The function &apos;getopt_long_only&apos; is never used." cwe="561">
+            <location file="/home/capstone/Desktop/root/fribidi-1.0.8/bin/getopt1.c" line="94" column="0"/>
+            <symbol>getopt_long_only</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

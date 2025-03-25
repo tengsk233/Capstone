@@ -1,0 +1,286 @@
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:914:6:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	if (chmod(tn, 0600) < OK)
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:930:7:  [5] (race) chown:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchown( ) instead. 
+		if (chown(tn, pw->pw_uid, -1) != 0) {
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:256:13:  [5] (race) chown:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchown( ) instead. 
+		if (OK == chown(SPOOL_DIR, -1, gr->gr_gid)) {
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:60:9:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	(void) strcpy(temp, str);
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:282:6:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	if (access(REBOOT_FILE, F_OK) == 0) {
+/home/capstone/Desktop/root/cron-3.0pl1/cron.h:125:5:  [4] (format) printf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+				printf message;
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:305:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:359:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:421:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+		strcpy(Directory, tmp);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:427:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+		strcat(Directory, template);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:555:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(n, MAX_FNAME, CRON_TAB(User));
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:690:3:  [4] (shell) execlp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		execlp(_PATH_BSHELL, _PATH_BSHELL, "-c", q, NULL);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:828:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(tn, MAX_FNAME, CRON_TAB("tmp.XXXXXX"));
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:937:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(n, sizeof(n), CRON_TAB(User));
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:121:4:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+			sprintf(syscrond_fname, "%s/%s", SYSCRONDIR,
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:195:10:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+		(void) strcat(fname, dp->d_name);
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:196:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		sprintf(tabname,"%s/%s", SYSCRONDIR, dp->d_name);
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:227:10:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+		(void) strcpy(fname, dp->d_name);
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:228:3:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+		snprintf(tabname, PATH_MAX+1, CRON_TAB(fname));
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:361:4:  [4] (shell) execle:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+			execle(shell, shell, "-c", e->cmd, (char *)0, jobenv);
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:540:9:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	(void) snprintf(mailcmd, sizeof(mailcmd),
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:260:13:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+					(void) strcpy(val, val+1);
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:268:9:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	(void) sprintf(envstr, "%s=%s", name, val);
+/home/capstone/Desktop/root/cron-3.0pl1/externs.h:62:26:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+extern	char		*getenv(), *strcpy(), *strchr(), *strtok();
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:299:10:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+		(void) snprintf(pidfile, MAX_FNAME, PIDFILE, PIDDIR);
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:152:3:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		execvp(gargv[0], gargv);
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:154:3:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		execvp(argv[0], argv);
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:226:19:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if (overwrite && getenv(name))
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:468:25:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while (EOF != (argch = getopt(argc, argv, getoptarg))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:183:25:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while (EOF != (argch = getopt(argc, argv, getoptarg))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:323:15:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if (!(ctnh = getenv("CRONTAB_NOHEADER")) || toupper(*ctnh) != 'N') {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:420:11:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((tmp=getenv("TMPDIR")) && strlen(tmp) < MAX_FNAME) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:645:19:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	if ((!((editor = getenv("VISUAL")) && strlen(editor)))
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:646:19:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	 && (!((editor = getenv("EDITOR")) && strlen(editor)))
+/home/capstone/Desktop/root/cron-3.0pl1/externs.h:62:15:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+extern	char		*getenv(), *strcpy(), *strchr(), *strtok();
+/home/capstone/Desktop/root/cron-3.0pl1/externs.h:80:5:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+int	getopt __P((int, char * const *, const char *));
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:43:1:  [2] (race) vfork:On some old systems, vfork() permits race conditions, and it's very difficult to use correctly (CWE-362).  Use fork() instead. 
+vfork() {
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:73:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	static char buf[32];
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:112:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open("/dev/tty", 2)) >= 0)
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:120:30:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	(void) close(STDIN);	(void) open("/dev/null", 0);
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:121:31:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	(void) close(STDOUT);	(void) open("/dev/null", 1);
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:122:31:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	(void) close(STDERR);	(void) open("/dev/null", 2);
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:89:10:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		(void) open("dev/null", 0);
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:112:3:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+		strcpy( cron_default_mail_charset, "US-ASCII");
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:479:16:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+			log_level = atoi(optarg);
+/home/capstone/Desktop/root/cron-3.0pl1/cron.h:313:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char	cron_default_mail_charset[MAX_ENVSTR] = "";
+/home/capstone/Desktop/root/cron-3.0pl1/cron.h:335:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+extern	char	cron_default_mail_charset[MAX_ENVSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:58:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static	char		Filename[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:59:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static	char		Directory[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:271:23:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+			if (!(NewCrontab = fopen(Filename, "r"))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:298:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	n[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:306:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if (!(f = fopen(n, "r"))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:353:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	n[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:354:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	q[MAX_TEMPSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:423:3:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+		strcpy(Directory,"/tmp");
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:446:11:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((nfd=open(Filename, O_CREAT|O_EXCL|O_WRONLY, 0600)) == -1) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:465:9:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((t=open(Filename, O_RDONLY)) < 0) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:505:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char fname[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:545:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char		n[MAX_FNAME], q[MAX_TEMPSTR], *editor;
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:556:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if (!(f = fopen(n, "r"))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:563:13:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if (!(f = fopen("/dev/null", "r"))) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:790:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char tn[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:804:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	n[MAX_FNAME], envstr[MAX_ENVSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:830:7:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+	fd = mkstemp(tn);
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:71:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char		syscrond_fname[PATH_MAX+1];
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:175:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	fname[MAXNAMLEN+1],
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:194:10:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+		(void) strcpy(fname,"*system*");
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:216:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	fname[MAXNAMLEN+1],
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:334:21:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((crontab_fd = open(tabname, O_RDONLY|O_NOFOLLOW, 0)) < OK) {
+/home/capstone/Desktop/root/cron-3.0pl1/database.c:385:21:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((crontab_fd = open(tabname, O_RDONLY, 0)) < OK) {
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:190:16:  [2] (tmpfile) tmpfile:Function tmpfile() has a security flaw on some systems (e.g., older System V systems) (CWE-377).  
+	if ((tmpout = tmpfile()) == NULL) {
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:305:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:313:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:321:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:372:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char logcmd[MAX_COMMAND + 8];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:465:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char		msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:534:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	auto char	mailcmd[MAX_COMMAND];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:535:7:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	auto char	hostname[MAXHOSTNAMELEN];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:599:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[4096];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:625:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char buf[MAX_TEMPSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:643:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char logcmd[MAX_COMMAND + 8];
+/home/capstone/Desktop/root/cron-3.0pl1/entry.c:93:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	cmd[MAX_COMMAND];
+/home/capstone/Desktop/root/cron-3.0pl1/entry.c:94:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	envstr[MAX_ENVSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/entry.c:532:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	temp[MAX_TEMPSTR], *pc;
+/home/capstone/Desktop/root/cron-3.0pl1/entry.c:575:13:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+		*numptr = atoi(temp);
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:155:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[MAX_ENVSTR], val[MAX_ENVSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/externs.h:27:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+extern char *tzname[2];
+/home/capstone/Desktop/root/cron-3.0pl1/externs.h:150:15:  [2] (race) vfork:On some old systems, vfork() permits race conditions, and it's very difficult to use correctly (CWE-362).  Use fork() instead. 
+extern	PID_T		vfork __P((void));
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:295:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	pidfile[MAX_FNAME];
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:296:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char	buf[MAX_TEMPSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:300:20:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ((-1 == (fd = open(pidfile, O_RDWR|O_CREAT, 0644)))
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:441:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char line[MAX_TEMPSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:479:11:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		allow = fopen(ALLOW_FILE, "r");
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:489:10:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		deny = fopen(DENY_FILE, "r");
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:552:11:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		LogFD = open(LOG_FILE, O_WRONLY|O_APPEND|O_CREAT, 0600);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:625:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	static char retbuf[2][MAX_TEMPSTR + 1];	/* sure wish C had GC */
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:707:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	static char ret[64];	/* zone name might be >3 chars */
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:59:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char *argv[MAX_ARGS + 1];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:61:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char **pop, *vv[2];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:63:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char *gargv[1000];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:128:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:136:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:144:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char msg[256];
+/home/capstone/Desktop/root/cron-3.0pl1/popen.c:172:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		free((char *)argv[argc]);
+/home/capstone/Desktop/root/cron-3.0pl1/user.c:209:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char	envstr[MAX_ENVSTR];
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:56:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if ((temp = malloc(strlen(str) + 1)) == NULL) {
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:229:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tmp_size = strlen(name) + strlen(value) + 2;
+/home/capstone/Desktop/root/cron-3.0pl1/compat.c:229:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tmp_size = strlen(name) + strlen(value) + 2;
+/home/capstone/Desktop/root/cron-3.0pl1/cron.c:110:3:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+		strncpy(cron_default_mail_charset, cs, MAX_ENVSTR);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:243:11:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+			(void) strncpy (Filename, argv[optind], (sizeof Filename)-1);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:420:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if ((tmp=getenv("TMPDIR")) && strlen(tmp) < MAX_FNAME) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:426:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(Directory) + strlen(template) < MAX_FNAME) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:426:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(Directory) + strlen(template) < MAX_FNAME) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:570:7:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+	um = umask(077);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:574:24:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+                (void) umask(um);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:578:9:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+	(void) umask(um);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:645:40:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if ((!((editor = getenv("VISUAL")) && strlen(editor)))
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:646:40:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	 && (!((editor = getenv("EDITOR")) && strlen(editor)))
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:684:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (strlen(editor) + strlen(Filename) + 2 >= MAX_TEMPSTR) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:684:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (strlen(editor) + strlen(Filename) + 2 >= MAX_TEMPSTR) {
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:829:7:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+	um = umask(077);
+/home/capstone/Desktop/root/cron-3.0pl1/crontab.c:840:9:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+	(void) umask(um);
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:262:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			char *x = mkprints((u_char *)e->cmd, strlen(e->cmd));
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:374:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			char *x = mkprints((u_char *)logcmd, strlen(logcmd));
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:567:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		size_t ctlen = strlen(content_type);
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:579:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		size_t ctlen = strlen(content_transfer_encoding);
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:645:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			x = mkprints((u_char *)logcmd, strlen(logcmd));
+/home/capstone/Desktop/root/cron-3.0pl1/do_command.c:647:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			x = mkprints((u_char *)e->cmd, strlen(e->cmd));
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:242:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		c = val + strlen(val);
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:266:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(name) + 1 + strlen(val) >= MAX_ENVSTR-1)
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:266:25:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(name) + 1 + strlen(val) >= MAX_ENVSTR-1)
+/home/capstone/Desktop/root/cron-3.0pl1/env.c:278:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	register int	len = strlen(name);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:211:8:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		um = umask(000);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:219:10:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		(void) umask(um);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:241:8:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		um = umask(000);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:249:10:  [1] (access) umask:Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732).  
+		(void) umask(um);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:343:7:  [1] (buffer) getc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	ch = getc(file);
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:446:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			line[strlen(line)-1] = '\0';
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:543:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	msg_size = strlen(username) + strlen(event) + strlen(detail) + MAX_TEMPSTR;
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:543:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	msg_size = strlen(username) + strlen(event) + strlen(detail) + MAX_TEMPSTR;
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:543:48:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	msg_size = strlen(username) + strlen(event) + strlen(detail) + MAX_TEMPSTR;
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:572:38:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (LogFD < OK || write(LogFD, msg, strlen(msg)) < OK) {
+/home/capstone/Desktop/root/cron-3.0pl1/misc.c:576:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		write(STDERR, msg, strlen(msg));

@@ -1,0 +1,25 @@
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/usr/bin/flawfinder", line 2234, in <module>
+    sys.exit(flawfind())
+  File "/usr/bin/flawfinder", line 2226, in flawfind
+    if process_files():
+  File "/usr/bin/flawfinder", line 2063, in process_files
+    process_file_args(files, patch_infos)
+  File "/usr/bin/flawfinder", line 1797, in process_file_args
+    maybe_process_file(f, patch_infos)
+  File "/usr/bin/flawfinder", line 1742, in maybe_process_file
+    maybe_process_file(os.path.join(f, dir_entry), patch_infos)
+  File "/usr/bin/flawfinder", line 1742, in maybe_process_file
+    maybe_process_file(os.path.join(f, dir_entry), patch_infos)
+  File "/usr/bin/flawfinder", line 1742, in maybe_process_file
+    maybe_process_file(os.path.join(f, dir_entry), patch_infos)
+  [Previous line repeated 2 more times]
+  File "/usr/bin/flawfinder", line 1766, in maybe_process_file
+    process_c_file(f, patch_infos)
+  File "/usr/bin/flawfinder", line 1508, in process_c_file
+    text = "".join(my_input.readlines())
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfc in position 577: invalid start byte
