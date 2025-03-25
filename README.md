@@ -19,5 +19,3 @@ As modern software systems become more complex and incorporate third-party libra
 - Docker-based reproducibility
 - Automated vulnerability detection pipeline
 - Evaluation of SAT precision, coverage, and false positive rate
-
-## 📂 Project Structure
