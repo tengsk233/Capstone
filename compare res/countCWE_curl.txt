@@ -1,0 +1,47 @@
+PS C:\Users\Sikai Teng> & "C:/Users/Sikai Teng/AppData/Local/Programs/Python/Python39/python.exe" "c:/Users/Sikai Teng/Desktop/countCWE.py"
+Starting countCWE...
+pure only
+Processing file: C:\Users\Sikai Teng\Desktop\result\curl\curl_res\flawfinder-pure_only.txt
+File length: 2466 characters
+----------------------------------------
+find CWE code： {'CWE-119', 'CWE-120'}
+total 2 different CWE
+
+each CWE count：
+CWE-119: 5
+CWE-120: 7
+----------------------------------------
+patched only
+Processing file: C:\Users\Sikai Teng\Desktop\result\curl\curl_res\flawfinder-patched_only.txt
+File length: 3345 characters
+----------------------------------------
+find CWE code： {'CWE-119', 'CWE-126', 'CWE-120'}
+total 3 different CWE
+
+each CWE count：
+CWE-120: 9
+CWE-119: 5
+CWE-126: 1
+----------------------------------------
+commen
+Processing file: C:\Users\Sikai Teng\Desktop\result\curl\curl_res\flawfinder-common.txt
+File length: 601120 characters
+----------------------------------------
+find CWE code： {'CWE-807', 'CWE-134', 'CWE-327', 'CWE-126', 'CWE-120', 'CWE-190', 'CWE-119', 'CWE-829', 'CWE-362', 'CWE-367', 'CWE-78', 'CWE-20'}
+total 12 different CWE
+
+each CWE count：
+CWE-78: 9
+CWE-134: 30
+CWE-120: 1003
+CWE-20: 78
+CWE-362: 149
+CWE-367: 11
+CWE-807: 43
+CWE-829: 2
+CWE-327: 2
+CWE-119: 566
+CWE-190: 8
+CWE-126: 634
+----------------------------------------
+PS C:\Users\Sikai Teng> 
