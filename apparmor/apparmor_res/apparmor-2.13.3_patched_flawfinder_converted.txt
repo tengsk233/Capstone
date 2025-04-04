@@ -1,0 +1,802 @@
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chgrp.c:34:6:  [5] (race) chown:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchown( ) instead. 
+	if (chown(argv[1], -1, gid) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chmod.c:33:6:  [5] (race) chmod:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchmod( ) instead. 
+	if (chmod(argv[1], mode) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chown.c:33:6:  [5] (race) chown:This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362).  Use fchown( ) instead. 
+	if (chown(argv[1], uid, -1) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:69:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, args);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:83:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, args);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:96:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, args);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:173:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+		strcat(name, namespace);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:178:3:  [4] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). 
+		strcat(name, profile);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:216:2:  [4] (shell) execvp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execvp(argv[0], argv);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:84:6:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	i = vsnprintf(fst->pos, remaining, fmt, args);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:225:6:  [4] (format) snprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+	if (snprintf(features->hash, HASH_SIZE,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:546:2:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	sprintf(buf, "%s %016lx^", cmd, token);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:550:4:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+			strcpy(pos, *hats);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/private.c:113:2:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vfprintf(stderr, fmt, args);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser.h:177:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf(stderr, "parser: " fmt, ## args);	\
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser.h:188:2:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	fprintf(stderr, fmt, ## args);		\
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:104:2:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	sprintf(n, "%s%s", alias->to, target + strlen(alias->from));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_common.c:116:9:  [4] (format) vfprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+        vfprintf(stderr, newfmt, arg);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:384:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		sprintf(name, "%s//%s", profile->parent->name, profile->name);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:903:7:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+		if (access(target, R_OK) == 0)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:47:30:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define PDEBUG(fmt, args...) fprintf(stderr, "Lexer: " fmt, ## args)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:692:4:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+			fprintf(stderr, err, label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:39:30:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+#define PDEBUG(fmt, args...) fprintf(stderr, "Lexer: " fmt, ## args)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:119:4:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+			sprintf(name, "%s//%s", prof->name, entry->nt_name);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/unit_test.h:41:9:  [4] (format) vsnprintf:If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \0-terminate (CWE-134).  Use a constant for the format specification. 
+        vsnprintf(buf, sizeof(buf), msg, arg);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/access.c:47:5:  [4] (race) access:This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!).  Set up the correct permissions (e.g., using setuid()) and try to open the file directly. 
+	rc=access(path, mode);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:109:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+				strcpy(manual_string, optarg);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:157:3:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+		sprintf (pname, "%s", argv[optind]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:177:8:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		exit(execv(pname, &argv[optind]));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dropprivs_wrapper.c:65:2:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	sprintf (pname, "./%s", argv[1]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dropprivs_wrapper.c:67:7:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	exit(execv(pname, &argv[1]));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/environ.c:72:12:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		retval = execl(argv[1], argv[1], argv[2], (char *) NULL);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:55:2:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execl(argv[2], argv[2], fd_str, buf, NULL);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:156:2:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+	sprintf(buffer, "%s%s", name, perms);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:219:4:  [4] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. 
+			sprintf(lname, "%s%s:%s", argv[2], perms, perms);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:220:4:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+			strcpy(b, lname);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:232:7:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+				  fprintf(stderr, usage, argv[0]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:238:3:  [4] (format) fprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+		fprintf(stderr, usage, argv[0]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:240:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy(to, label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:39:2:  [4] (format) vprintf:If format strings can be influenced by an attacker, they can be exploited (CWE-134).  Use a constant for the format specification. 
+	vprintf(format, arg);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:140:2:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execv(argv[0], argv);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:288:2:  [4] (shell) execv:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+	execv(prog, argv);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:41:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy(remote.sun_path, argv[1]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:76:2:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+	strcpy(local.sun_path, argv[2]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:95:3:  [4] (shell) execlp:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		execlp(argv[3], argv[3], argv[2], NULL);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:220:3:  [4] (shell) execl:This causes a new program to execute and is difficult to use safely (CWE-78).  try using a library call that implements the same functionality if available. 
+		execl(argv[4], argv[4], sun_path, argv[2], fd_number, NULL);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:95:3:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+		strcpy(addr.sun_path + peer_path_len, SUN_PATH_SUFFIX);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:123:16:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((opt = getopt_long(argc, argv, "+dhp:n:iv", long_opts, NULL)) != -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:672:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long(argc, argv, short_options, long_options, &o)) != -1)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:689:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long(argc, argv, short_options, long_options, &o)) != -1)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:95:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long (argc, argv, "+", long_options, &o)) != -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:68:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long (argc, argv, "+hn", long_options, NULL)) != -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/env_check.c:28:11:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	envval = getenv(var);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/openat.c:43:14:  [3] (buffer) getopt_long:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((c = getopt_long (argc, argv, "+hdr:", long_options, NULL)) != -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:220:9:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+		opt = getopt(argc, argv, "chn:");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace_helper.c:14:16:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+char *tracer = getenv("_tracer");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:37:8:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	fd0 = getenv(ENV_FD0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:38:8:  [3] (buffer) getenv:Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20).  Check environment variables carefully before using them. 
+	fd1 = getenv(ENV_FD1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_chroot.c:93:6:  [3] (misc) chroot:chroot can be very helpful, but is hard to use correctly (CWE-250, CWE-22).  Make sure the program immediately chdir("/"), closes file descriptors, and drops root privileges, and that all necessary files (and no more!) are in the new root. 
+	if (chroot(argv[1]) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:344:14:  [3] (buffer) getopt:Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20).  Check implementation on installation, or limit the size of all string inputs. 
+	while ((o = getopt(argc, argv, "f:L:M:l:m:O:P:o:p:")) != -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:174:3:  [2] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant string.
+		strcat(name, "://");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:183:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[PATH_MAX];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/mod_apparmor/mod_apparmor.c:138:11:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    const char *aa_hat_array[6] = { NULL, NULL, NULL, NULL, NULL, NULL };
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/pam_apparmor/pam_apparmor.c:100:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open("/dev/urandom", O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/tomcat_apparmor/tomcat_5_0/src/jni_src/JNIChangeHat.c:36:6:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+     char hatname[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/tomcat_apparmor/tomcat_5_5/src/jni_src/JNIChangeHat.c:36:6:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+     char hatname[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:44:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char hash[HASH_SIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:45:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char string[STRING_SIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:479:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(f->string, string, size);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:109:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[2];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:120:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open("/sys/module/apparmor/parameters/enabled", O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:271:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(tmp, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:394:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(ctl, O_WRONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:585:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char *argv[nhats+1];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:824:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[QUERY_LABEL_REPLY_LEN];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:842:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(aafs_access, O_RDWR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:849:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query, AA_QUERY_CMD_LABEL, AA_QUERY_CMD_LABEL_SIZE);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:923:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query + AA_QUERY_CMD_LABEL_SIZE, label, label_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:927:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query + AA_QUERY_CMD_LABEL_SIZE + label_len + 2, path, path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:982:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query + pos, label, label_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:987:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query + pos + 1, link, link_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:1000:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(query + pos + 1, target, target_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel_interface.c:248:14:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	ki->dirfd = open(apparmorfs, O_RDONLY | O_CLOEXEC | O_DIRECTORY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/libaalogparse.c:132:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[3], *endptr;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/libaalogparse.c:145:3:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+		sprintf(buf, "%.2s", hexstring);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:113:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	proc_fd = open(proc_path, O_RDONLY | O_CLOEXEC | O_PATH | O_NOFOLLOW);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:330:1:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+open:
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:352:10:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+				goto open;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/private.c:364:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(dents[i], dent, sizeof(*dent));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/testsuite/test_multi.c:15:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char log_line[1024];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/testsuite/test_multi.c:28:13:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	testcase = fopen(argv[1], "r");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/dbus.cc:217:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char *vec[6];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/lib.c:411:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char str[2] = " ";
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/libapparmor_re/chfa.cc:316:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char zeroes[8] = { };
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:539:3:  [2] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). Risk is low because the source is a constant string.
+		strcpy(p, "(\\xfe|)");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:589:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char flagsbuf[PATH_MAX + 3];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:591:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char class_mount_hdr[64];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:592:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	const char *vec[5];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:601:2:  [2] (buffer) sprintf:Does not check for buffer overflows (CWE-120).  Use sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a constant maximum length.
+	sprintf(class_mount_hdr, "\\x%02x", AA_CLASS_MOUNT);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/network.c:156:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[32];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/network.c:168:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(PROC_VERSION, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:60:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char *path[MAX_PATH] = { NULL };
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:168:10:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		newf = fopen(buf, "r");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:262:8:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static char zeros[64];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:107:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static const char *cacheloc[MAX_CACHE_LOCS];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:267:5:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+				memcpy(tmp, s, p - s);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:286:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(tmp, s, p - s);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:300:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	static char line[256];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:495:11:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		ofile = fopen(optarg, "w");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:711:6:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	f = fopen(name, "r");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:746:24:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	autofclose FILE *ms = fopen(MATCH_FILE, "r");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:924:17:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		if ( !(yyin = fopen(profilename, "r")) ) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:563:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		const char *vec[2];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:581:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		const char *vec[3];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:41:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[HEADER_STRING_SIZE + VERSION_STRING_SIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:43:12:  [2] (misc) fopen:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if (!(f = fopen(cachename, "r"))) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:156:19:  [2] (tmpfile) mkstemp:Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377).  
+		if ((cache_fd = mkstemp(tmpname)) < 0) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/profile.h:137:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char *exec_table[AA_EXEC_COUNT];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/signal.cc:79:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+static const char *const sig_names[MAXMAPPED_SIG + 1] = {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/unit_test.h:38:9:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+        char buf[PATH_MAX];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:10:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:13:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(file, O_RDWR, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:56:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(ATTR_FILE, O_WRONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:89:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[BUFSIZ];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:63:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[BUFSIZ];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:144:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char sig[5];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:165:4:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+			char sig[2];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:249:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_service.c:241:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_service.c:253:14:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+			lock_fd = atoi(fd);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_unrequested_reply.c:173:13:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:36:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:48:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[2], O_RDWR, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:117:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(argv[2], O_RDWR, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/exec_qual2.c:45:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(argv[1], O_RDWR, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchdir.c:29:17:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+        dirfd = open(dir, O_RDONLY | O_DIRECTORY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchgrp.c:35:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[1], O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchmod.c:32:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[1], O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchown.c:34:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[1], O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:32:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[BUF_LEN + 1], fd_str[FD_STR_LEN + 1];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:40:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[1], O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritor.c:29:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[BUF_LEN + 1];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritor.c:37:7:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	fd = atoi(argv[1]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fork.c:35:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		fd = open(files[i], O_RDWR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:154:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char perms[10];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:204:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char perms[10];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:33:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:54:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(argv[1], O_CREAT|O_EXCL|O_RDWR, S_IWUSR|S_IRUSR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:79:8:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	(void)memcpy(mptr, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:27:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:83:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(file, O_RDONLY, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:109:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(file, O_WRONLY, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/net_raw.c:34:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char data[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_receive.c:70:25:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	local.sin_port = htons(atoi(bind_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_receive.c:134:25:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	local.sin_port = htons(atoi(bind_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:60:26:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	remote.sin_port = htons(atoi(remote_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:64:25:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+	local.sin_port = htons(atoi(bind_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:96:33:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+        remote.sin_port = htons(atoi(remote_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:100:32:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+        local.sin_port = htons(atoi(bind_port));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/open.c:28:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(argv[1], O_RDWR | O_CREAT, S_IWUSR | S_IRUSR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/openat.c:66:10:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	dirfd = open(dir, O_RDONLY | O_DIRECTORY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:27:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:229:28:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+			case 'n': num_syscall = atoi(optarg); 
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:32:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char in_buffer[strlen(bugger) +1];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:51:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(argv[1], O_CREAT|O_RDWR, S_IWUSR|S_IRUSR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:52:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(dirname, O_RDONLY, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:76:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(dirname, O_RDONLY, 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:30:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char buf[128];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:50:5:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd=open(argv[1], O_CREAT|O_EXCL|O_RDWR, S_IWUSR|S_IRUSR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:41:13:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+		pair[0] = atoi(fd0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:42:13:  [2] (integer) atoi:Unless checked, the resulting number can exceed the expected range (CWE-190).  If source untrusted, check both minimum and maximum, even if the input had no minus sign (large numbers can roll over into negative number; consider saving to an unsigned value if that is intended). 
+		pair[1] = atoi(fd1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:107:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char fd_str[32];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_chroot.c:45:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy (&tmp->dirent, dirent, sizeof (struct dirent));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_query_module.c:19:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:23:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char saved_domain[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:24:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char new_domain[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:23:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char saved_hostname[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:24:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char new_hostname[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:21:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char read_buffer[BUFSIZE], verify_buffer[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:31:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		fd = open(argv[1], O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:46:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		fd = open(argv[1], O_WRONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:62:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		fd = open(argv[1], O_RDWR);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:33:1:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+char data[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:107:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:166:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char buffer[BUFSIZE];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:238:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(DATASOURCE, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:29:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char read_buffer[17], f_buf[255];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:36:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char comparison_buffer[17];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:37:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char inbound_buffer[17];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:48:12:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	if ((fd = open(argv[1], O_RDONLY)) < 0) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:124:9:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+       	memcpy(CMSG_DATA(ctrl_mesg), &fd, sizeof(fd));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:96:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char msg_buf[MSG_BUF_MAX];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:123:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(addr.sun_path, sun_path, sun_path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:134:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(addr.sun_path, sun_path, sun_path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:153:2:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+	memcpy(msg_buf, argv[3], msg_buf_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:37:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char msg_buf[MSG_BUF_MAX];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:71:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char msg_buf[MSG_BUF_MAX];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:94:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(addr.sun_path, peer_addr->sun_path, peer_path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:179:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(peer_addr.sun_path, sun_path, sun_path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:195:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+		memcpy(peer_addr.sun_path, sun_path, sun_path_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/xattrs.c:30:2:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+	char name[256];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/xattrs.c:44:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+		char value[256];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/change_hat.c:33:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(o_file, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/change_hat.c:46:7:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+	fd = open(o_file, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/open.c:21:8:  [2] (misc) open:Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362).  
+		fd = open(o_file, O_RDONLY);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:161:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		required_len += 1 + strlen(namespace) + 3; /* :<NAMESPACE>:// */
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:164:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		required_len += strlen(profile);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:172:3:  [1] (buffer) strcat:Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120).  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is easily misused). Risk is low because the source is a constant character.
+		strcat(name, ":");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/pam_apparmor/get_options.c:67:45:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	} else if (strncasecmp(argv, ORDER_PREFIX, strlen(ORDER_PREFIX)) != 0) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/pam_apparmor/get_options.c:72:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	opts = argv + strlen(ORDER_PREFIX);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/pam_apparmor/get_options.c:137:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			opts += strlen(opts);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:136:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		len = read(file, pos, size);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:170:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (*name == '.' || !strlen(name))
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:217:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t len = strlen(string);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:557:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size = strlen(string);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:48:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define UNCONFINED_SIZE		strlen(UNCONFINED)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:127:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	size = read(fd, &buffer, 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:241:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return splitcon(con, strlen(con), true, mode);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:279:9:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		ret = read(fd, tmp, len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:537:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size = strlen(cmd) + 18 + totallen + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:547:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	pos = buf + strlen(buf);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:551:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			pos += strlen(*hats) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:863:8:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	ret = read(fd, buf, QUERY_LABEL_REPLY_LEN);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:947:45:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return aa_query_file_path_len(mask, label, strlen(label), path,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:948:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				      strlen(path), allowed, audited);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:1020:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return aa_query_link_path_len(label, strlen(label), target,
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:1021:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				      strlen(target), link, strlen(link),
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:1021:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				      strlen(target), link, strlen(link),
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel_interface.c:173:11:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		rsize = read(fd, buffer + size, asize - size);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel_interface.c:388:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+					    fqname, strlen(fqname) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/libaalogparse.c:139:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(hexstring) / 2;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/private.c:129:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t name_len = strlen(name);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/tst_kernel.c:86:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		size_t sz = size < 0 ? strlen(con) : size;		\
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/common_optarg.c:111:7:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (strlen(table[i].option) > longest)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/common_optarg.c:112:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			longest = strlen(table[i].option);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/lib.c:394:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		retval = strn_escseq(&pos, "", strlen(t->test));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/lib.c:401:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		retval = strn_escseq(&pos, "", strlen(t->test));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/lib.c:405:44:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		retval = strn_escseq(&pos, "*+.|^-[]()", strlen(t->test));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/libapparmor_re/chfa.cc:403:57:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	size_t hsize = pad64(sizeof(th) + sizeof(th_version) + strlen(name) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/libapparmor_re/chfa.cc:417:49:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	os << fill64(sizeof(th) + sizeof(th_version) + strlen(name) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/network.c:172:8:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	res = read(fd, &buffer, sizeof(buffer) - 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:98:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int len = strlen(target) - strlen(alias->from) + strlen(alias->to);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:98:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int len = strlen(target) - strlen(alias->from) + strlen(alias->to);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:98:51:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int len = strlen(target) - strlen(alias->from) + strlen(alias->to);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:104:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	sprintf(n, "%s%s", alias->to, target + strlen(alias->from));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:120:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen((*t)->from);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:165:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen((*t)->from);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:105:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	for (i = strlen(t) - 1; i >= 0 && t[i] == '/'; i--)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:134:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(dir);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:186:15:  [1] (buffer) fgetc:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	while (((c = fgetc(f)) != EOF) && (c != '\n')
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:187:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	       && (strlen(buffer) < len - 1)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:206:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	return strlen(t);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:248:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		sd_write16(buf, strlen(name) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:249:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		buf.write(name, strlen(name) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:286:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	sd_write_strn(buf, b, strlen(b) + 1, name);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:358:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		int len = strlen(table[i]) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:381:45:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		autofree char *name = (char *) malloc(3 + strlen(profile->name) + strlen(profile->parent->name));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:381:69:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		autofree char *name = (char *) malloc(3 + strlen(profile->name) + strlen(profile->parent->name));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:335:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		len = strlen(save) - 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:345:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (!strlen(save)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:530:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+						optarg, strlen(optarg))) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:212:5:  [1] (buffer) strncpy:Easily used incorrectly; doesn't always \0-terminate or check for invalid pointers [MS-banned] (CWE-120).  
+				strncpy(s, string, pos - string);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:265:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	int len = strlen(var);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:646:14:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	*name_len = strlen(name_start);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1089:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		result_str = processunquoted((input), strlen((input)));			\
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1129:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1136:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1143:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1150:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1157:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1164:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1171:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1178:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1185:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1192:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1199:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1206:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1213:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1220:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:1227:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	out = processquoted(teststring, strlen(teststring));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:113:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			name = (char *) malloc(strlen(prof->name) + strlen(entry->nt_name)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:113:48:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			name = (char *) malloc(strlen(prof->name) + strlen(entry->nt_name)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:55:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (!path || (strlen(path) < 2))
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:449:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		prof->xmatch_len = strlen(name);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:59:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	unsigned int offset = strlen("@{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:71:6:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (strlen(var_end + 1) != 0) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:191:45:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (split_var->prefix && split_var->prefix[strlen(split_var->prefix) - 1] == '/')
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:349:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	MY_TEST(retchar - testchar == strlen("TRUE"), "get var end for TRUE}");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:353:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	MY_TEST(retchar - testchar == strlen("some_var"), "get var end for some_var}");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:357:32:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	MY_TEST(retchar - testchar == strlen("some_var"), "get var end for some_var} 2");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:380:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_start = tst_string + strlen(prefix);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:381:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:381:38:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:391:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:391:38:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:400:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_start = tst_string + strlen(prefix);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:401:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:401:38:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:411:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:411:38:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	var_end = var_start + strlen(var) + strlen("@\{");
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:479:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tmp = strndup(tst_string, strlen(prefix) + 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_variable.c:515:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tmp = strndup(tst_string, strlen(prefix) + 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:21:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        rc=write(fd, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:23:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:30:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+        rc=read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:32:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:38:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (memcmp(buf, data, strlen(data)) != 0){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:70:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	rc = write (fd, buf, strlen(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:72:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (rc != strlen(buf)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:104:22:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+					(char *) malloc(strlen(optarg) + 1);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:143:3:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		read(filedes[0], &buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:152:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		char * pname = malloc (strlen(argv[optind]) + 3);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:49:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	rc = write(filedes[1], "PASS\n", strlen("PASS\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:100:2:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	read(filedes[0], &buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:56:30:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        rc = write(fd, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:57:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:82:14:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+        rc = read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:84:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:106:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+        rc=read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:108:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dropprivs_wrapper.c:60:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	pname = malloc (strlen(argv[1]) + 3);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:47:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc = read(fd, buf, BUF_LEN);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritor.c:46:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc = read(fd, buf, BUF_LEN);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:70:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (rc != strlen(profile) + strlen(mode) + 4) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:70:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		if (rc != strlen(profile) + strlen(mode) + 4) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:74:5:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				strlen(profile) + strlen(mode) + 4, rc);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:74:23:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+				strlen(profile) + strlen(mode) + 4, rc);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:77:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	} else if (rc != strlen(profile) + 1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/introspect.c:81:4:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			strlen(profile) + 1, rc);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:205:41:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		char *b, *buffer = malloc(MAX_PERM * (strlen(argv[2] + 2*MAX_PERM_LEN +2)));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:210:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		lname = malloc(strlen(argv[2]) + 2*MAX_PERM_LEN + 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:221:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			b += strlen(lname);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:228:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	tname = malloc(strlen(argv[1]) + 2*MAX_PERM_LEN + 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:229:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	lname = malloc(strlen(argv[2]) + 2*MAX_PERM_LEN + 2);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:79:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	(void)memcpy(mptr, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:81:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (msync(mptr, strlen(data), MS_SYNC) == -1){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:89:5:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc=read(fd, buf, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:89:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	rc=read(fd, buf, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:91:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:97:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (memcmp(buf, mptr, strlen(data)) != 0){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:29:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+        rc=read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:31:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:37:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (memcmp(buf, data, strlen(data)) != 0){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:52:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        rc=write(fd, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:54:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:74:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (sendto(sock, message, strlen(message), 0, (struct sockaddr *) &remote, sizeof(remote)) <= 0)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:115:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (send(sock, message, strlen(message), 0) <= 0)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:34:12:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+        rc=read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:36:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:42:31:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (memcmp(buf, data, strlen(data)) != 0){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:57:28:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        rc=write(fd, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:59:19:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+        if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:32:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	char in_buffer[strlen(bugger) +1];
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:60:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	ret = pwrite(fd, bugger, strlen(bugger), 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:68:20:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	} else if (ret != strlen(bugger)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:70:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			ret, strlen(bugger));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:75:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	ret = pread(fd, in_buffer, strlen(bugger), 0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:80:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	}  else if (ret != strlen(bugger)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:82:9:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			ret, strlen(bugger));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:84:39:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	} else if (memcmp(bugger, in_buffer, strlen(bugger)) != 0) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:7:25:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define OPT_EXPECT_LEN		strlen(OPT_EXPECT)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:10:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define OPT_LABEL_LEN		strlen(OPT_LABEL)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:13:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define OPT_TYPE_DBUS_LEN	strlen(OPT_TYPE_DBUS)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:16:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define OPT_TYPE_FILE_LEN	strlen(OPT_TYPE_FILE)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:228:15:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	label_size = strlen(label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:232:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+			size += strlen(argv[i]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:62:21:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	rc=write(fd, data, strlen(data));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:64:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:71:5:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc=read(fd, buf, sizeof(buf));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:73:12:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (rc != strlen(data)){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:79:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (memcmp(buf, data, strlen(data)) != 0){
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:84:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	expected_rc = strlen(expected_label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:87:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		expected_rc += 1 + 1 + strlen(expected_mode) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:35:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	newlen = strlen(argv[1]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:49:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (setdomainname(argv[1], strlen(argv[1])) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:74:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (setdomainname(saved_domain, strlen(saved_domain)) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:35:11:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	newlen = strlen(argv[1]);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:49:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (sethostname(argv[1], strlen(argv[1])) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:74:34:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	if (sethostname(saved_hostname, strlen(saved_hostname)) == -1) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:37:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		read_size = read(fd, &read_buffer, sizeof(read_buffer));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:52:35:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		write_size = write(fd, argv[3], strlen(argv[3]));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:68:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		read_size = read(fd, &read_buffer, sizeof(read_buffer));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:83:15:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+		read_size = read(fd, &verify_buffer, sizeof(verify_buffer));
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:244:16:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	if ((retval = read(fd, data, sizeof(data))) < sizeof(data)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:31:25:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define STACK_DELIM_LEN	strlen(STACK_DELIM)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:77:13:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		sl->len = strlen(sl->label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:200:33:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	expected_rc = expected_label ? strlen(expected_label) : strlen(label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:200:58:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	expected_rc = expected_label ? strlen(expected_label) : strlen(label);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:208:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		expected_rc += 1 + 1 + strlen(expected_mode) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:210:26:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		expected_rc += 1 + 1 + strlen(mode) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:42:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(remote.sun_path) + sizeof(remote.sun_family);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:77:27:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+		send(sock, read_buffer, strlen(read_buffer),0);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:78:8:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	len = strlen(local.sun_path) + sizeof(local.sun_family);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:112:24:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+       	vect.iov_len = strlen(argv[2]) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:54:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc = read(peer_sock, msg_buf, msg_buf_len);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:117:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	sun_path_len = strlen(sun_path);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:148:16:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	msg_buf_len = strlen(argv[3]) + 1;
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:31:29:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define SUN_PATH_SUFFIX_LEN	strlen(SUN_PATH_SUFFIX)
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:52:7:  [1] (buffer) read:Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20).  
+	rc = read(sock, msg_buf, MSG_BUF_MAX);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:173:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+	sun_path_len = strlen(sun_path);
+/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/xattrs.c:18:17:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+#define msglen (strlen(msgstring)+1)

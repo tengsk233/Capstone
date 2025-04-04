@@ -1,0 +1,264 @@
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_NETWORK_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_NETWORK_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_EXPR_TREE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_EXPR_TREE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_CHFA_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_CHFA_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_FLEX_TABLES_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_FLEX_TABLES_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_PARSE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_PARSE_H
+      |  endif // HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_PARSE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_AARE_RULES_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_AARE_RULES_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_HFA_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_HFA_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_APPARMOR_RE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIBAPPARMOR_RE_APPARMOR_RE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PARSER_INCLUDE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PARSER_INCLUDE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_COMMON_OPTARG_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_COMMON_OPTARG_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_SIGNAL_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_SIGNAL_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_IMMUNIX_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_IMMUNIX_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_MOUNT_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_MOUNT_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_RULE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_RULE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_DBUS_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_DBUS_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_POLICYDB_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_POLICYDB_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_AF_RULE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_AF_RULE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_POLICY_CACHE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_POLICY_CACHE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_UNIT_TEST_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_UNIT_TEST_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIB_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_LIB_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PARSER_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PARSER_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PROFILE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PROFILE_H
+7473 warnings and 1 error generated.
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:67:14: warning: variable 'path' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:68:12: warning: variable 'npath' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:70:28: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:71:31: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:72:32: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:77:13: warning: variable 'basedir' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:78:20: warning: variable 'default_basedir' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:79:20: warning: variable 'old_basedir' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:85:6: warning: variable 'rc' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:85:6: warning: variable name 'rc' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:108:8: warning: variable 't' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:108:8: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:6: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:6: warning: variable name 'i' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:9: warning: variable 'rc' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:9: warning: variable name 'rc' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:112:19: warning: no header providing "PATH_MAX" is directly included [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:114:3: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+  114 |                 PERROR(_("Error: Out of memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:114:3: warning: the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c]
+  114 |                 PERROR(_("Error: Out of memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:114:3: note: cast the expression to void to silence this warning
+  114 |                 PERROR(_("Error: Out of memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:119:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:119:11: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:119:26: warning: backward branch (for loop) is ID-dependent due to variable reference to 'i' and may cause performance degradation [altera-id-dependent-backward-branch]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:109:2: note: inferred assignment of ID-dependent value from ID-dependent variable t
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:119:53: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:124:3: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+  124 |                 PERROR(_("Error: basedir %s is not a directory, skipping.\n"), t);
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:124:3: warning: the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c]
+  124 |                 PERROR(_("Error: basedir %s is not a directory, skipping.\n"), t);
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:124:3: note: cast the expression to void to silence this warning
+  124 |                 PERROR(_("Error: basedir %s is not a directory, skipping.\n"), t);
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:130:2: warning: redundant return statement at the end of a function with a void return type [readability-redundant-control-flow]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:136:8: warning: variable 't' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:136:8: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:137:9: warning: variable 'len' is not initialized [cppcoreguidelines-init-variables]
+  140 |                 PERROR(_("Error: Could not add directory %s to search path.\n"),
+  140 |                 PERROR(_("Error: Could not add directory %s to search path.\n"),
+  140 |                 PERROR(_("Error: Could not add directory %s to search path.\n"),
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:145:11: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:149:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:154:3: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+  154 |                 PERROR(_("Error: Could not allocate memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:154:3: warning: the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c]
+  154 |                 PERROR(_("Error: Could not allocate memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:154:3: note: cast the expression to void to silence this warning
+  154 |                 PERROR(_("Error: Could not allocate memory.\n"));
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:159:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:159:9: warning: backward branch (while loop) is ID-dependent due to variable reference to 'len' and may cause performance degradation [altera-id-dependent-backward-branch]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:137:2: note: inferred assignment of ID-dependent value from ID-dependent 
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:159:22: warning: decrementing and referencing a variable in a complex condition can cause unintended side-effects due to C++'s order of evaluation, consider moving the modification outside of the condition to avoid misunderstandings [bugprone-inc-dec-in-conditions]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:159:9: note: variable is referenced here
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:159:36: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:182:19: warning: variable 'f' is not initialized [cppcoreguidelines-init-variables]
+  182 |         autofclose FILE *f;
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:182:19: warning: variable name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:183:11: warning: 1024 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:8: warning: variable 't' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:8: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:12: warning: variable 's' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:12: warning: variable name 's' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:187:28: warning: use 'fopen' mode 'e' to set O_CLOEXEC [android-cloexec-fopen]
+  187 |         f = fopen(SUBDOMAIN_CONF, "r");
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:188:16: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:193:26: warning: 1024 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  193 |         while (fgetline(f, buf, 1024)) {
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:194:31: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:194:31: note: if it should be an assignment, move it out of the 'if' condition
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:194:31: note: if it is meant to be an equality check, change '=' to '=='
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:195:9: warning: 15 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:197:4: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:199:11: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:201:41: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:203:11: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:205:13: warning: backward branch (do loop) is ID-dependent due to variable reference to 's' and may cause performance degradation [altera-id-dependent-backward-branch]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:184:2: note: inferred assignment of ID-dependent value from ID-dependent variable t
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:220:6: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:220:6: warning: variable name 'i' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:221:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:224:4: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:226:21: warning: use 'fopen' mode 'e' to set O_CLOEXEC [android-cloexec-fopen]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:227:24: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:229:7: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:232:12: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:239:28: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:241:8: warning: variable name 'b' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:242:6: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:242:6: warning: variable name 'c' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:244:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:244:9: warning: backward branch (while loop) is ID-dependent due to variable reference to 'c' and may cause performance degradation [altera-id-dependent-backward-branch]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:242:2: note: inferred assignment of ID-dependent value from ID-dependent 
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:246:8: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:250:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:257:31: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:259:8: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:260:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:260:30: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:264:9: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:267:32: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:269:8: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:269:8: warning: variable name 'c' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:271:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:271:21: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:274:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:274:33: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:280:8: warning: accessing fields in struct 'include_stack_t' is inefficient due to padding; only needs 20 bytes but is using 24 bytes [altera-struct-pack-align]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:280:8: note: use "__attribute__((packed))" to reduce the amount of padding applied to struct 'include_stack_t'
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:280:8: warning: accessing fields in struct 'include_stack_t' is inefficient due to poor alignment; currently aligned to 8 bytes, but recommended alignment is 32 bytes [altera-struct-pack-align]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:280:8: note: use "__attribute__((aligned(32)))" to align struct 'include_stack_t' to 32 bytes
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:286:25: warning: variable 'include_stack_head' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:286:25: warning: variable 'include_stack_head' provides global access to a non-const object; consider making the pointed-to data 'const' [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:290:23: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+  290 |         if (current_filename)
+  291 |                 free(current_filename);
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:319:26: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:325:23: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+  325 |         if (current_filename)
+  326 |                 free(current_filename);
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:334:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:334:9: warning: backward branch (while loop) is ID-dependent due to variable reference to 'include_stack_head' and may cause performance degradation [altera-id-dependent-backward-branch]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:286:1: note: inferred assignment of ID-dependent value from ID-dependent variable include
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/parser/parser_include.c:334:28: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+Suppressed 7310 warnings (7310 in non-user code).
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_AF_UNIX_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_AF_UNIX_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PTRACE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_PARSER_PTRACE_H
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:1:1: warning: #includes are not sorted properly [llvm-include-order]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:1:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:2:1: warning: system include sys/types.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:3:1: warning: system include unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:4:1: warning: system include errno.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:5:1: warning: system include string.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:6:1: warning: system include signal.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:7:1: warning: system include stdlib.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:8:1: warning: system include sys/wait.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:10:12: warning: variable 'zombies' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:12:18: warning: parameter 'num' is unused [misc-unused-parameters]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:19:8: warning: variable 'pid' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:20:6: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:20:6: warning: variable name 'i' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:22:2: warning: the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:22:2: note: cast the expression to void to silence this warning
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:24:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:24:18: warning: 500 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:26:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:28:3: warning: do not use 'else' after 'continue' [llvm-else-after-return,readability-else-after-return]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:28:21: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:29:4: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:30:7: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:31:25: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:33:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/child.c:33:39: warning: statement should be inside braces [hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:1:1: warning: #includes are not sorted properly [llvm-include-order]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:1:1: warning: system include unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:2:1: warning: system include sys/types.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:2:1: warning: included header types.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:3:1: warning: system include sys/stat.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:3:1: warning: included header stat.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:4:1: warning: system include fcntl.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:5:1: warning: system include errno.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:6:1: warning: system include string.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:7:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:8:1: warning: system include linux/unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:8:1: warning: included header unistd.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:10:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:10:9: warning: macro 'MAX_LOOP' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:6: warning: variable 'fd' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:6: warning: variable name 'fd' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:10: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:10: warning: variable name 'i' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:13: warning: variable 'success' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:13:22: warning: variable 'fail' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:16:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:19:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:21:29: warning: 'open' should use O_CLOEXEC where possible [android-cloexec-open]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/open.c:26:25: warning: function is not thread safe [concurrency-mt-unsafe]
+Error while processing /home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c.
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:1:1: warning: #includes are not sorted properly [llvm-include-order]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:1:1: warning: system include unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:2:1: warning: system include sys/types.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:2:1: warning: included header types.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:3:1: warning: system include sys/stat.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:3:1: warning: included header stat.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:4:1: warning: system include fcntl.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:5:1: warning: system include errno.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:6:1: warning: system include string.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:7:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:8:1: warning: system include linux/unistd.h not allowed [llvmlibc-restrict-system-libc-headers]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:8:1: warning: included header unistd.h is not used directly [misc-include-cleaner]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:10:10: error: 'sys/apparmor.h' file not found [clang-diagnostic-error]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:12:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:12:9: warning: macro 'SD_ID_MAGIC' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:16:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:16:6: warning: variable 'fd' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:16:6: warning: variable name 'fd' is too short, expected at least 3 characters [readability-identifier-length]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:16:10: warning: variable 'error' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:17:8: warning: variable 'hat_name' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:18:6: warning: variable 'hat_magic' is not initialized [cppcoreguidelines-init-variables]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:21:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:24:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:30:8: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:33:28: warning: 'open' should use O_CLOEXEC where possible [android-cloexec-open]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:34:35: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:35:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:43:8: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:46:28: warning: 'open' should use O_CLOEXEC where possible [android-cloexec-open]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:47:35: warning: function is not thread safe [concurrency-mt-unsafe]
+/home/capstone/Desktop/root/apparmor-2.13.3_XXXX/tests/stress/subdomain/change_hat.c:48:15: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_LIBRARIES_LIBAPPARMOR_SRC_PRIVATE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_LIBRARIES_LIBAPPARMOR_SRC_PRIVATE_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_LIBRARIES_LIBAPPARMOR_SRC_PARSER_H
+      |         HOME_CAPSTONE_DESKTOP_ROOT_APPARMOR_2_13_3_PURE_LIBRARIES_LIBAPPARMOR_SRC_PARSER_H

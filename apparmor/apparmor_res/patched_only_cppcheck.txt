@@ -1,0 +1,6 @@
+style: unusedFunction: The function 'init_base_dir' is never used.
+style: unusedFunction: The function 'parse_default_paths' is never used.
+style: unusedFunction: The function 'push_include_stack' is never used.
+style: unusedFunction: The function 'reset_include_stack' is never used.
+style: unusedFunction: The function 'search_path' is never used.
+style: unusedFunction: The function 'set_base_dir' is never used.

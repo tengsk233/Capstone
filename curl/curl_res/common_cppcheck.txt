@@ -1,0 +1,615 @@
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 73 configurations. Use --force to check all configurations.
+information: noValidConfiguration: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details.
+warning: constStatement: Found suspicious operator '*'
+information: ConfigurationNotChecked: Skipping configuration 'CURLPIPE_MULTIPLEX' since the value of 'CURLPIPE_MULTIPLEX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+warning: constStatement: Found suspicious operator '*'
+information: ConfigurationNotChecked: Skipping configuration 'CURLPIPE_MULTIPLEX' since the value of 'CURLPIPE_MULTIPLEX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: variableScope: The scope of the variable 'postthis' can be reduced.
+warning: invalidscanf: sscanf() without field width limits can crash with huge input data.
+style: variableScope: The scope of the variable 'range' can be reduced.
+style: variableScope: The scope of the variable 'postthis' can be reduced.
+error: resourceLeak: Resource leak: headerfile
+style: variableScope: The scope of the variable 'pCertFile' can be reduced.
+style: variableScope: The scope of the variable 'pCACertFile' can be reduced.
+warning: invalidscanf: sscanf() without field width limits can crash with huge input data.
+portability: invalidPrintfArgType_uint: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_uint: %lu in format string (no. 2) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_uint: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_uint: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 164 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 128 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 172 configurations. Use --force to check all configurations.
+error: preprocessorErrorDirective: failed to expand 'Curl_resolver_getsock', Wrong number of parameters for macro 'Curl_resolver_getsock'.
+style: funcArgNamesDifferent: Function 'Curl_resolver_getsock' argument 2 names different: declaration 'sock' definition 'socks'.
+style: funcArgNamesDifferent: Function 'Curl_resolver_wait_resolv' argument 2 names different: declaration 'dnsentry' definition 'entry'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 176 configurations. Use --force to check all configurations.
+error: preprocessorErrorDirective: failed to expand 'Curl_resolver_getsock', Wrong number of parameters for macro 'Curl_resolver_getsock'.
+style: variableScope: The scope of the variable 'milli' can be reduced.
+style: funcArgNamesDifferent: Function 'Curl_resolver_wait_resolv' argument 2 names different: declaration 'dnsentry' definition 'entry'.
+style: funcArgNamesDifferent: Function 'Curl_resolver_is_resolved' argument 2 names different: declaration 'dns' definition 'entry'.
+style: funcArgNamesDifferent: Function 'Curl_resolver_getsock' argument 2 names different: declaration 'sock' definition 'socks'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 160 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'convbuf' is always false
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 160 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 218 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_connecthost' argument 2 names different: declaration 'host' definition 'remotehost'.
+style: funcArgNamesDifferent: Function 'Curl_conncontrol' argument 2 names different: declaration 'closeit' definition 'ctrl'.
+information: ConfigurationNotChecked: Skipping configuration 'AF_UNIX;HAVE_SYS_UN_H' since the value of 'AF_UNIX' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'CONNECT_DATA_IDEMPOTENT;HAVE_BUILTIN_AVAILABLE' since the value of 'CONNECT_DATA_IDEMPOTENT' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 164 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'BROTLI_DECODER_ERROR_COMPOUND_DICTIONARY;HAVE_BROTLI' since the value of 'BROTLI_DECODER_ERROR_COMPOUND_DICTIONARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET;HAVE_BROTLI' since the value of 'BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_cookie_add' argument 3 names different: declaration 'header' definition 'httpheader'.
+style: funcArgNamesDifferent: Function 'Curl_cookie_add' argument 4 names different: declaration 'noexpiry' definition 'noexpire'.
+style: funcArgNamesDifferent: Function 'Curl_cookie_freelist' argument 1 names different: declaration 'cookies' definition 'co'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 146 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_str2addr' argument 1 names different: declaration 'dotted' definition 'address'.
+error: uninitvar: Uninitialized variable: *result
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 116 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 118 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 117 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 118 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 160 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 124 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 175 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 172 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 157 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 153 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 180 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 128 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 129 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 164 configurations. Use --force to check all configurations.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_doh_is_resolved' argument 2 names different: declaration 'dns' definition 'dnsp'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 191 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'curl_easy_perform_ev' argument 1 names different: declaration 'easy' definition 'data'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 158 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_urldecode' argument 6 names different: declaration 'reject_crlf' definition 'reject_ctrl'.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 169 configurations. Use --force to check all configurations.
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 175 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 190 configurations. Use --force to check all configurations.
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+style: funcArgNamesDifferent: Function 'Curl_GetFTPResponse' argument 1 names different: declaration 'nread' definition 'nreadp'.
+style: funcArgNamesDifferent: Function 'ftp_need_type' argument 2 names different: declaration 'ascii' definition 'ascii_wanted'.
+style: funcArgNamesDifferent: Function 'ftp_do_more' argument 2 names different: declaration 'completed' definition 'completep'.
+style: funcArgNamesDifferent: Function 'ftp_regular_transfer' argument 2 names different: declaration 'done' definition 'dophase_done'.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 156 configurations. Use --force to check all configurations.
+style: redundantAssignment: Variable 'parser->offsets.filename' is reassigned a value before the old one has been used.
+style: funcArgNamesDifferent: Function 'Curl_ftp_parselist_data_free' argument 1 names different: declaration 'pl_data' definition 'parserp'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 173 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_HMAC_update' argument 1 names different: declaration 'context' definition 'ctxt'.
+style: funcArgNamesDifferent: Function 'Curl_HMAC_final' argument 1 names different: declaration 'context' definition 'ctxt'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 162 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 126 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 173 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_printable_address' argument 1 names different: declaration 'ip' definition 'ai'.
+style: funcArgNamesDifferent: Function 'Curl_resolv' argument 5 names different: declaration 'dnsentry' definition 'entry'.
+style: funcArgNamesDifferent: Function 'Curl_resolv_timeout' argument 4 names different: declaration 'dnsentry' definition 'entry'.
+style: funcArgNamesDifferent: Function 'Curl_once_resolved' argument 2 names different: declaration 'protocol_connect' definition 'protocol_done'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 173 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'buf' is always false
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 168 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 163 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 202 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_add_timecondition' argument 2 names different: declaration 'buf' definition 'req_buffer'.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 163 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 160 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_httpchunk_read' argument 3 names different: declaration 'length' definition 'datalen'.
+style: funcArgNamesDifferent: Function 'Curl_httpchunk_read' argument 4 names different: declaration 'wrote' definition 'wrotep'.
+style: funcArgNamesDifferent: Function 'Curl_httpchunk_read' argument 5 names different: declaration 'passthru' definition 'extrap'.
+style: constArgument: Argument 'conn->trlMax+3' to function Curl_cmalloc is always 131
+style: constArgument: Argument 'conn->trlMax+3' to function malloc is always 131
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 158 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 166 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 181 configurations. Use --force to check all configurations.
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+style: funcArgNamesDifferent: Function 'Curl_proxyCONNECT' argument 2 names different: declaration 'tunnelsocket' definition 'sockindex'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 127 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 137 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 184 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'imap_disconnect' argument 2 names different: declaration 'dead' definition 'dead_connection'.
+style: funcArgNamesDifferent: Function 'imap_regular_transfer' argument 2 names different: declaration 'done' definition 'dophase_done'.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 120 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_inet_ntop' argument 2 names different: declaration 'addr' definition 'src'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 120 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 162 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 179 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function '_ldap_url_parse' argument 2 names different: declaration 'ludp' definition 'ludpp'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_llist_insert_next' argument 4 names different: declaration 'node' definition 'ne'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 133 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 130 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_md5it' argument 1 names different: declaration 'output' definition 'outbuffer'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 162 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'curl_dbg_malloc' argument 1 names different: declaration 'size' definition 'wantedsize'.
+style: funcArgNamesDifferent: Function 'curl_dbg_calloc' argument 1 names different: declaration 'elements' definition 'wanted_elements'.
+style: funcArgNamesDifferent: Function 'curl_dbg_calloc' argument 2 names different: declaration 'size' definition 'wanted_size'.
+style: funcArgNamesDifferent: Function 'curl_dbg_strdup' argument 3 names different: declaration 'src' definition 'source'.
+style: funcArgNamesDifferent: Function 'curl_dbg_realloc' argument 2 names different: declaration 'size' definition 'wantedsize'.
+style: funcArgNamesDifferent: Function 'curl_dbg_accept' argument 2 names different: declaration 'a' definition 'saddr'.
+style: funcArgNamesDifferent: Function 'curl_dbg_accept' argument 3 names different: declaration 'alen' definition 'saddrlen'.
+style: unusedStructMember: union member 'Anonymous7::d' is never used.
+style: unusedStructMember: union member 'Anonymous7::p' is never used.
+information: ConfigurationNotChecked: Skipping configuration 'CURLDEBUG;CURL_MT_FREE_FILL' since the value of 'CURL_MT_FREE_FILL' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'CURLDEBUG;CURL_MT_MALLOC_FILL' since the value of 'CURL_MT_MALLOC_FILL' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 162 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 124 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 184 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'result' is always true
+style: knownConditionTrueFalse: Condition 'result' is always true
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 126 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_parsenetrc' argument 6 names different: declaration 'filename' definition 'netrcfile'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 160 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 125 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 117 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 177 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 121 configurations. Use --force to check all configurations.
+style: duplicateConditionalAssign: The statement 'if (errno!=old_errno) errno=old_errno' is logically equivalent to 'errno=old_errno'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 175 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 184 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'pop3_disconnect' argument 2 names different: declaration 'dead' definition 'dead_connection'.
+style: funcArgNamesDifferent: Function 'pop3_regular_transfer' argument 2 names different: declaration 'done' definition 'dophase_done'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 153 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 157 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 140 configurations. Use --force to check all configurations.
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 161 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 162 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_socket_check' argument 1 names different: declaration 'readfd' definition 'readfd0'.
+style: funcArgNamesDifferent: Function 'Curl_socket_check' argument 2 names different: declaration 'readfd2' definition 'readfd1'.
+style: knownConditionTrueFalse: Condition 'r' is always false
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 183 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'nread>0' is always false
+style: knownConditionTrueFalse: Condition 'newtype' is always true
+style: funcArgNamesDifferent: Function 'Curl_read' argument 4 names different: declaration 'buffersize' definition 'sizerequested'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 184 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_vsetopt' argument 3 names different: declaration 'arg' definition 'param'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 120 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 171 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 185 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 184 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'smtp_disconnect' argument 2 names different: declaration 'dead' definition 'dead_connection'.
+style: funcArgNamesDifferent: Function 'smtp_regular_transfer' argument 2 names different: declaration 'done' definition 'dophase_done'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 126 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 166 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'allow_gssapi' is always false
+style: knownConditionTrueFalse: Condition '!allow_gssapi' is always true
+style: funcArgNamesDifferent: Function 'Curl_SOCKS4' argument 1 names different: declaration 'proxy_name' definition 'proxy_user'.
+style: funcArgNamesDifferent: Function 'Curl_SOCKS5' argument 1 names different: declaration 'proxy_name' definition 'proxy_user'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 164 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 164 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 152 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 116 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_splayinsert' argument 1 names different: declaration 'key' definition 'i'.
+style: funcArgNamesDifferent: Function 'Curl_splayinsert' argument 3 names different: declaration 'newnode' definition 'node'.
+style: funcArgNamesDifferent: Function 'Curl_splaygetbest' argument 1 names different: declaration 'key' definition 'i'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 117 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+warning: invalidFunctionArg: Either the condition 'len>=((unsigned long)-1)/sizeof(char)' is redundant or memcpy() argument nr 3 can have invalid value. The value is -1 but the valid values are '0:'.
+style: funcArgNamesDifferent: Function 'Curl_memdup' argument 2 names different: declaration 'buffer_length' definition 'length'.
+warning: invalidFunctionArg: Either the condition 'len>=((unsigned long)-1)/sizeof(char)' is redundant or malloc() argument nr 1 can have invalid value. The value is -1 but the valid values are '0:'.
+error: doubleFree: Memory pointed to by 'ptr' is freed twice.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 172 configurations. Use --force to check all configurations.
+style: duplicateConditionalAssign: The statement 'if (errno!=old_errno) errno=old_errno' is logically equivalent to 'errno=old_errno'.
+style: duplicateConditionalAssign: The statement 'if (errno!=old_errno) errno=old_errno' is logically equivalent to 'errno=old_errno'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 116 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_strtok_r' argument 1 names different: declaration 's' definition 'ptr'.
+style: funcArgNamesDifferent: Function 'Curl_strtok_r' argument 2 names different: declaration 'delim' definition 'sep'.
+style: funcArgNamesDifferent: Function 'Curl_strtok_r' argument 3 names different: declaration 'last' definition 'end'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 118 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 135 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 169 configurations. Use --force to check all configurations.
+warning: negativeIndex: Either the condition '(i)<=39' is redundant or the array 'telnetcmds[20]' is accessed at index -196, which is out of bounds.
+warning: negativeIndex: Either the condition '(j)<=39' is redundant or the array 'telnetcmds[20]' is accessed at index -196, which is out of bounds.
+style: unreadVariable: Variable 'startwrite' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 167 configurations. Use --force to check all configurations.
+style: redundantAssignment: Variable 'state->retry_time' is reassigned a value before the old one has been used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 123 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_timediff' argument 1 names different: declaration 't1' definition 'newer'.
+style: funcArgNamesDifferent: Function 'Curl_timediff' argument 2 names different: declaration 't2' definition 'older'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 191 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_single_getsock' argument 2 names different: declaration 'socks' definition 'sock'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 219 configurations. Use --force to check all configurations.
+information: noValidConfiguration: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 159 configurations. Use --force to check all configurations.
+style: redundantInitialization: Redundant initialization for 'newp'. The initialized value is overwritten before it is read.
+style: funcArgNamesDifferent: Function 'Curl_is_absolute_url' argument 2 names different: declaration 'scheme' definition 'buf'.
+style: unreadVariable: Variable 'hlen' is assigned a value that is never used.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+style: unreadVariable: Variable 'type_2_bufs[0].cbBuffer' is assigned a value that is never used.
+information: ConfigurationNotChecked: Skipping configuration 'SECPKG_ATTR_ENDPOINT_BINDINGS;USE_NTLM;USE_WINDOWS_SSPI' since the value of 'SECPKG_ATTR_ENDPOINT_BINDINGS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+style: unreadVariable: Variable 'chlg_buf[0].cbBuffer' is assigned a value that is never used.
+information: ConfigurationNotChecked: Skipping configuration 'SECPKG_ATTR_ENDPOINT_BINDINGS;USE_SPNEGO;USE_WINDOWS_SSPI' since the value of 'SECPKG_ATTR_ENDPOINT_BINDINGS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 197 configurations. Use --force to check all configurations.
+style: knownConditionTrueFalse: Condition 'len>0' is always false
+information: ConfigurationNotChecked: Skipping configuration 'NGTCP2_PROTO_VER;USE_NGTCP2' since the value of 'NGTCP2_PROTO_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'NGTCP2_PROTO_VER;USE_NGTCP2' since the value of 'NGTCP2_PROTO_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'NGTCP2_PROTO_VER;USE_NGTCP2' since the value of 'NGTCP2_PROTO_VER' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: variableScope: The scope of the variable 'recvd' can be reduced.
+style: variableScope: The scope of the variable 'sent' can be reduced.
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'sftp_disconnect' argument 2 names different: declaration 'dead' definition 'dead_connection'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 29 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations.
+style: variableScope: The scope of the variable 'state' can be reduced.
+style: variableScope: The scope of the variable 'app' can be reduced.
+style: variableScope: The scope of the variable 'timeout_ms' can be reduced.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations.
+style: shadowVariable: Local variable 'p' shadows outer variable
+style: unusedVariable: Unused variable: rc
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 30 configurations. Use --force to check all configurations.
+style: unreadVariable: Variable 'len2' is assigned a value that is never used.
+information: ConfigurationNotChecked: Skipping configuration 'GNUTLS_NO_TICKETS;USE_GNUTLS' since the value of 'GNUTLS_NO_TICKETS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations.
+style: unreadVariable: Variable 'retcode' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 36 configurations. Use --force to check all configurations.
+style: variableScope: The scope of the variable 'cert' can be reduced.
+style: variableScope: The scope of the variable 'i' can be reduced.
+style: unreadVariable: Variable 'err' is assigned a value that is never used.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_CBC_RANDOM_IV;USE_NSS' since the value of 'SSL_CBC_RANDOM_IV' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_ALPN;SSL_ENABLE_NPN;USE_NGHTTP2;USE_NSS' since the value of 'SSL_ENABLE_ALPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_ALPN;SSL_ENABLE_NPN;USE_NGHTTP2;USE_NSS' since the value of 'SSL_ENABLE_NPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_ALPN;SSL_ENABLE_NPN;USE_NSS' since the value of 'SSL_ENABLE_ALPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_ALPN;SSL_ENABLE_NPN;USE_NSS' since the value of 'SSL_ENABLE_NPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_ALPN;USE_NSS' since the value of 'SSL_ENABLE_ALPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL_ENABLE_NPN;USE_NSS' since the value of 'SSL_ENABLE_NPN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 84 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'SSL2_VERSION;SSL_CTRL_SET_MSG_CALLBACK' since the value of 'SSL2_VERSION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL2_VERSION_MAJOR;SSL_CTRL_SET_MSG_CALLBACK' since the value of 'SSL2_VERSION_MAJOR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL3_MT_CERTIFICATE_STATUS;SSL_CTRL_SET_MSG_CALLBACK' since the value of 'SSL3_MT_CERTIFICATE_STATUS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL3_MT_ENCRYPTED_EXTENSIONS;SSL_CTRL_SET_MSG_CALLBACK' since the value of 'SSL3_MT_ENCRYPTED_EXTENSIONS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SSL3_MT_END_OF_EARLY_DATA;SSL_CTRL_SET_MSG_CALLBACK' since the value of 'SSL3_MT_END_OF_EARLY_DATA' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 55 configurations. Use --force to check all configurations.
+error: memleak: Memory leak: encdata_buffer
+style: unreadVariable: Variable 'result' is assigned a value that is never used.
+style: unreadVariable: Variable 'sspi_status' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 36 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'Curl_ssl_random' argument 2 names different: declaration 'buffer' definition 'entropy'.
+style: funcArgNamesDifferent: Function 'Curl_none_shutdown' argument 1 names different: declaration 'conn' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_shutdown' argument 2 names different: declaration 'sockindex' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_check_cxn' argument 1 names different: declaration 'conn' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_random' argument 1 names different: declaration 'data' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_random' argument 2 names different: declaration 'entropy' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_random' argument 3 names different: declaration 'length' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_close_all' argument 1 names different: declaration 'data' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_session_free' argument 1 names different: declaration 'ptr' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_data_pending' argument 1 names different: declaration 'conn' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_data_pending' argument 2 names different: declaration 'connindex' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_set_engine' argument 1 names different: declaration 'data' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_set_engine' argument 2 names different: declaration 'engine' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_set_engine_default' argument 1 names different: declaration 'data' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_engines_list' argument 1 names different: declaration 'data' definition 'UNUSED_PARAM'.
+style: funcArgNamesDifferent: Function 'Curl_none_md5sum' argument 4 names different: declaration 'md5len' definition 'UNUSED_PARAM'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 28 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 125 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 122 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 175 configurations. Use --force to check all configurations.
+error: invalidFunctionArg: Invalid malloc() argument nr 1. The value is -1 but the valid values are '0:'.
+error: deallocret: Returning/dereferencing 'd' after it is deallocated / released
+style: funcArgNamesDifferent: Function 'curl_slist_append_ccsid' argument 1 names different: declaration 'l' definition 'list'.
+style: funcArgNamesDifferent: Function 'curl_version_info_ccsid' argument 2 names different: declaration 'cid' definition 'ccsid'.
+style: variableScope: The scope of the variable 'srcu' can be reduced.
+style: variableScope: The scope of the variable 'dstu' can be reduced.
+style: variableScope: The scope of the variable 'dstsize' can be reduced.
+style: unusedVariable: Unused variable: rc
+information: ConfigurationNotChecked: Skipping configuration 'GUSISetupDevices_BeginHook' since the value of 'GUSISetupDevices_BeginHook' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'GUSISetupDevices_EndHook' since the value of 'GUSISetupDevices_EndHook' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'GUSISetupFactories_BeginHook' since the value of 'GUSISetupFactories_BeginHook' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'GUSISetupFactories_EndHook' since the value of 'GUSISetupFactories_EndHook' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+error: unknownMacro: There is an unknown macro here somewhere. Configuration is required. If DECLARE_MAIN is a macro then please configure it.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_SETMODE;O_BINARY' since the value of 'O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_SETMODE;O_BINARY;__HIGHC__' since the value of 'O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: redundantInitialization: Redundant initialization for 'stop'. The initialized value is overwritten before it is read.
+information: ConfigurationNotChecked: Skipping configuration 'TIOCGSIZE' since the value of 'TIOCGSIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'TIOCGWINSZ' since the value of 'TIOCGWINSZ' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'EACCES' since the value of 'EACCES' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'EDQUOT' since the value of 'EDQUOT' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'ENAMETOOLONG' since the value of 'ENAMETOOLONG' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'ENOSPC' since the value of 'ENOSPC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'EROFS' since the value of 'EROFS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations.
+style: redundantAssignment: Variable 'len' is reassigned a value before the old one has been used.
+information: ConfigurationNotChecked: Skipping configuration 'MSDOS;WIN32;S_IFCHR' since the value of 'S_IFCHR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: funcArgNamesDifferent: Function 'easysrc_add' argument 2 names different: declaration 'bupf' definition 'line'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'getparameter' argument 5 names different: declaration 'operation' definition 'config'.
+style: funcArgNamesDifferent: Function 'parse_args' argument 1 names different: declaration 'config' definition 'global'.
+style: unreadVariable: Variable 'subletter' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations.
+style: duplicateBreak: Consecutive return, break, continue, goto or throw statements are unnecessary.
+style: duplicateBreak: Consecutive return, break, continue, goto or throw statements are unnecessary.
+style: funcArgNamesDifferent: Function 'getpass_r' argument 2 names different: declaration 'buffer' definition 'password'.
+style: variableScope: The scope of the variable 'proto' can be reduced.
+information: ConfigurationNotChecked: Skipping configuration 'CURL_PATCHSTAMP' since the value of 'CURL_PATCHSTAMP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'home', return value is always 0
+style: knownConditionTrueFalse: Condition 'hugehelpgz[3]&254' is always false
+style: variableScope: The scope of the variable 'status' can be reduced.
+style: variableScope: The scope of the variable 'proto' can be reduced.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 22 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_SIGNAL;SIGPIPE' since the value of 'SIGPIPE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations.
+style: duplicateCondition: The if condition is the same as the previous if condition
+style: variableScope: The scope of the variable 'file' can be reduced.
+style: funcArgNamesDifferent: Function 'operate' argument 1 names different: declaration 'config' definition 'global'.
+style: knownConditionTrueFalse: Condition '!result' is always true
+warning: invalidFunctionArg: Either the condition 'alloc+1>((unsigned long)-1)/2' is redundant or realloc() argument nr 2 can have invalid value. The value is -1 but the valid values are '0:'.
+style: variableScope: The scope of the variable 'alloc_needed' can be reduced.
+style: funcArgNamesDifferent: Function 'str2udouble' argument 1 names different: declaration 'val' definition 'valp'.
+style: knownConditionTrueFalse: Condition '!file' is always true
+style: funcArgNamesDifferent: Function 'parseconfig' argument 2 names different: declaration 'config' definition 'global'.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'tool_setopt_enum' argument 5 names different: declaration 'nv' definition 'nvlist'.
+style: funcArgNamesDifferent: Function 'tool_setopt_flags' argument 5 names different: declaration 'nv' definition 'nvlist'.
+style: funcArgNamesDifferent: Function 'tool_setopt_bitmask' argument 5 names different: declaration 'nv' definition 'nvlist'.
+warning: invalidFunctionArg: Either the condition 'len>=((unsigned long)-1)/sizeof(char)' is redundant or malloc() argument nr 1 can have invalid value. The value is -1 but the valid values are '0:'.
+warning: invalidFunctionArg: Either the condition 'len>=((unsigned long)-1)/sizeof(char)' is redundant or memcpy() argument nr 3 can have invalid value. The value is -1 but the valid values are '0:'.
+style: funcArgNamesDifferent: Function 'tvdiff' argument 1 names different: declaration 't1' definition 'newer'.
+style: funcArgNamesDifferent: Function 'tvdiff' argument 2 names different: declaration 't2' definition 'older'.
+style: knownConditionTrueFalse: The expression 'err == 0' is always true.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'O_BINARY' since the value of 'O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'O_BINARY;__HIGHC__' since the value of 'O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SOL_SOCKET;SO_SNDBUF' since the value of 'SOL_SOCKET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SOL_SOCKET;SO_SNDBUF' since the value of 'SO_SNDBUF' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+warning: nullPointerRedundantCheck: Either the condition 'scheme==NULL' is redundant or there is possible null pointer dereference: scheme.
+warning: nullPointerRedundantCheck: Either the condition '!ptr' is redundant or there is possible null pointer dereference: ptr.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+warning: invalidPrintfArgType_uint: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'signed long'.
+style: redundantAssignment: Variable 'interval.tv_sec' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'interval.tv_usec' is reassigned a value before the old one has been used.
+portability: CastIntegerToAddressAtReturn: Returning an integer in a function with pointer return type is not portable.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: duplicateCondition: The if condition is the same as the previous if condition
+style: shadowVariable: Local variable 'buf' shadows outer variable
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: duplicateCondition: The if condition is the same as the previous if condition
+style: redundantInitialization: Redundant initialization for 'eof'. The initialized value is overwritten before it is read.
+style: duplicateCondition: The if condition is the same as the previous if condition
+style: redundantInitialization: Redundant initialization for 'eof'. The initialized value is overwritten before it is read.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: redundantAssignment: Variable 'res' is reassigned a value before the old one has been used.
+style: funcArgNamesDifferent: Function 'test' argument 1 names different: declaration 'URL' definition 'url'.
+style: funcArgNamesDifferent: Function 'test' argument 1 names different: declaration 'URL' definition 'url'.
+style: funcArgNamesDifferent: Function 'tutil_tvdiff' argument 1 names different: declaration 't1' definition 'newer'.
+style: funcArgNamesDifferent: Function 'tutil_tvdiff' argument 2 names different: declaration 't2' definition 'older'.
+style: funcArgNamesDifferent: Function 'tutil_tvdiff_secs' argument 1 names different: declaration 't1' definition 'newer'.
+style: funcArgNamesDifferent: Function 'tutil_tvdiff_secs' argument 2 names different: declaration 't2' definition 'older'.
+style: unreadVariable: Variable 'in_wanted_part' is assigned a value that is never used.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGBREAK;WIN32' since the value of 'SIGBREAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 26 configurations. Use --force to check all configurations.
+style: funcArgNamesDifferent: Function 'validate_access' argument 2 names different: declaration 'fname' definition 'filename'.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM;HAVE_SIGSETJMP' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM;HAVE_SIGSETJMP' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'HAVE_ALARM;SIGALRM;HAVE_SIGSETJMP' since the value of 'SIGALRM' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: toomanyconfigs: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations.
+style: unreadVariable: Variable 'res' is assigned a value that is never used.
+error: ctunullpointer: Null pointer dereference: entry
+style: unusedFunction: The function 'Curl_auth_cleanup_gssapi' is never used.
+style: unusedFunction: The function 'Curl_auth_create_gssapi_security_message' is never used.
+style: unusedFunction: The function 'Curl_auth_create_gssapi_user_message' is never used.
+style: unusedFunction: The function 'Curl_auth_create_ntlm_type1_message' is never used.
+style: unusedFunction: The function 'Curl_auth_create_ntlm_type3_message' is never used.
+style: unusedFunction: The function 'Curl_auth_create_spnego_message' is never used.
+style: unusedFunction: The function 'Curl_auth_decode_ntlm_type2_message' is never used.
+style: unusedFunction: The function 'Curl_auth_decode_spnego_message' is never used.
+style: unusedFunction: The function 'Curl_auth_is_gssapi_supported' is never used.
+style: unusedFunction: The function 'Curl_auth_is_ntlm_supported' is never used.
+style: unusedFunction: The function 'Curl_auth_is_spnego_supported' is never used.
+style: unusedFunction: The function 'Curl_auth_user_contains_domain' is never used.
+style: unusedFunction: The function 'Curl_conncache_add_conn' is never used.
+style: unusedFunction: The function 'Curl_conncache_bundle_size' is never used.
+style: unusedFunction: The function 'Curl_conncache_extract_bundle' is never used.
+style: unusedFunction: The function 'Curl_conncache_remove_conn' is never used.
+style: unusedFunction: The function 'Curl_conncache_unlock' is never used.
+style: unusedFunction: The function 'Curl_convert_clone' is never used.
+style: unusedFunction: The function 'Curl_ftpsend' is never used.
+style: unusedFunction: The function 'Curl_getaddrinfo_a' is never used.
+style: unusedFunction: The function 'Curl_getnameinfo_a' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_get_buffer_a' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_get_cert_info' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_get_enum' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_get_numeric_value' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_set_buffer_a' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_set_callback' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_set_enum' is never used.
+style: unusedFunction: The function 'Curl_gsk_attribute_set_numeric_value' is never used.
+style: unusedFunction: The function 'Curl_gsk_environment_close' is never used.
+style: unusedFunction: The function 'Curl_gsk_environment_init' is never used.
+style: unusedFunction: The function 'Curl_gsk_environment_open' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_close' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_init' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_misc' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_open' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_read' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_startInit' is never used.
+style: unusedFunction: The function 'Curl_gsk_secure_soc_write' is never used.
+style: unusedFunction: The function 'Curl_gsk_strerror_a' is never used.
+style: unusedFunction: The function 'Curl_gss_delete_sec_context_a' is never used.
+style: unusedFunction: The function 'Curl_gss_display_status_a' is never used.
+style: unusedFunction: The function 'Curl_gss_import_name_a' is never used.
+style: unusedFunction: The function 'Curl_gss_init_sec_context_a' is never used.
+style: unusedFunction: The function 'Curl_hash_apply' is never used.
+style: unusedFunction: The function 'Curl_ldap_err2string_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_first_attribute_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_get_dn_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_get_values_len_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_init_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_next_attribute_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_search_s_a' is never used.
+style: unusedFunction: The function 'Curl_ldap_simple_bind_s_a' is never used.
+style: unusedFunction: The function 'Curl_md4it' is never used.
+style: unusedFunction: The function 'Curl_multi_add_perform' is never used.
+style: unusedFunction: The function 'Curl_multi_max_concurrent_streams' is never used.
+style: unusedFunction: The function 'Curl_multi_max_host_connections' is never used.
+style: unusedFunction: The function 'Curl_multi_max_total_connections' is never used.
+style: unusedFunction: The function 'Curl_multiplex_wanted' is never used.
+style: unusedFunction: The function 'Curl_os400_bind' is never used.
+style: unusedFunction: The function 'Curl_os400_connect' is never used.
+style: unusedFunction: The function 'Curl_os400_getpeername' is never used.
+style: unusedFunction: The function 'Curl_os400_getsockname' is never used.
+style: unusedFunction: The function 'Curl_os400_inflate' is never used.
+style: unusedFunction: The function 'Curl_os400_inflateEnd' is never used.
+style: unusedFunction: The function 'Curl_os400_inflateInit2_' is never used.
+style: unusedFunction: The function 'Curl_os400_inflateInit_' is never used.
+style: unusedFunction: The function 'Curl_os400_recvfrom' is never used.
+style: unusedFunction: The function 'Curl_os400_sendto' is never used.
+style: unusedFunction: The function 'Curl_os400_zlibVersion' is never used.
+style: unusedFunction: The function 'Curl_quic_connect' is never used.
+style: unusedFunction: The function 'Curl_quic_data_pending' is never used.
+style: unusedFunction: The function 'Curl_quic_done' is never used.
+style: unusedFunction: The function 'Curl_quic_done_sending' is never used.
+style: unusedFunction: The function 'Curl_quic_is_connected' is never used.
+style: unusedFunction: The function 'Curl_quic_ver' is never used.
+style: unusedFunction: The function 'Curl_read16_be' is never used.
+style: unusedFunction: The function 'Curl_read16_le' is never used.
+style: unusedFunction: The function 'Curl_read32_le' is never used.
+style: unusedFunction: The function 'Curl_resolv_timeout' is never used.
+style: unusedFunction: The function 'Curl_resolver_cleanup' is never used.
+style: unusedFunction: The function 'Curl_set_dns_interface' is never used.
+style: unusedFunction: The function 'Curl_set_dns_local_ip4' is never used.
+style: unusedFunction: The function 'Curl_set_dns_local_ip6' is never used.
+style: unusedFunction: The function 'Curl_set_dns_servers' is never used.
+style: unusedFunction: The function 'Curl_ssh_init' is never used.
+style: unusedFunction: The function 'Curl_ssh_version' is never used.
+style: unusedFunction: The function 'Curl_ssl_close_all' is never used.
+style: unusedFunction: The function 'Curl_ssl_md5sum' is never used.
+style: unusedFunction: The function 'Curl_strntoupper' is never used.
+style: unusedFunction: The function 'GUSISetupConfig' is never used.
+style: unusedFunction: The function 'GUSISetupDevices' is never used.
+style: unusedFunction: The function 'GUSISetupFactories' is never used.
+style: unusedFunction: The function 'SyncTime_CURL_WriteHeader' is never used.
+style: unusedFunction: The function 'SyncTime_CURL_WriteOutput' is never used.
+style: unusedFunction: The function 'WriteHeader' is never used.
+style: unusedFunction: The function 'WriteOutput' is never used.
+style: unusedFunction: The function '__crt0_glob_function' is never used.
+style: unusedFunction: The function 'alarmfunc' is never used.
+style: unusedFunction: The function 'check_metalink_content_type' is never used.
+style: unusedFunction: The function 'clean_metalink' is never used.
+style: unusedFunction: The function 'count_next_metalink_resource' is never used.
+style: unusedFunction: The function 'curl_dbg_recv' is never used.
+style: unusedFunction: The function 'curl_dbg_send' is never used.
+style: unusedFunction: The function 'curl_dbg_wcsdup' is never used.
+style: unusedFunction: The function 'curl_easy_escape_ccsid' is never used.
+style: unusedFunction: The function 'curl_easy_getinfo_ccsid' is never used.
+style: unusedFunction: The function 'curl_easy_setopt_ccsid' is never used.
+style: unusedFunction: The function 'curl_easy_strerror_ccsid' is never used.
+style: unusedFunction: The function 'curl_easy_unescape_ccsid' is never used.
+style: unusedFunction: The function 'curl_easy_upkeep' is never used.
+style: unusedFunction: The function 'curl_form_long_value' is never used.
+style: unusedFunction: The function 'curl_formadd_ccsid' is never used.
+style: unusedFunction: The function 'curl_formget_ccsid' is never used.
+style: unusedFunction: The function 'curl_getdate_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_data_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_encoder_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_filedata_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_filename_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_name_ccsid' is never used.
+style: unusedFunction: The function 'curl_mime_type_ccsid' is never used.
+style: unusedFunction: The function 'curl_multi_socket' is never used.
+style: unusedFunction: The function 'curl_multi_socket_all' is never used.
+style: unusedFunction: The function 'curl_multi_strerror_ccsid' is never used.
+style: unusedFunction: The function 'curl_mvfprintf' is never used.
+style: unusedFunction: The function 'curl_mvprintf' is never used.
+style: unusedFunction: The function 'curl_mvsprintf' is never used.
+style: unusedFunction: The function 'curl_pushheader_byname_ccsid' is never used.
+style: unusedFunction: The function 'curl_pushheader_bynum_cssid' is never used.
+style: unusedFunction: The function 'curl_share_strerror_ccsid' is never used.
+style: unusedFunction: The function 'curl_slist_append_ccsid' is never used.
+style: unusedFunction: The function 'curl_url_get_ccsid' is never used.
+style: unusedFunction: The function 'curl_url_set_ccsid' is never used.
+style: unusedFunction: The function 'curl_version_ccsid' is never used.
+style: unusedFunction: The function 'curl_version_info_ccsid' is never used.
+style: unusedFunction: The function 'curlx_read' is never used.
+style: unusedFunction: The function 'curlx_sitosk' is never used.
+style: unusedFunction: The function 'curlx_sitouz' is never used.
+style: unusedFunction: The function 'curlx_sktosi' is never used.
+style: unusedFunction: The function 'curlx_ultosi' is never used.
+style: unusedFunction: The function 'curlx_write' is never used.
+style: unusedFunction: The function 'gss_seal' is never used.
+style: unusedFunction: The function 'gss_unseal' is never used.
+style: unusedFunction: The function 'handle_error' is never used.
+style: unusedFunction: The function 'is_vms_shell' is never used.
+style: unusedFunction: The function 'metalink_check_hash' is never used.
+style: unusedFunction: The function 'metalink_cleanup' is never used.
+style: unusedFunction: The function 'metalink_write_cb' is never used.
+style: unusedFunction: The function 'parse_metalink' is never used.
+style: unusedFunction: The function 'set_callback' is never used.
+style: unusedFunction: The function 'socket_domain_is_ip' is never used.
+style: unusedFunction: The function 'sslctx_function' is never used.
+style: unusedFunction: The function 'thread_cleanup' is never used.
+style: unusedFunction: The function 'thread_setup' is never used.
+style: unusedFunction: The function 'tutil_tvdiff_secs' is never used.
+style: unusedFunction: The function 'vms_special_exit' is never used.
+information: missingInclude: Cppcheck cannot find all the include files (use --check-config for details)

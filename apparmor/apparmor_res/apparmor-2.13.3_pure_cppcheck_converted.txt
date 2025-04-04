@@ -1,0 +1,1491 @@
+style: unusedVariable: Unused variable: err
+warning: nullPointerRedundantCheck: Either the condition 'dcfg!=NULL' is redundant or there is possible null pointer dereference: dcfg.
+style: variableScope: The scope of the variable 'aa_hat' can be reduced.
+information: ConfigurationNotChecked: Skipping configuration 'APLOG_USE_MODULE' since the value of 'APLOG_USE_MODULE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+error: syntaxError: syntax error: { . hat_type
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+warning: identicalConditionAfterEarlyExit: Identical condition and return expression 'result', return value is always 0
+style: variableScope: The scope of the variable 'k1' can be reduced.
+style: funcArgNamesDifferent: Function 'PMurHash32_Result' argument 1 names different: declaration 'h1' definition 'h'.
+style: variableScope: The scope of the variable 'retval' can be reduced.
+style: clarifyCalculation: Clarify calculation precedence for '&' and '?'.
+style: clarifyCalculation: Clarify calculation precedence for '&' and '?'.
+information: ConfigurationNotChecked: Skipping configuration 'SYS_gettid' since the value of 'SYS_gettid' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: variableScope: The scope of the variable 'bsize' can be reduced.
+style: funcArgNamesDifferent: Function 'hex_to_string' argument 1 names different: declaration 'str' definition 'hexstring'.
+style: variableScope: The scope of the variable 'i' can be reduced.
+style: variableScope: The scope of the variable 'fd' can be reduced.
+warning: nullPointer: Possible null pointer dereference: str
+style: variableScope: The scope of the variable 'retval' can be reduced.
+error: uninitvar: Uninitialized variable: c
+style: duplicateValueTernary: Same value in both branches of ternary operator.
+style: duplicateValueTernary: Same value in both branches of ternary operator.
+style: clarifyCalculation: Clarify calculation precedence for '&' and '?'.
+style: clarifyCalculation: Clarify calculation precedence for '&' and '?'.
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+warning: literalWithCharPtrCompare: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead?
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+performance: functionStatic: Technically the member function 'af_rule::cond_check' can be static (but you may consider moving to unnamed namespace).
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: funcArgNamesDifferent: Function 'cond_check' argument 1 names different: declaration 'cond' definition 'conds'.
+style: funcArgNamesDifferent: Function 'move_base_cond' argument 1 names different: declaration 'conds' definition 'ent'.
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+style: functionConst: Technically the member function 'unix_rule::downgrade_rule' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+warning: virtualCallInConstructor: Virtual function 'has_peer_conds' is called from constructor 'unix_rule(int mode,struct cond_entry*conds,struct cond_entry*peer_conds)' at line 118. Dynamic binding is not used.
+warning: duplInheritedMember: The class 'unix_rule' defines member variable with name 'mode' also defined in its parent class 'af_rule'.
+warning: duplInheritedMember: The class 'unix_rule' defines member variable with name 'audit' also defined in its parent class 'af_rule'.
+warning: duplInheritedMember: The class 'unix_rule' defines member variable with name 'deny' also defined in its parent class 'af_rule'.
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'has_peer_conds' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump_local' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump_peer' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: funcArgNamesDifferent: Function 'unix_rule' argument 1 names different: declaration 'mode' definition 'mode_p'.
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'perms_t::is_accept' can be const.
+style: functionConst: Technically the member function 'perms_t::dump' can be const.
+style: functionConst: Technically the member function 'ProtoState::size' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+style: cstyleCast: C-style pointer casting
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'rhs' can be declared with const
+style: constParameter: Parameter 'n' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'perms_t::is_accept' can be const.
+style: functionConst: Technically the member function 'perms_t::dump' can be const.
+style: functionConst: Technically the member function 'ProtoState::size' can be const.
+performance: functionStatic: Technically the member function 'CHFA::init_free_list' can be static (but you may consider moving to unnamed namespace).
+style: functionConst: Technically the member function 'CHFA::fits_in' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'std::size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 3) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'.
+style: cstyleCast: C-style pointer casting
+style: variableScope: The scope of the variable 'c' can be reduced.
+style: funcArgNamesDifferent: Function 'fits_in' argument 2 names different: declaration 'base' definition 'pos'.
+style: funcArgNamesDifferent: Function 'fits_in' argument 3 names different: declaration 'cases' definition 'trans'.
+style: funcArgNamesDifferent: Function 'insert_state' argument 2 names different: declaration 'state' definition 'from'.
+style: shadowVariable: Local variable 'prev' shadows outer variable
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'rhs' can be declared with const
+style: constParameter: Parameter 'n' can be declared with const
+style: constParameter: Parameter 'free_list' can be declared with const
+style: constParameter: Parameter 'dfa' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: variableScope: The scope of the variable 'replace' can be reduced.
+style: shadowVariable: Local variable 'tmp' shadows outer variable
+style: shadowVariable: Local variable 'tmp' shadows outer variable
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'perms_t::is_accept' can be const.
+style: functionConst: Technically the member function 'perms_t::dump' can be const.
+style: functionConst: Technically the member function 'ProtoState::size' can be const.
+performance: functionStatic: Technically the member function 'DFA::same_mappings' can be static (but you may consider moving to unnamed namespace).
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+warning: identicalInnerCondition: Identical inner 'return' condition is always true.
+style: cstyleCast: C-style pointer casting
+style: shadowVariable: Local variable 'i' shadows outer variable
+style: shadowVariable: Local variable 'l' shadows outer variable
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'rhs' can be declared with const
+style: constParameter: Parameter 'n' can be declared with const
+portability: shiftTooManyBitsSigned: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour
+style: unusedVariable: Unused variable: next
+style: unreadVariable: Variable 'transitions' is assigned a value that is never used.
+style: unreadVariable: Variable 'transitions' is assigned a value that is never used.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+portability: shiftTooManyBitsSigned: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour
+portability: shiftTooManyBitsSigned: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour
+portability: shiftTooManyBitsSigned: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+information: ConfigurationNotChecked: Skipping configuration 'SUBDOMAIN_CONFDIR' since the value of 'SUBDOMAIN_CONFDIR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+information: ConfigurationNotChecked: Skipping configuration 'RLIMIT_NICE' since the value of 'RLIMIT_NICE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'RLIMIT_OFILE' since the value of 'RLIMIT_OFILE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'RLIMIT_RTPRIO' since the value of 'RLIMIT_RTPRIO' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'RLIMIT_RTTIME' since the value of 'RLIMIT_RTTIME' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+error: syntaxError: Code 'using namespace std' is invalid C code. Use --std or --language to configure the language.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: funcArgNamesDifferent: Function 'ptrace_rule' argument 1 names different: declaration 'mode' definition 'mode_p'.
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+warning: arrayIndexOutOfBoundsCond: Either the condition '*i<128' is redundant or the array 'sig_names[36]' is accessed at index 127, which is out of bounds.
+performance: useInitializationList: Variable 'flags' is assigned in constructor body. Consider performing initialization in initialization list.
+performance: useInitializationList: Variable 'rlimits' is assigned in constructor body. Consider performing initialization in initialization list.
+style: functionConst: Technically the member function 'depth_first_traversal::operatorbool' can be const.
+style: functionConst: Technically the member function 'flagvals::dump' can be const.
+warning: noCopyConstructor: Class 'hashedNodeVec' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+warning: noOperatorEq: Class 'hashedNodeVec' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+style: noExplicitConstructor: Class 'InnerNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'OneChildNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'CharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'NotCharSetNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'StarNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'PlusNode' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'depth_first_traversal' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeSet' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'hashedNodeVec' has a constructor with 1 argument that is not explicit.
+style: noExplicitConstructor: Class 'aare_rules' has a constructor with 1 argument that is not explicit.
+style: missingOverride: The function 'normalize_eps' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_followpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_nullable' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_lastpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'compute_firstpos' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'normalize' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'min_match_len' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'contains_null' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'release' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'follow' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'eq' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_accept' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'is_postprocess' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'size' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'dump' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'expand_variables' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'gen_policy_re' overrides a function in a base class but is not marked with a 'override' specifier.
+style: missingOverride: The function 'post_process' overrides a function in a base class but is not marked with a 'override' specifier.
+style: cstyleCast: C-style pointer casting
+style: funcArgNamesDifferent: Function 'signal_rule' argument 1 names different: declaration 'mode' definition 'mode_p'.
+style: constParameter: Parameter 'chars' can be declared with const
+style: constParameter: Parameter 'chars' can be declared with const
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+performance: postfixOperator: Prefer prefix ++/-- operators for non-primitive types.
+style: unreadVariable: Variable 'rc' is assigned a value that is never used.
+style: unreadVariable: Variable 'rc' is assigned a value that is never used.
+style: redundantAssignment: Variable 'rc' is reassigned a value before the old one has been used.
+portability: arithOperationsOnVoidPointer: 'child_stack' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined.
+error: nullPointer: Null pointer dereference: ptr
+style: redundantAssignment: Variable 'type' is reassigned a value before the old one has been used.
+style: shadowVariable: Local variable 'type' shadows outer variable
+style: shadowVariable: Local variable 'path' shadows outer variable
+style: variableScope: The scope of the variable 'message' can be reduced.
+style: shadowVariable: Local variable 'path' shadows outer variable
+style: duplicateBranch: Found duplicate branches for 'if' and 'else'.
+style: variableScope: The scope of the variable 'fd' can be reduced.
+style: variableScope: The scope of the variable 'i' can be reduced.
+portability: invalidPrintfArgType_sint: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'.
+style: shadowVariable: Local variable 'data' shadows outer variable
+error: memleak: Memory leak: buf
+error: memleak: Memory leak: buf
+error: memleak: Memory leak: buf
+error: memleak: Memory leak: buf
+error: memleak: Memory leak: buf
+style: redundantAssignment: Variable 'ret' is reassigned a value before the old one has been used.
+style: variableScope: The scope of the variable 'cli_sock' can be reduced.
+error: uninitvar: Uninitialized variable: ret
+style: unusedVariable: Unused variable: remote
+style: unusedVariable: Unused variable: remote
+style: shadowVariable: Local variable 'data' shadows outer variable
+warning: allocaCalled: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead.
+portability: arithOperationsOnVoidPointer: 'stack' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined.
+information: ConfigurationNotChecked: Skipping configuration '__NR_pivot_root' since the value of '__NR_pivot_root' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+style: variableScope: The scope of the variable 'opt' can be reduced.
+information: ConfigurationNotChecked: Skipping configuration 'PTRACE_GETREGSET;__aarch64__' since the value of 'PTRACE_GETREGSET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'PTRACE_GETREGSET;__arm__;__powerpc64__;__powerpc__' since the value of 'PTRACE_GETREGSET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'PTRACE_GETREGSET;__i386__;__x86_64__' since the value of 'PTRACE_GETREGSET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'PTRACE_GETREGSET;__s390__;__s390x__' since the value of 'PTRACE_GETREGSET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+portability: invalidPrintfArgType_sint: %zi in format string (no. 2) requires 'size_t' but the argument type is 'size_t {aka unsigned long}'.
+portability: invalidPrintfArgType_sint: %zi in format string (no. 2) requires 'size_t' but the argument type is 'size_t {aka unsigned long}'.
+error: uninitvar: Uninitialized variable: class
+information: ConfigurationNotChecked: Skipping configuration 'SYS_getdents' since the value of 'SYS_getdents' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SYS_getdents64' since the value of 'SYS_getdents64' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SYS_getdents;SYS_getdents64' since the value of 'SYS_getdents' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+information: ConfigurationNotChecked: Skipping configuration 'SYS_getdents;SYS_getdents64' since the value of 'SYS_getdents64' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly.
+warning: nullPointerRedundantCheck: Either the condition '!mode' is redundant or there is possible null pointer dereference: mode.
+warning: nullPointerRedundantCheck: Either the condition '!expected_mode' is redundant or there is possible null pointer dereference: expected_mode.
+style: unsignedLessThanZero: Checking if unsigned expression 'newlen' is less than zero.
+style: unsignedLessThanZero: Checking if unsigned expression 'newlen' is less than zero.
+style: unreadVariable: Variable 'saved_sched_policy' is assigned a value that is never used.
+style: unreadVariable: Variable 'retval' is assigned a value that is never used.
+warning: nullPointerRedundantCheck: Either the condition '!mode' is redundant or there is possible null pointer dereference: mode.
+warning: allocaCalled: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead.
+warning: allocaCalled: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead.
+style: variableScope: The scope of the variable 'in_sock' can be reduced.
+style: variableScope: The scope of the variable 'inbound_buffer' can be reduced.
+style: redundantAssignment: Variable 'error' is reassigned a value before the old one has been used.
+style: variableScope: The scope of the variable 'fd' can be reduced.
+style: variableScope: The scope of the variable 'error' can be reduced.
+style: variableScope: The scope of the variable 'hat_name' can be reduced.
+style: variableScope: The scope of the variable 'hat_magic' can be reduced.
+style: unreadVariable: Variable 'error' is assigned a value that is never used.
+style: variableScope: The scope of the variable 'fd' can be reduced.
+error: ctuPointerArith: Pointer arithmetic overflow; 'size' buffer size is 4
+style: unusedFunction: The function 'Java_com_novell_apparmor_JNIChangeHat_changehat_1in' is never used.
+style: unusedFunction: The function 'Java_com_novell_apparmor_JNIChangeHat_changehat_1out' is never used.
+style: unusedFunction: The function 'PMurHash32' is never used.
+style: unusedFunction: The function 'PMurHash32_test' is never used.
+style: unusedFunction: The function '_aa_autoclose' is never used.
+style: unusedFunction: The function '_aa_autofclose' is never used.
+style: unusedFunction: The function '_aa_autofree' is never used.
+style: unusedFunction: The function '_init_log_record' is never used.
+style: unusedFunction: The function 'aa_features_new_from_string' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_load_policy' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_load_policy_from_fd' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_load_policy_from_file' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_replace_policy' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_replace_policy_from_fd' is never used.
+style: unusedFunction: The function 'aa_kernel_interface_write_policy' is never used.
+style: unusedFunction: The function 'aa_policy_cache_add_ro_dir' is never used.
+style: unusedFunction: The function 'aa_policy_cache_dir_path' is never used.
+style: unusedFunction: The function 'aa_policy_cache_dirfd' is never used.
+style: unusedFunction: The function 'aa_policy_cache_filename' is never used.
+style: unusedFunction: The function 'aa_policy_cache_no_dirs' is never used.
+style: unusedFunction: The function 'aa_query_file_path' is never used.
+style: unusedFunction: The function 'aa_query_link_path' is never used.
+style: unusedFunction: The function 'create_dfa' is never used.
+style: unusedFunction: The function 'diff_qualifiers' is never used.
+style: unusedFunction: The function 'dump_regex' is never used.
+style: unusedFunction: The function 'dump_syntax_tree' is never used.
+style: unusedFunction: The function 'gen_policy_re' is never used.
+style: unusedFunction: The function 'get_options' is never used.
+style: unusedFunction: The function 'is_valid_mnt_cond' is never used.
+style: unusedFunction: The function 'match_len' is never used.
+style: unusedFunction: The function 'parse_dbus_mode' is never used.
+style: unusedFunction: The function 'parse_ptrace_mode' is never used.
+style: unusedFunction: The function 'parse_signal_mode' is never used.
+style: unusedFunction: The function 'parse_unix_mode' is never used.
+style: unusedFunction: The function 'post_process' is never used.
+style: unusedFunction: The function 'undiff_encode' is never used.
+information: missingInclude: Cppcheck cannot find all the include files (use --check-config for details)

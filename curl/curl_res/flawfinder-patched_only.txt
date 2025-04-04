@@ -1,0 +1,20 @@
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:796:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy(prioritysrp, prioritylist);
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:797:5:  [4] (buffer) strcpy:Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120).  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily misused). 
+    strcpy(prioritysrp + len, ":" GNUTLS_SRP);
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1028:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char certbuf[256] = ""; /* big enough? */
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1094:32:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      const char *beg = (const char *) chainp[i].data;
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1291:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    unsigned char addrbuf[sizeof(struct use_addr)];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1302:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      unsigned char certaddr[sizeof(struct use_addr)];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1665:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buf[120];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1816:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(md5sum, gcry_md_read(MD5pw, 0), md5len);
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1836:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(sha256sum, gcry_md_read(SHA256pw, 0), sha256len);
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:791:18:  [1] (buffer) strlen:Does not handle strings that are not \0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126).  
+    size_t len = strlen(prioritylist);

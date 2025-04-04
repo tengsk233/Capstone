@@ -1,0 +1,14 @@
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1019:3:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+  char certbuf[256] = ""; /* big enough? */
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1085:32:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      const char *beg = (const char *) chainp[i].data;
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1282:14:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    unsigned char addrbuf[sizeof(struct use_addr)];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1293:16:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+      unsigned char certaddr[sizeof(struct use_addr)];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1656:5:  [2] (buffer) char:Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120).  Perform bounds checking, use functions that limit length, or ensure that the size is larger than the maximum possible length. 
+    char buf[120];
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1807:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(md5sum, gcry_md_read(MD5pw, 0), md5len);
+/home/capstone/Desktop/root/curl-7.68.0_XXXX/lib/vtls/gtls.c:1827:3:  [2] (buffer) memcpy:Does not check for buffer overflows when copying to destination (CWE-120).  Make sure destination can always hold the source data. 
+  memcpy(sha256sum, gcry_md_read(SHA256pw, 0), sha256len);

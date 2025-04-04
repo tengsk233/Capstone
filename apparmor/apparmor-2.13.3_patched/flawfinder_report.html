@@ -1,0 +1,1797 @@
+<ul>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chgrp.c:34:6: <b>  [5] </b> (race) <i> chown:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchown( ) instead. </i>
+<pre>
+	if (chown(argv[1], -1, gid) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chmod.c:33:6: <b>  [5] </b> (race) <i> chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchmod( ) instead. </i>
+<pre>
+	if (chmod(argv[1], mode) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/chown.c:33:6: <b>  [5] </b> (race) <i> chown:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). Use
+  fchown( ) instead. </i>
+<pre>
+	if (chown(argv[1], uid, -1) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:69:2: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	vfprintf(stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:83:2: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	vfprintf(stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:96:2: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	vfprintf(stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:173:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+		strcat(name, namespace);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:178:3: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+		strcat(name, profile);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:216:2: <b>  [4] </b> (shell) <i> execvp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	execvp(argv[0], argv);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:84:6: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	i = vsnprintf(fst-&gt;pos, remaining, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:225:6: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+	if (snprintf(features-&gt;hash, HASH_SIZE,
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:546:2: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	sprintf(buf, "%s %016lx^", cmd, token);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:550:4: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+			strcpy(pos, *hats);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/private.c:113:2: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	vfprintf(stderr, fmt, args);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser.h:177:2: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	fprintf(stderr, "parser: " fmt, ## args);	\
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser.h:188:2: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	fprintf(stderr, fmt, ## args);		\
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_alias.c:104:2: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	sprintf(n, "%s%s", alias-&gt;to, target + strlen(alias-&gt;from));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_common.c:116:9: <b>  [4] </b> (format) <i> vfprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+        vfprintf(stderr, newfmt, arg);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:384:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		sprintf(name, "%s//%s", profile-&gt;parent-&gt;name, profile-&gt;name);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:903:7: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+		if (access(target, R_OK) == 0)
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:47:30: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#define PDEBUG(fmt, args...) fprintf(stderr, "Lexer: " fmt, ## args)
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_misc.c:692:4: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+			fprintf(stderr, err, label);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:39:30: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+#define PDEBUG(fmt, args...) fprintf(stderr, "Lexer: " fmt, ## args)
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_policy.c:119:4: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+			sprintf(name, "%s//%s", prof-&gt;name, entry-&gt;nt_name);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/unit_test.h:41:9: <b>  [4] </b> (format) <i> vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+        vsnprintf(buf, sizeof(buf), msg, arg);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/access.c:47:5: <b>  [4] </b> (race) <i> access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>/<a
+  href="https://cwe.mitre.org/data/definitions/367.html">CWE-367</a>!). Set
+  up the correct permissions (e.g., using setuid()) and try to open the file
+  directly. </i>
+<pre>
+	rc=access(path, mode);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:109:5: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+				strcpy(manual_string, optarg);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:157:3: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+		sprintf (pname, "%s", argv[optind]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:177:8: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		exit(execv(pname, &amp;argv[optind]));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dropprivs_wrapper.c:65:2: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	sprintf (pname, "./%s", argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dropprivs_wrapper.c:67:7: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	exit(execv(pname, &amp;argv[1]));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/environ.c:72:12: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		retval = execl(argv[1], argv[1], argv[2], (char *) NULL);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:55:2: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	execl(argv[2], argv[2], fd_str, buf, NULL);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:156:2: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+	sprintf(buffer, "%s%s", name, perms);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:219:4: <b>  [4] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. </i>
+<pre>
+			sprintf(lname, "%s%s:%s", argv[2], perms, perms);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:220:4: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+			strcpy(b, lname);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:232:7: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+				  fprintf(stderr, usage, argv[0]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:238:3: <b>  [4] </b> (format) <i> fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+		fprintf(stderr, usage, argv[0]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/query_label.c:240:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy(to, label);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:39:2: <b>  [4] </b> (format) <i> vprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. </i>
+<pre>
+	vprintf(format, arg);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:140:2: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	execv(argv[0], argv);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:288:2: <b>  [4] </b> (shell) <i> execv:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+	execv(prog, argv);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:41:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy(remote.sun_path, argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:76:2: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+	strcpy(local.sun_path, argv[2]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:95:3: <b>  [4] </b> (shell) <i> execlp:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		execlp(argv[3], argv[3], argv[2], NULL);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:220:3: <b>  [4] </b> (shell) <i> execl:
+  This causes a new program to execute and is difficult to use safely (<a
+  href="https://cwe.mitre.org/data/definitions/78.html">CWE-78</a>). try
+  using a library call that implements the same functionality if available. </i>
+<pre>
+		execl(argv[4], argv[4], sun_path, argv[2], fd_number, NULL);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:95:3: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+		strcpy(addr.sun_path + peer_path_len, SUN_PATH_SUFFIX);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:123:16: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((opt = getopt_long(argc, argv, "+dhp:n:iv", long_opts, NULL)) != -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:672:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((c = getopt_long(argc, argv, short_options, long_options, &amp;o)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:689:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((c = getopt_long(argc, argv, short_options, long_options, &amp;o)) != -1)
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:95:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((c = getopt_long (argc, argv, "+", long_options, &amp;o)) != -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:68:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((c = getopt_long (argc, argv, "+hn", long_options, NULL)) != -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/env_check.c:28:11: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	envval = getenv(var);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/openat.c:43:14: <b>  [3] </b> (buffer) <i> getopt_long:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((c = getopt_long (argc, argv, "+hdr:", long_options, NULL)) != -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:220:9: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+		opt = getopt(argc, argv, "chn:");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace_helper.c:14:16: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+char *tracer = getenv("_tracer");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:37:8: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	fd0 = getenv(ENV_FD0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:38:8: <b>  [3] </b> (buffer) <i> getenv:
+  Environment variables are untrustable input if they can be set by an
+  attacker. They can have any content and length, and the same variable can
+  be set more than once (<a
+  href="https://cwe.mitre.org/data/definitions/807.html">CWE-807</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  environment variables carefully before using them. </i>
+<pre>
+	fd1 = getenv(ENV_FD1);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_chroot.c:93:6: <b>  [3] </b> (misc) <i> chroot:
+  chroot can be very helpful, but is hard to use correctly (<a
+  href="https://cwe.mitre.org/data/definitions/250.html">CWE-250</a>, <a
+  href="https://cwe.mitre.org/data/definitions/22.html">CWE-22</a>). Make
+  sure the program immediately chdir("/"), closes file descriptors, and drops
+  root privileges, and that all necessary files (and no more!) are in the new
+  root. </i>
+<pre>
+	if (chroot(argv[1]) == -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/transition.c:344:14: <b>  [3] </b> (buffer) <i> getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). Check
+  implementation on installation, or limit the size of all string inputs. </i>
+<pre>
+	while ((o = getopt(argc, argv, "f:L:M:l:m:O:P:o:p:")) != -1) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:174:3: <b>  [2] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). Risk is low because the source is a constant string. </i>
+<pre>
+		strcat(name, "://");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/binutils/aa_exec.c:183:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char name[PATH_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/mod_apparmor/mod_apparmor.c:138:11: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+    const char *aa_hat_array[6] = { NULL, NULL, NULL, NULL, NULL, NULL };
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/pam_apparmor/pam_apparmor.c:100:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open("/dev/urandom", O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/tomcat_apparmor/tomcat_5_0/src/jni_src/JNIChangeHat.c:36:6: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+     char hatname[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/changehat/tomcat_apparmor/tomcat_5_5/src/jni_src/JNIChangeHat.c:36:6: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+     char hatname[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:44:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char hash[HASH_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:45:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char string[STRING_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/features.c:479:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(f-&gt;string, string, size);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:109:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[2];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:120:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open("/sys/module/apparmor/parameters/enabled", O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:271:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(tmp, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:394:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(ctl, O_WRONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:585:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	const char *argv[nhats+1];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:824:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[QUERY_LABEL_REPLY_LEN];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:842:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(aafs_access, O_RDWR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:849:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query, AA_QUERY_CMD_LABEL, AA_QUERY_CMD_LABEL_SIZE);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:923:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query + AA_QUERY_CMD_LABEL_SIZE, label, label_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:927:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query + AA_QUERY_CMD_LABEL_SIZE + label_len + 2, path, path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:982:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query + pos, label, label_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:987:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query + pos + 1, link, link_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel.c:1000:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(query + pos + 1, target, target_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/kernel_interface.c:248:14: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	ki-&gt;dirfd = open(apparmorfs, O_RDONLY | O_CLOEXEC | O_DIRECTORY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/libaalogparse.c:132:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[3], *endptr;
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/libaalogparse.c:145:3: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+		sprintf(buf, "%.2s", hexstring);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:113:12: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	proc_fd = open(proc_path, O_RDONLY | O_CLOEXEC | O_PATH | O_NOFOLLOW);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:330:1: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+open:
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/policy_cache.c:352:10: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+				goto open;
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/src/private.c:364:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(dents[i], dent, sizeof(*dent));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/testsuite/test_multi.c:15:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char log_line[1024];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/libraries/libapparmor/testsuite/test_multi.c:28:13: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	testcase = fopen(argv[1], "r");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/dbus.cc:217:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	const char *vec[6];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/lib.c:411:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char str[2] = " ";
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/libapparmor_re/chfa.cc:316:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	const char zeroes[8] = { };
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:539:3: <b>  [2] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). Risk is low because the source is a constant string. </i>
+<pre>
+		strcpy(p, "(\\xfe|)");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:589:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char flagsbuf[PATH_MAX + 3];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:591:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char class_mount_hdr[64];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:592:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	const char *vec[5];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/mount.cc:601:2: <b>  [2] </b> (buffer) <i> sprintf:
+  Does not check for buffer overflows (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
+  sprintf_s, snprintf, or vsnprintf. Risk is low because the source has a
+  constant maximum length. </i>
+<pre>
+	sprintf(class_mount_hdr, "\\x%02x", AA_CLASS_MOUNT);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/network.c:156:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[32];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/network.c:168:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(PROC_VERSION, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:60:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char *path[MAX_PATH] = { NULL };
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_include.c:168:10: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		newf = fopen(buf, "r");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_interface.c:262:8: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static char zeros[64];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:107:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static const char *cacheloc[MAX_CACHE_LOCS];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:267:5: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+				memcpy(tmp, s, p - s);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:286:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(tmp, s, p - s);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:300:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	static char line[256];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:495:11: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		ofile = fopen(optarg, "w");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:711:6: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	f = fopen(name, "r");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:746:24: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	autofclose FILE *ms = fopen(MATCH_FILE, "r");
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_main.c:924:17: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		if ( !(yyin = fopen(profilename, "r")) ) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:563:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		const char *vec[2];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/parser_regex.c:581:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		const char *vec[3];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:41:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[HEADER_STRING_SIZE + VERSION_STRING_SIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:43:12: <b>  [2] </b> (misc) <i> fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if (!(f = fopen(cachename, "r"))) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/policy_cache.c:156:19: <b>  [2] </b> (tmpfile) <i> mkstemp:
+  Potential for temporary file vulnerability in some circumstances. Some
+  older Unix-like systems create temp files with permission to write by all
+  by default, so be sure to set the umask to override this. Also, some older
+  Unix systems might fail to use O_EXCL when opening the file, so make sure
+  that O_EXCL is used by the library (<a
+  href="https://cwe.mitre.org/data/definitions/377.html">CWE-377</a>). </i>
+<pre>
+		if ((cache_fd = mkstemp(tmpname)) &lt; 0) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/profile.h:137:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char *exec_table[AA_EXEC_COUNT];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/signal.cc:79:14: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+static const char *const sig_names[MAXMAPPED_SIG + 1] = {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/parser/unit_test.h:38:9: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+        char buf[PATH_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:10:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat.h:13:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(file, O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:56:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(ATTR_FILE, O_WRONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/changehat_wrapper.c:89:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[BUFSIZ];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/clone.c:63:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[BUFSIZ];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:144:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char sig[5];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:165:4: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+			char sig[2];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_message.c:249:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_service.c:241:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_service.c:253:14: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+			lock_fd = atoi(fd);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/dbus_unrequested_reply.c:173:13: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+			log_fd = open(path, O_CREAT | O_TRUNC | O_WRONLY,
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:36:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:48:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[2], O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/deleted.c:117:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(argv[2], O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/exec_qual2.c:45:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(argv[1], O_RDWR, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchdir.c:29:17: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+        dirfd = open(dir, O_RDONLY | O_DIRECTORY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchgrp.c:35:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[1], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchmod.c:32:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[1], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fchown.c:34:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[1], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:32:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[BUF_LEN + 1], fd_str[FD_STR_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritance.c:40:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[1], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritor.c:29:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[BUF_LEN + 1];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fd_inheritor.c:37:7: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	fd = atoi(argv[1]);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/fork.c:35:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		fd = open(files[i], O_RDWR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:154:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char perms[10];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/link_subset.c:204:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char perms[10];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:33:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:54:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(argv[1], O_CREAT|O_EXCL|O_RDWR, S_IWUSR|S_IRUSR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/mmap.c:79:8: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	(void)memcpy(mptr, data, strlen(data));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:27:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:83:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(file, O_RDONLY, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/named_pipe.c:109:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(file, O_WRONLY, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/net_raw.c:34:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char data[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_receive.c:70:25: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	local.sin_port = htons(atoi(bind_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_receive.c:134:25: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	local.sin_port = htons(atoi(bind_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:60:26: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	remote.sin_port = htons(atoi(remote_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:64:25: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+	local.sin_port = htons(atoi(bind_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:96:33: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+        remote.sin_port = htons(atoi(remote_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/netdomain/test_multi_send.c:100:32: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+        local.sin_port = htons(atoi(bind_port));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/open.c:28:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(argv[1], O_RDWR | O_CREAT, S_IWUSR | S_IRUSR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/openat.c:66:10: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	dirfd = open(dir, O_RDONLY | O_DIRECTORY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pipe.c:27:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/ptrace.c:229:28: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+			case 'n': num_syscall = atoi(optarg); 
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:32:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char in_buffer[strlen(bugger) +1];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/pwrite.c:51:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(argv[1], O_CREAT|O_RDWR, S_IWUSR|S_IRUSR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:52:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(dirname, O_RDONLY, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/readdir.c:76:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(dirname, O_RDONLY, 0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:30:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char buf[128];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/rw.c:50:5: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd=open(argv[1], O_CREAT|O_EXCL|O_RDWR, S_IWUSR|S_IRUSR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:41:13: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+		pair[0] = atoi(fd0);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:42:13: <b>  [2] </b> (integer) <i> atoi:
+  Unless checked, the resulting number can exceed the expected range (<a
+  href="https://cwe.mitre.org/data/definitions/190.html">CWE-190</a>). If
+  source untrusted, check both minimum and maximum, even if the input had no
+  minus sign (large numbers can roll over into negative number; consider
+  saving to an unsigned value if that is intended). </i>
+<pre>
+		pair[1] = atoi(fd1);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/socketpair.c:107:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char fd_str[32];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_chroot.c:45:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy (&amp;tmp-&gt;dirent, dirent, sizeof (struct dirent));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_query_module.c:19:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:23:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char saved_domain[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_setdomainname.c:24:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char new_domain[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:23:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char saved_hostname[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/syscall_sethostname.c:24:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char new_hostname[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:21:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char read_buffer[BUFSIZE], verify_buffer[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:31:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		fd = open(argv[1], O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:46:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		fd = open(argv[1], O_WRONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/sysctl_proc.c:62:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		fd = open(argv[1], O_RDWR);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:33:1: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+char data[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:107:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:166:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char buffer[BUFSIZE];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/tcp.c:238:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(DATASOURCE, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_client.c:29:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char read_buffer[17], f_buf[255];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:36:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char comparison_buffer[17];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:37:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char inbound_buffer[17];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:48:12: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	if ((fd = open(argv[1], O_RDONLY)) &lt; 0) {
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_fd_server.c:124:9: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+       	memcpy(CMSG_DATA(ctrl_mesg), &amp;fd, sizeof(fd));
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:96:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char msg_buf[MSG_BUF_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:123:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(addr.sun_path, sun_path, sun_path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:134:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(addr.sun_path, sun_path, sun_path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket.c:153:2: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+	memcpy(msg_buf, argv[3], msg_buf_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:37:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char msg_buf[MSG_BUF_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:71:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char msg_buf[MSG_BUF_MAX];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:94:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(addr.sun_path, peer_addr-&gt;sun_path, peer_path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:179:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(peer_addr.sun_path, sun_path, sun_path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/unix_socket_client.c:195:3: <b>  [2] </b> (buffer) <i> memcpy:
+  Does not check for buffer overflows when copying to destination (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
+  sure destination can always hold the source data. </i>
+<pre>
+		memcpy(peer_addr.sun_path, sun_path, sun_path_len);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/xattrs.c:30:2: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+	char name[256];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/regression/apparmor/xattrs.c:44:3: <b>  [2] </b> (buffer) <i> char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (<a
+  href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Perform bounds checking, use functions that limit length, or ensure that
+  the size is larger than the maximum possible length. </i>
+<pre>
+		char value[256];
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/change_hat.c:33:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(o_file, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/change_hat.c:46:7: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+	fd = open(o_file, O_RDONLY);
+</pre>
+<li>/home/capstone/Desktop/root/apparmor-2.13.3_patched/tests/stress/apparmor/open.c:21:8: <b>  [2] </b> (misc) <i> open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (<a
+  href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
+<pre>
+		fd = open(o_file, O_RDONLY);
+</pre>
+</ul>
